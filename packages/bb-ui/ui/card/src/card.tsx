@@ -2,7 +2,7 @@
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 21:13:04
  * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2023-01-16 23:24:42
+ * @LastEditTime: 2023-01-20 15:12:37
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\card\src\card.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -27,7 +27,9 @@ export default defineComponent({
     });
 
     return () => (
+      
       <div class={boxClass}>
+        <p>我是测试修改git</p>
         <div class={ns.m('header')} v-show={isHeader}>
           {(slots.header && slots.header()) || props.header}
         </div>
