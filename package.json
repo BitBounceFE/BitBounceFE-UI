@@ -1,0 +1,63 @@
+{
+  "name": "bitbounce-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter bb-ui dev",
+    "docs:build": "pnpm --filter bb-ui predev -- -e prod && pnpm --filter bb-ui docs:build",
+    "lint": "pnpm run lint:script && pnpm run lint:style",
+    "lint:script": "eslint --ext \"packages/**/*.{vue,js,jsx,ts,tsx}\" --fix",
+    "lint:style": "stylelint --fix \"packages/**/*.{css,scss}\"",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "@algolia/client-search": ">= 4.9.1 < 6",
+    "@amatlash/vite-plugin-stylelint": "^1.2.0",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "commitlint": "^17.4.2",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.8.3",
+    "react": ">=16.8.0 <17.0.0",
+    "react-dom": ">=16.8.0 <17.0.0",
+    "rollup": "2.60.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-prettier": "^2.0.0",
+    "typescript": "^4.9.4",
+    "vite": "3",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitepress": "1.0.0-alpha.36"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts,vue}": [
+      "npm run lint:script",
+      "git add ."
+    ],
+    "**/*.{scss, css}": [
+      "npm run lint:style",
+      "git add ."
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

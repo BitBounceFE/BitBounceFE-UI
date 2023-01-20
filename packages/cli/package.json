@@ -1,0 +1,57 @@
+{
+  "name": "bbui-cli",
+  "version": "1.0.0",
+  "description": "bbui-cli",
+  "keywords": [
+    "cli"
+  ],
+  "author": "cjz",
+  "license": "MIT",
+  "main": "lib/bbui-cli.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BitBounceFE/BitBounceFE-UI"
+  },
+  "scripts": {
+    "build": "pnpm generate:theme && node --max-old-space-size=4096 node_modules/vitepress/bin/vitepress.js build docs && cp public/* docs/.vitepress/dist/assets && cp docs/assets/* docs/.vitepress/dist/assets",
+    "build:lib": "pnpm --filter bb-ui predev -- -e prod && pnpm build:components && pnpm changelog && pnpm release",
+    "build:components": "node ./index.js build",
+    "generate:theme": "node ./index.js generate:theme",
+    "generate:dts": "node ./index.js generate:dts",
+    "release": "node ./index.js release",
+    "cli": "node ./index.js create",
+    "cli:create": "node ./index.js create -t component",
+    "prebuild": "node ./index.js create -t bb-ui --ignore-parse-error",
+    "changelog": "conventional-changelog -k '../bb-ui/package.json' -p angular -i CHANGELOG.md -s"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/parser": "^7.17.9",
+    "@babel/traverse": "^7.17.9",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "@vitejs/plugin-vue-jsx": "^1.3.7",
+    "chalk": "^4.1.2",
+    "commander": "^9.0.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "esbuild": "^0.13.15",
+    "esbuild-register": "^3.3.2",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.0",
+    "kolorist": "^1.5.1",
+    "ora": "^5.4.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.53.0",
+    "shelljs": "^0.8.5",
+    "vite": "^2.8.0",
+    "vue": "^3.2.25"
+  }
+}

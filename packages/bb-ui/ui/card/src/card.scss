@@ -1,0 +1,32 @@
+// 后边组件主题环节会通过此文件替换 下边的两个变量
+ @import '../../style-var/index.scss';  
+
+.#{$cls-prefix}-card {
+  overflow: hidden;
+  color: #303133;
+  background: $bbui-global-bg;
+  border: 1px solid #ebeef5;
+  border-radius: 4px;
+  transition: 0.3s;
+
+  &-header {
+    box-sizing: border-box;
+    padding: 18px 20px;
+    border-bottom: 1px solid #ebeef5;
+  }
+}
+
+.#{$cls-prefix}-card-always-shadow {
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+}
+
+.#{$cls-prefix}-card-hover-shadow {
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+  }
+}
+
+.#{$cls-prefix}-card-never-shadow {
+  box-shadow: none;
+}

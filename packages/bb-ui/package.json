@@ -1,0 +1,54 @@
+{
+  "name": "bb-ui",
+  "version": "1.0.6",
+  "license": "MIT",
+  "description": "bb-ui components based on Vite and Vue3",
+  "keywords": [
+    "frontend",
+    "typescript",
+    "ui-component",
+    "components",
+    "vue-components",
+    "vue",
+    "vue3",
+    "vite",
+    "jsx",
+    "bb-ui"
+  ],
+  "homepage": "https://vaebe.github.io/ccui/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BitBounceFE/BitBounceFE-UI"
+  },
+  "main": "bb-ui.umd.js",
+  "module": "bb-ui.es.js",
+  "style": "style.css",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "register:components": "vitepress-rc",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "AAAdev": "node ../cli/index.js create -t bb-ui --ignore-parse-error && node ../cli/index.js generate:theme"
+  },
+  "dependencies": {
+    "vitepress-theme-demoblock": "^1.4.2",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.5",
+    "@vitejs/plugin-vue": "^3.0.0",
+    "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "@vue/test-utils": "^2.0.2",
+    "c8": "^7.11.3",
+    "jsdom": "^20.0.0",
+    "sass": "^1.53.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vite-svg-loader": "^3.4.0",
+    "vitepress": "1.0.0-alpha.4",
+    "vitest": "^0.18.1",
+    "vue-tsc": "^0.38.4"
+  }
+}
