@@ -20,6 +20,16 @@
   "cz-customizable": {
     "config": "cz-config.js"
   },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts,vue}": [
+      "npm run lint:script",
+      "git add ."
+    ],
+    "**/*.{scss, css}": [
+      "npm run lint:style",
+      "git add ."
+    ]
+  },
   "devDependencies": {
     "@algolia/client-search": ">= 4.9.1 < 6",
     "@amatlash/vite-plugin-stylelint": "^1.2.0",
@@ -58,16 +68,6 @@
     "vite": "3",
     "vite-plugin-eslint": "^1.8.1",
     "vitepress": "1.0.0-alpha.36"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,tsx,ts,vue}": [
-      "npm run lint:script",
-      "git add ."
-    ],
-    "**/*.{scss, css}": [
-      "npm run lint:style",
-      "git add ."
-    ]
   },
   "keywords": [],
   "author": "",
