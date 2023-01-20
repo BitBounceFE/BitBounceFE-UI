@@ -9,7 +9,16 @@
     "lint": "pnpm run lint:script && pnpm run lint:style",
     "lint:script": "eslint --ext \"packages/**/*.{vue,js,jsx,ts,tsx}\" --fix",
     "lint:style": "stylelint --fix \"packages/**/*.{css,scss}\"",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "cz-customizable": {
+    "config": "cz-config.js"
   },
   "devDependencies": {
     "@algolia/client-search": ">= 4.9.1 < 6",
@@ -18,7 +27,10 @@
     "@commitlint/config-conventional": "^17.4.2",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
+    "commitizen": "^4.3.0",
     "commitlint": "^17.4.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard": "^17.0.0",
