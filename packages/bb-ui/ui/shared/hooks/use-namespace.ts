@@ -1,4 +1,11 @@
-
+/*
+ * @Author: 司文超
+ * @Date: 2023-01-20 15:15:02
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-01-23 10:18:51
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\shared\hooks\use-namespace.ts
+ * @Description: BEM 类名生成函数
+ */
 export type UseNamespace = {
   b: () => string;
   e: (el: string) => string;
@@ -13,10 +20,10 @@ function createBem(
 ): string {
   let cls = namespace;
   if (element) {
-    cls += `-${element}`;
+    cls += `__${element}`;
   }
   if (modifier) {
-    cls += `-${modifier}`;
+    cls += `--${modifier}`;
   }
   return cls;
 }
@@ -29,7 +36,7 @@ function createBem(
  * @returns UseNamespace
  */
 export function useNamespace(block: string, needDot = false): UseNamespace {
-  // .ccui 项目 class 的命名空间
+  // .bb-ui 项目 class 的命名空间
   const namespace = needDot ? `.bbui-${block}` : `bbui-${block}`;
   const b = () => createBem(namespace);
   const e = (element: string) => (element ? createBem(namespace, element) : '');
