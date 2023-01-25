@@ -3,29 +3,34 @@
   flex-wrap: wrap;
   position: relative;
   box-sizing: border-box;
-}
-.bbui-row--justify-center {
-  justify-content: center;
-}
-.bbui-row--justify-start {
-  justify-content: start;
-}
-.bbui-row--justify-end {
-  justify-content: end;
-}
-.bbui-row--justify-space-between {
-  justify-content: space-between;
-}
-.bbui-row--justify-space-around {
-  justify-content: space-around;
-}
 
-.bbui-row--align-top {
-  align-items: flex-start;
-}
-.bbui-row--align-middle {
-  align-items: center;
-}
-.bbui-row--align-button {
-  align-items: flex-end;
+  &--justify {
+    &-center {
+      justify-content: center;
+    }
+    &-start {
+      justify-content: start;
+    }
+    &-end {
+      justify-content: end;
+    }
+    &-space-between {
+      justify-content: space-between;
+    }
+    &-space-around {
+      justify-content: space-around;
+    }
+  }
+
+  &--align {
+    &-top {
+      align-items: flex-start;
+    }
+    &-middle {
+      align-items: center;
+    }
+    &-bottom {
+      align-items: flex-end;
+    }
+  }
 }
