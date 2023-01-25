@@ -1,0 +1,32 @@
+@use 'sass:math';
+
+.bbui-col {
+  box-sizing: border-box;
+}
+.bbui-col--is-guttered {
+  display: block;
+}
+.bbui-col--span-0,
+.bbui-col--is-guttered .bbui-col--span-0 {
+  display: none;
+}
+
+@for $i from 0 through 24 {
+  $percent: (math.div(1, 24) * $i * 100) * 1%;
+
+  .bbui-col--span-#{$i} {
+    max-width: $percent;
+    flex: 0 0 $percent;
+  }
+  .bbui-col--offset-#{$i} {
+    margin-left: $percent;
+  }
+  .bbui-col--push-#{$i} {
+    position: relative;
+    right: $percent;
+  }
+  .bbui-col--pull-#{$i} {
+    position: relative;
+    left: $percent;
+  }
+}
