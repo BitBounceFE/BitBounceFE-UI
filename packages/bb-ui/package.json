@@ -30,7 +30,7 @@
     "register:components": "vitepress-rc",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "AAAdev": "node ../cli/index.js create -t bb-ui --ignore-parse-error && node ../cli/index.js generate:theme"
+    "predev": "node ../cli/index.js create -t bbui --ignore-parse-error && node ../cli/index.js generate:theme"
   },
   "dependencies": {
     "vitepress-theme-demoblock": "^1.4.2",
