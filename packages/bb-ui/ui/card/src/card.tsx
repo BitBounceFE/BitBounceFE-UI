@@ -10,7 +10,6 @@ import { defineComponent, computed } from 'vue';
 import { cardProps, CardProps } from './card-types';
 import './card.scss';
 import { useNamespace } from '../../shared/hooks/use-namespace';
-
 export default defineComponent({
   name: 'CCard',
   props: cardProps,

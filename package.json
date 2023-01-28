@@ -22,11 +22,11 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts,vue}": [
-      "npm run lint:script",
+      "eslint --fix",
       "git add ."
     ],
     "**/*.{scss, css}": [
-      "npm run lint:style",
+      "stylelint --fix",
       "git add ."
     ]
   },
