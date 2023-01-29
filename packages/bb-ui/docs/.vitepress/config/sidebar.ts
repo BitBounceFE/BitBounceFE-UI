@@ -26,6 +26,11 @@ export default {
           link: "/components/card/",
           status: "100%",
         },
+        {
+          text: "input 输入框",
+          link: "/components/input/",
+          status:"100%",
+        }
       ],
     },
   ],

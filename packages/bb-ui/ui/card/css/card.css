@@ -6,6 +6,7 @@
   border-radius: 4px;
   transition: 0.3s;
 }
+
 .bbui-card-header {
   box-sizing: border-box;
   padding: 18px 20px;
@@ -13,11 +14,12 @@
 }
 
 .bbui-card-always-shadow {
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
 }
 
-.bbui-card-hover-shadow:hover, .bbui-card-hover-shadow:focus {
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+.bbui-card-hover-shadow:hover,
+.bbui-card-hover-shadow:focus {
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
 }
 
 .bbui-card-never-shadow {

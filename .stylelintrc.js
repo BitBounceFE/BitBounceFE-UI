@@ -26,7 +26,7 @@ module.exports = {
     'stylelint-config-recommended-vue',
     'stylelint-config-recommended-vue/scss',
   ],
-  customSyntax: 'postcss-html',
+  // customSyntax: 'postcss-html',
   ignoreFiles: [], // 忽略某些不想被检查的文件
   // 配置 rules
   rules: {
