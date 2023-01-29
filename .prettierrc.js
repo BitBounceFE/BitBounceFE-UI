@@ -1,3 +1,9 @@
+/*
+ * @Date: 2023-01-28 19:53:25
+ * @LastEditors: fxjzz && 1042183935@qq.com
+ * @LastEditTime: 2023-01-29 16:18:20
+ * @FilePath: \BB-UI\.prettierrc.js
+ */
 
 // .prettierrc.js
 module.exports = {
