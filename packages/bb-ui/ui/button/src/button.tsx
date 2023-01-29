@@ -1,3 +1,12 @@
+/*
+ * @Author: thricefice thricefice@gmail.com
+ * @Date: 2023-01-28 21:12:12
+ * @LastEditors: thricefice thricefice@gmail.com
+ * @LastEditTime: 2023-01-28 22:06:28
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\button\src\button.tsx
+ * @Description: button 组件
+ */
+
 import { defineComponent, computed } from 'vue';
 import { buttonProps, ButtonProps } from './button-types';
 import './button.scss';
