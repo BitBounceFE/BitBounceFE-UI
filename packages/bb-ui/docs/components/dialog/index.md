@@ -16,7 +16,8 @@
      <button @click="dialogVisible=true">
      click to open the Dialog
     </button>
-    <b-dialog  :v-model="dialogVisible" :title="header" @open="open" @close="close">
+    <b-dialog  :v-model="dialogVisible" :title="header" @open="open" @close="close"
+     :before-close="beforeClose" :close-delay="openDelay">
     <span>This is a message</span>
     <template #footer>
       <span class="dialog-footer">
@@ -47,8 +48,9 @@
       done()
     },1000)
    }
+   const openDelay=ref(1000)
     return {
-      header,dialogVisible,open,close
+      header,dialogVisible,open,close,openDelay,beforeClose
     }
   }
 }
@@ -81,6 +83,8 @@
 | width |string / number| 50%| Dialog 的宽度  |
 | top | string | 15vh | Dialog CSS 中的 margin-top 值  |
 | before-close | Function(done) (done 用来关闭 Dialog) | - | 关闭前的回调，会暂停 Dialog 的关闭. 回调函数内执行 done 参数方法的时候才是真正关闭对话框的时候. |
+| open-delay | number | 0 | Dialog 打开的延时时间，单位毫秒 |
+| close-delay | number | 0 | Dialog 关闭的延时时间，单位毫秒 |
 
 ### b-dialog 插槽
 

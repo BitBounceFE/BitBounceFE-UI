@@ -1,1 +1,31 @@
-.bbui-card{overflow:hidden;color:#303133;background:var(--bbui-global-bg, #f3f6f8);border:1px solid #ebeef5;border-radius:4px;transition:.3s}.bbui-card-header{box-sizing:border-box;padding:18px 20px;border-bottom:1px solid #ebeef5}.bbui-card-always-shadow{box-shadow:0 2px 12px #0000001a}.bbui-card-hover-shadow:hover,.bbui-card-hover-shadow:focus{box-shadow:0 2px 12px #0000001a}.bbui-card-never-shadow{box-shadow:none}header{color:#000}
+.bbui-card {
+  overflow: hidden;
+  color: #303133;
+  background: var(--bbui-global-bg, #f3f6f8);
+  border: 1px solid #ebeef5;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.bbui-card-header {
+  box-sizing: border-box;
+  padding: 18px 20px;
+  border-bottom: 1px solid #ebeef5;
+}
+
+.bbui-card-always-shadow {
+  box-shadow: 0 2px 12px #0000001a;
+}
+
+.bbui-card-hover-shadow:hover,
+.bbui-card-hover-shadow:focus {
+  box-shadow: 0 2px 12px #0000001a;
+}
+
+.bbui-card-never-shadow {
+  box-shadow: none;
+}
+
+header {
+  color: #000;
+}

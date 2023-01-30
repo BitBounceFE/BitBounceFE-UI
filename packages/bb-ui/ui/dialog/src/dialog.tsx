@@ -1,3 +1,4 @@
+
 import { defineComponent, computed, ref, watch } from 'vue';
 import { dialogProps, DialogProps, dialogEmits } from './dialog-types';
 import './dialog.scss';
@@ -20,28 +21,58 @@ export default defineComponent({
       width: props.width,
       'margin-top': props.top
     };
-    const delay = ref(false);
-    // 事件回调
+    //控制弹窗打开与否
+    const isShow = ref(false);
+    // 事件延迟句柄
+    const handleDelay:(fn:Function,delay:number)=>void=(fn:Function,delay:number)=>{
+         setTimeout(()=>{
+           fn()
+         },delay)
+    }
+    //打开弹窗
+    const openDialog:()=>void=()=>{
+      if(props.openDelay>0){
+        handleDelay(()=>{
+          isShow.value=true
+          emit("open")
+        },props.openDelay)
+      }else{
+        isShow.value=true
+        emit('open')
+      } 
+    }
+    //延迟关弹窗
+    const closeDialogDelay:(closeDelay:number)=>void=(closeDelay:number)=>{
+      if(closeDelay>0){
+        handleDelay(()=>{
+          isShow.value=false
+          emit("close")
+        },closeDelay)
+      }else{
+        isShow.value=false
+        emit('close')
+      } 
+    }
+        //关闭弹窗
+      const closeDialog:()=>void=()=>{
+          if(props.beforeClose){
+            props.beforeClose(()=>{
+              closeDialogDelay(props.closeDelay)
+            })
+          }else closeDialogDelay(props.closeDelay);
+        }
+
     watch(
       () => props.vModel,
       (newValue, oldValue) => {
         // 打开弹窗时
-        if (newValue === true) emit('open');
+        if (newValue === true) openDialog();
         // 关闭弹窗时
-        if (newValue === false) {
-          if (props.beforeClose) {
-            // 是否存在beforeClose
-            delay.value = true;
-            props.beforeClose(() => {
-              delay.value = false;
-              emit('close');
-            });
-          } else emit('close');
-        }
+        if (newValue === false) closeDialog();
       }
     );
     return () => (
-      <div class={ns.e('mask')} v-show={props.vModel || delay.value}>
+      <div class={ns.e('mask')} v-show={isShow.value}>
         <div class={ns.b()} style={dialogStyle}>
           <div class={ns.e('header')} v-show={bHeader}>
             {(slots.header && slots.header()) || props.title}

@@ -42,6 +42,7 @@
     "@vitejs/plugin-vue-jsx": "^2.0.0",
     "@vue/test-utils": "^2.0.2",
     "c8": "^7.11.3",
+    "eslint-plugin-vue": "^9.9.0",
     "jsdom": "^20.0.0",
     "sass": "^1.53.0",
     "typescript": "^4.6.4",
