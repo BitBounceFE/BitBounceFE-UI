@@ -1,0 +1,59 @@
+.bbui-select{
+    width: 200px;
+    cursor: pointer;
+    input{
+        cursor: pointer;
+        border: 1px solid rgb(221, 224, 231);
+        width: 100%;
+        padding-left: 5px;
+        &:focus{
+            border: 1px solid rgb(50, 222, 235);
+        }
+    }
+    .bbui-select__content{
+        width: 100%;
+        // height: 50px;
+        // background-color: pink;
+        margin-top: 5px;
+        border-radius: 1px solid #ccc;
+        border: 1px solid rgb(221, 224, 231);
+        li{
+            height: 30px;
+            list-style: none;
+            line-height: 30px;
+            padding-left: 5px;
+            &:hover{
+                background-color: #f0f0f0;
+            }
+        }
+        li.li_disabled{
+            color: rgb(174,174,174);
+            cursor: not-allowed;
+        }
+    }
+    .bbui-select__disabled{
+        cursor: not-allowed;
+    }
+
+}
+
+.bbui-select__small{
+    width: 150px;
+}
+.bbui-select__big{
+    width: 300px;
+}
+
+.slide-fade-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+    transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateY(-10px);
+    opacity: 0;
+}
