@@ -1,8 +1,8 @@
 /*
  * @Author: 司文超
  * @Date: 2023-01-20 15:15:02
- * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-01-23 10:18:51
+ * @LastEditors: xuepeng184 1831919639@qq.com
+ * @LastEditTime: 2023-01-30 16:57:41
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\shared\hooks\use-namespace.ts
  * @Description: BEM 类名生成函数
  */
