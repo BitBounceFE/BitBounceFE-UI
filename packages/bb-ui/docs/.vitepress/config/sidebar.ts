@@ -26,6 +26,11 @@ export default {
           link: "/components/card/",
           status: "100%",
         },
+        {
+          text: "Upload 上传",
+          link: "/components/upload/",
+          status: "100%",
+        }
       ],
     },
   ],
