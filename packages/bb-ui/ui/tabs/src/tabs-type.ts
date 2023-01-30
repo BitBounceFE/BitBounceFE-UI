@@ -2,11 +2,12 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-27 10:18:12
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-01-27 12:38:59
+ * @LastEditTime: 2023-01-30 12:33:03
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\tabs-type.ts
  * @Description: Tabs Type
  */
 import { PropType, ExtractPropTypes } from 'vue';
+import type { Ref } from 'vue';
 
 export type TabsType = 'card' | 'border-card';
 export type TabsPositonType = 'top' | 'right' | 'bottom' | 'left';
@@ -42,3 +43,7 @@ export const tabsProps = {
 } as const;
 
 export type TabsProps = ExtractPropTypes<typeof tabsProps>;
+
+export type TabsContextType = {
+  active: Ref<string>;
+};

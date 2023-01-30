@@ -9,7 +9,6 @@
  * Copyright (c) 2023 by Xia Yuang xiayuang@foxmail.com, All Rights Reserved.
  */
 import { ExtractPropTypes } from 'vue';
-import type { Ref } from 'vue';
 
 export const tabPaneProps = {
   label: {
@@ -30,7 +29,3 @@ export const tabPaneProps = {
 } as const;
 
 export type TabPaneProps = ExtractPropTypes<typeof tabPaneProps>;
-
-export type TabsContextType = {
-  active: Ref<string>;
-};
