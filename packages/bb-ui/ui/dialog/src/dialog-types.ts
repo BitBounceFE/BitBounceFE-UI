@@ -1,78 +1,85 @@
-
 import type { ExtractPropTypes } from 'vue';
 export const dialogProps = {
   vModel: {
     type: Boolean,
-    default:undefined
+    default: undefined
   },
   title: {
     type: String
   },
-  width:{
-    type:[Number,String],
-    default:'50%'
+  width: {
+    type: [Number, String],
+    default: '50%'
   },
-  fullscreen:{
-    type:Boolean,
-    default:false
-  }
-  ,
-  top:{
-    type:String,
-    default:'15vh'
+  fullscreen: {
+    type: Boolean,
+    default: false
   },
-  modal:{
-    type:Boolean,
-    default:true
+  beforeClose: {
+    type: Function
   },
-  appendToBody:{
-    type:Boolean,
-    default:false
+  top: {
+    type: String,
+    default: '15vh'
   },
-  lockScroll:{
-    type:Boolean,
-    default:true
+  modal: {
+    type: Boolean,
+    default: true
   },
-  openDelay:{
-    type:Number,
-    default:0
+  appendToBody: {
+    type: Boolean,
+    default: false
   },
-  closeDelay:{
-    type:Number,
-    default:0
+  lockScroll: {
+    type: Boolean,
+    default: true
   },
-  closeOnClickModal:{
-    type:Boolean,
-    default:true
+  openDelay: {
+    type: Number,
+    default: 0
   },
-  closeOnPressEscape:{
-    type:Boolean,
-    default:true
+  closeDelay: {
+    type: Number,
+    default: 0
   },
-  showClose:{
-    type:Boolean,
-    default:true
-  },  
-  beforeClose:{
-    type:Function
-  },  
-  draggable:{
-    type:Boolean,
-    default:false
-  },  
-  center:{
-    type:Boolean,
-    default:false
-  }, 
-  alignCenter:{
-    type:Boolean,
-    default:false
+  closeOnClickModal: {
+    type: Boolean,
+    default: true
+  },
+  closeOnPressEscape: {
+    type: Boolean,
+    default: true
+  },
+  showClose: {
+    type: Boolean,
+    default: true
+  },
+  draggable: {
+    type: Boolean,
+    default: false
+  },
+  center: {
+    type: Boolean,
+    default: false
+  },
+  alignCenter: {
+    type: Boolean,
+    default: false
   },
   destroyOnClose: {
     type: Boolean,
-    default:false
+    default: false
   }
 };
 
 // 获取 props 类型
 export type DialogProps = ExtractPropTypes<typeof dialogProps>;
+
+// 事件
+export const dialogEmits = {
+  open: () => true,
+  close: () => true,
+  openAutoFocus: () => true,
+  closeAutoFocus: () => true
+};
+export type DialogEmits = typeof dialogEmits;
