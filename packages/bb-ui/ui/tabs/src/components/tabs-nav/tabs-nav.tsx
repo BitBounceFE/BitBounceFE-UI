@@ -31,7 +31,7 @@ export default defineComponent({
             tabsContext.active.value = pane.name;
           }}
         >
-          {pane.label}, {pane.name}
+          {pane.label ? pane.label : pane.name}
         </button>
       ));
   }
