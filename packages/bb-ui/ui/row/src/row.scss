@@ -1,0 +1,36 @@
+.bbui-row {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  box-sizing: border-box;
+
+  &--justify {
+    &-center {
+      justify-content: center;
+    }
+    &-start {
+      justify-content: start;
+    }
+    &-end {
+      justify-content: end;
+    }
+    &-space-between {
+      justify-content: space-between;
+    }
+    &-space-around {
+      justify-content: space-around;
+    }
+  }
+
+  &--align {
+    &-top {
+      align-items: flex-start;
+    }
+    &-middle {
+      align-items: center;
+    }
+    &-bottom {
+      align-items: flex-end;
+    }
+  }
+}

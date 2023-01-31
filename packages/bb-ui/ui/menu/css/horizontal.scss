@@ -1,0 +1,17 @@
+//水平的menu的样式
+.#{$cls-prefix}-menu__horizontal {
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px 15px;
+  line-height: 1.5;
+
+  .#{$cls-prefix}-menu-item {
+    padding: 0 15px;
+    cursor: pointer;
+    line-height: 24px;
+    margin-top: 0px;
+
+    &:hover {
+    }
+  }
+}
