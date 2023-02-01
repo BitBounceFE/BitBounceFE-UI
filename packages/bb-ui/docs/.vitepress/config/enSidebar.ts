@@ -43,6 +43,11 @@
 	    "text": "Data Entry",
 	    "items": [
 	      {
+	        "text": "Input",
+	        "link": "/en-US/components/input/",
+	        "status": "100%"
+	      },
+	      {
 	        "text": "Upload",
 	        "link": "/en-US/components/upload/",
 	        "status": "100%"

@@ -2,7 +2,7 @@
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 22:13:21
  * @LastEditors: syk syk@qq.com
- * @LastEditTime: 2023-02-01 14:22:09
+ * @LastEditTime: 2023-02-01 14:56:51
  * @FilePath: \组件库\BitBounceFE-UI\packages\bb-ui\docs\.vitepress\theme\index.ts
  * @Description: 组件注册
  */
@@ -21,6 +21,7 @@ import MessageBoxInstall from '../../../ui/message-box';
 
 import UploadInstall from "../../../ui/upload/index";
 import SelectInstall from '../../../ui/select/index';
+import InputInstall from '../../../ui/input/index';
 // 引入组件 注册
 
 export default {
@@ -35,6 +36,7 @@ export default {
     app.use(UploadInstall)
 
     app.use(SelectInstall);
+    app.use(InputInstall);
     registerComponents(app);
   }
 };

@@ -43,6 +43,11 @@
 	    "text": "数据录入",
 	    "items": [
 	      {
+	        "text": "Input 输入框",
+	        "link": "/components/input/",
+	        "status": "100%"
+	      },
+	      {
 	        "text": "upload 上传文件",
 	        "link": "/components/upload/",
 	        "status": "100%"
