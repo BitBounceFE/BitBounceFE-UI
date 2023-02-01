@@ -2,7 +2,7 @@
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 21:13:04
  * @LastEditors: syk syk@qq.com
- * @LastEditTime: 2023-01-30 23:19:52
+ * @LastEditTime: 2023-02-01 11:08:29
  * @FilePath: \组件库\BitBounceFE-UI\packages\bb-ui\ui\upload\src\upload.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -21,11 +21,9 @@ export default defineComponent({
     const change = (e) => {
       fileList.value.unshift(...e.target.files);
       ctx.emit('change', fileList.value);
-      // console.log(fileList.value);
     };
     const ns = useNamespace('upload');
-    const handleSubmit = (e) => {
-      // console.log(Input.value);
+    const handleSubmit = (e: Event) => {
       (Input.value as unknown as HTMLInputElement).click();
     };
     // ccui-card ccui-card__nse ccui-card--nsm ccui-card__em--open
@@ -38,10 +36,31 @@ export default defineComponent({
           class={ns.e('input')}
           ref={Input}
           onChange={change}
+          multiple={props.multiple}
         />
         <button class={ns.e('button')} onClick={handleSubmit}>
           上传文件
         </button>
+        <div class={ns.e('list')}>
+          {fileList.value.map((item, index) => {
+            return (
+              <>
+                <li>
+                  {' '}
+                  {item.name}
+                  <span
+                    onClick={(Event) => {
+                      // console.log(index);
+                      fileList.value.splice(index, 1);
+                    }}
+                  >
+                    删除
+                  </span>
+                </li>{' '}
+              </>
+            );
+          })}
+        </div>
       </div>
     );
   }

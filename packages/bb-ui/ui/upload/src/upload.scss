@@ -11,3 +11,18 @@
     line-height: 40px;
     border-radius: 5px;
 }
+.bbui-upload__list{
+ 
+    li{
+        list-style: none;
+        height: 30px;
+        line-height: 30px;
+        background-color: #eee;
+        border-radius: 5px;
+       span{
+        float: right;
+        cursor: pointer;
+        user-select: none;
+       }
+    }
+}
