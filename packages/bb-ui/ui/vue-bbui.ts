@@ -10,16 +10,26 @@ import TabsInstall, { BTabs } from './tabs';
 import UploadInstall, { Upload } from './upload';
 const installs = [
   CardInstall,
-  ColInstall,
-  DialogInstall,
-  MenuInstall,
-  MessageBoxInstall,
-  RowInstall,
-  TabPaneInstall,
-  TabsInstall,
-  UploadInstall
+	ColInstall,
+	DialogInstall,
+	MenuInstall,
+	MessageBoxInstall,
+	RowInstall,
+	TabPaneInstall,
+	TabsInstall,
+	UploadInstall
 ];
-export { Card, BCol, Dialog, Menu, MessageBox, BRow, BTabPane, BTabs, Upload };
+export {
+  Card,
+	BCol,
+	Dialog,
+	Menu,
+	MessageBox,
+	BRow,
+	BTabPane,
+	BTabs,
+	Upload
+};
 export default {
   version: '1.0.9',
   install(app: App): void {
