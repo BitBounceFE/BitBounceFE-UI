@@ -20,7 +20,7 @@
     "url": "https://github.com/BitBounceFE/BitBounceFE-UI"
   },
   "scripts": {
-    "build": "pnpm generate:theme && node --max-old-space-size=4096 node_modules/vitepress/bin/vitepress.js build docs && cp public/* docs/.vitepress/dist/assets && cp docs/assets/* docs/.vitepress/dist/assets",
+    "build": "pnpm generate:theme && node --max-old-space-size=4096 node_modules/vitepress/bin/vitepress.js build docs && xcopy /e public/* docs/.vitepress/dist/assets && xcopy /e docs/assets/* docs/.vitepress/dist/assets",
     "build:lib": "pnpm --filter bb-ui predev -- -e prod && pnpm build:components && pnpm changelog && pnpm release",
     "build:components": "node ./index.js build",
     "generate:theme": "node ./index.js generate:theme",
@@ -28,13 +28,14 @@
     "release": "node ./index.js release",
     "cli": "node ./index.js create",
     "cli:create": "node ./index.js create -t component",
-    "prebuild": "node ./index.js create -t bb-ui --ignore-parse-error",
+    "prebuild": "node ./index.js create -t bbui --ignore-parse-error",
     "changelog": "conventional-changelog -k '../bb-ui/package.json' -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@algolia/client-search": ">= 4.9.1 < 6",
     "@babel/parser": "^7.17.9",
     "@babel/traverse": "^7.17.9",
     "@vitejs/plugin-vue": "^2.2.0",
@@ -52,6 +53,7 @@
     "sass": "^1.53.0",
     "shelljs": "^0.8.5",
     "vite": "^2.8.0",
+    "vitepress": "1.0.0-alpha.40",
     "vue": "^3.2.25"
   }
 }

@@ -30,7 +30,7 @@
     "register:components": "vitepress-rc",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "AAAdev": "node ../cli/index.js create -t bb-ui --ignore-parse-error && node ../cli/index.js generate:theme"
+    "predev": "node ../cli/index.js create -t bbui --ignore-parse-error && node ../cli/index.js generate:theme"
   },
   "dependencies": {
     "vitepress-theme-demoblock": "^1.4.2",
@@ -42,6 +42,7 @@
     "@vitejs/plugin-vue-jsx": "^2.0.0",
     "@vue/test-utils": "^2.0.2",
     "c8": "^7.11.3",
+    "eslint-plugin-vue": "^9.9.0",
     "jsdom": "^20.0.0",
     "sass": "^1.53.0",
     "typescript": "^4.6.4",

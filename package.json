@@ -7,7 +7,7 @@
     "dev": "pnpm --filter bb-ui dev",
     "docs:build": "pnpm --filter bb-ui predev -- -e prod && pnpm --filter bb-ui docs:build",
     "lint": "pnpm run lint:script && pnpm run lint:style",
-    "lint:script": "eslint --ext \"packages/**/*.{vue,js,jsx,ts,tsx}\" --fix",
+    "lint:script": "eslint --fix --ext \"packages/**/*.{vue,js,jsx,ts,tsx}\" ",
     "lint:style": "stylelint --fix \"packages/**/*.{css,scss}\"",
     "prepare": "husky install",
     "commit": "git-cz"
@@ -22,11 +22,10 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts,vue}": [
-      "npm run lint:script",
       "git add ."
     ],
     "**/*.{scss, css}": [
-      "npm run lint:style",
+      "stylelint --fix",
       "git add ."
     ]
   },
@@ -48,7 +47,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-vue": "^9.9.0",
+    "eslint-plugin-vue": "8",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "postcss": "^8.4.21",

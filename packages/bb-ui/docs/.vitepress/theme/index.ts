@@ -12,12 +12,10 @@ import 'vitepress-theme-demoblock/theme/styles/index.css';
 import { registerComponents } from './register-components.js';
 // 引入组件 注册
 import CardInstall from '../../../ui/card/index';
-
 import DialogInstall from '../../../ui/dialog/index';
 import MenuInstall from '../../../ui/menu';
 import MessageBoxInstall from '../../../ui/message-box';
 import ProgreInstall from '../../../ui/progress-component/index';
-
 import UploadInstall from '../../../ui/upload/index';
 import SelectInstall from '../../../ui/select/index';
 import InputInstall from '../../../ui/input/index';
@@ -32,9 +30,7 @@ export default {
     app.use(DialogInstall);
     app.use(MenuInstall);
     app.use(MessageBoxInstall);
-
     app.use(UploadInstall);
-
     app.use(SelectInstall);
     app.use(InputInstall);
     registerComponents(app);

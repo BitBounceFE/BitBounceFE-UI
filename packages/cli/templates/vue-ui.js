@@ -1,5 +1,11 @@
-const { relative } = require('path');
-const { INDEX_FILE_NAME, VERSION, VUE_UI_FILE } = require('../shared/constant');
+const {
+  relative
+} = require('path');
+const {
+  INDEX_FILE_NAME,
+  VERSION,
+  VUE_UI_FILE
+} = require('../shared/constant');
 
 exports.createUiTemplate = (exportModules = []) => {
   const packages = [];
@@ -7,7 +13,9 @@ exports.createUiTemplate = (exportModules = []) => {
   const installs = [];
 
   exportModules.forEach((m) => {
-    const { fileInfo } = m;
+    const {
+      fileInfo
+    } = m;
     const relativePath = relative(VUE_UI_FILE, fileInfo.path)
       .replace(/\\/g, '/')
       .replace('..', '.')
@@ -32,7 +40,7 @@ export {
   ${packages.join(',\n\t')}
 };
 export default {
-  version: '1.0.8',
+  version: '1.0.9',
   install(app: App): void {
     installs.forEach((p) => app.use(p));
   }

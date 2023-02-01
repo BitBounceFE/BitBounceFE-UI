@@ -1,9 +1,9 @@
 /*
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 21:13:04
- * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2023-01-20 15:56:45
- * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\card\src\card.tsx
+ * @LastEditors: syk syk@qq.com
+ * @LastEditTime: 2023-02-01 14:57:36
+ * @FilePath: \组件库\BitBounceFE-UI\packages\bb-ui\ui\card\src\card.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import { defineComponent, computed } from 'vue';
@@ -12,7 +12,7 @@ import './card.scss';
 import { useNamespace } from '../../shared/hooks/use-namespace';
 
 export default defineComponent({
-  name: 'CCard',
+  name: 'BCard',
   props: cardProps,
   setup(props: CardProps, { slots }) {
     const ns = useNamespace('card');
@@ -28,6 +28,7 @@ export default defineComponent({
 
     return () => (
       <div class={boxClass}>
+        66666666666666
         <div class={ns.m('header')} v-show={isHeader}>
           {(slots.header && slots.header()) || props.header}
         </div>

@@ -1,0 +1,34 @@
+.bbui-dialog__mask {
+  z-index: 99999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(22, 21, 21, .3);
+}
+
+.bbui-dialog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.bbui-dialog__header{
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.bbui-dialog__default {
+  min-height: 120px;
+  padding: 30px 0;
+}
+
+.bbui-dialog__footer {
+  padding-top: 10px;
+}

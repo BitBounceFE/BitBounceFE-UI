@@ -1,5 +1,5 @@
 // 后边组件主题环节会通过此文件替换 下边的两个变量
- @import '../../style-var/index.scss';  
+@import '../../style-var/index';
 
 .#{$cls-prefix}-card {
   overflow: hidden;
