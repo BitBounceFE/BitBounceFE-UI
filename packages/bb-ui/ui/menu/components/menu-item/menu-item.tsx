@@ -2,12 +2,12 @@
  * @Author: xuepeng184 1831919639@qq.com
  * @Date: 2023-01-28 22:18:18
  * @LastEditors: xuepeng184 1831919639@qq.com
- * @LastEditTime: 2023-01-29 14:56:24
+ * @LastEditTime: 2023-01-30 16:10:39
  * @FilePath: \bbui\packages\bb-ui\ui\menu\components\menu-item\menu-item.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 
-import { defineComponent, inject, Ref, computed } from 'vue';
+import { defineComponent, inject, Ref, computed, toRefs } from 'vue';
 import { menuItemProps, MenuItemProps } from './menu-item-types';
 import { useNamespace } from '../../../shared/hooks/use-namespace';
 
@@ -20,10 +20,13 @@ export default defineComponent({
     //  竖直还是水平模式，使用Ref定义防止.value报错
     const mode = inject('mode') as Ref<'vertical' | 'horizontal'>;
 
+    //  是否禁用
+    const { disabled } = toRefs(props);
     // 计算出根节点的类名
     const menuItemClass = computed(() => {
       return {
-        [`${ns.b()}`]: true
+        [`${ns.b()}`]: true,
+        [`${ns.b()}--disabled`]: disabled.value
       };
     });
     return () => {
@@ -33,7 +36,9 @@ export default defineComponent({
           <span>{ctx.slots.default?.()}</span>
         </li>
       ) : (
-        <div></div>
+        <li class={menuItemClass.value}>
+          <span>{ctx.slots.default?.()}</span>
+        </li>
       );
     };
   }

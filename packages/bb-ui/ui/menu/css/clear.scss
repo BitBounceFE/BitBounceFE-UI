@@ -4,7 +4,17 @@
 //   a,
 // }
 
-ul,
-li {
-  list-style: none;
+.#{$cls-prefix}-menu__vertical,
+.#{$cls-prefix}-menu__horizontal {
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    text-decoration: none;
+  }
+
+  ul,
+  li {
+    list-style: none;
+  }
 }
