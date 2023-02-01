@@ -1,0 +1,70 @@
+
+.bbui-button {
+  &--primary {
+    color: #7693f5;
+  }
+
+  &--success {
+    color:#67c23a;
+  }
+
+  &--info {
+    color:#909399;
+  }
+
+  &--warning {
+    color:#e6a23c;
+  }
+
+  &--danger {
+    color:#f56c6c;
+  }
+
+  &--plain-primary {
+    color: #7693f5;
+  }
+
+  &--plain-success {
+    color:#67c23a;
+  }
+
+  &--plain-info {
+    color:#909399;
+  }
+
+  &--plain-warning {
+    color:#e6a23c;
+  }
+
+  &--plain-danger {
+    color:#f56c6c;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &--large {
+    height: 40px;
+    padding: 12px 19px;
+  }
+
+  &--small {
+    height: 24px;
+    padding: 5px 11px;
+    font-size: 12px;
+  }
+
+  &--round {
+    border-radius: 20px;
+  }
+
+  &--circle {
+    padding: 8px;
+    border-radius: 50%;
+  }
+}
