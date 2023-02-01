@@ -2,7 +2,7 @@
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 21:13:04
  * @LastEditors: syk syk@qq.com
- * @LastEditTime: 2023-02-01 14:51:55
+ * @LastEditTime: 2023-02-01 17:45:14
  * @FilePath: \组件库\BitBounceFE-UI\packages\bb-ui\ui\select\src\select.tsx
  * @Description: 写select的首页
  */
@@ -106,7 +106,7 @@ export default defineComponent({
                   <li
                     value={item.value}
                     onClick={item.disabled ? handleLi1 : handleLi}
-                    class={item.disabled ? 'li_disabled' : ''}
+                    class={item.disabled ? 'li-disabled' : ''}
                   >
                     {' '}
                     {item.name}{' '}

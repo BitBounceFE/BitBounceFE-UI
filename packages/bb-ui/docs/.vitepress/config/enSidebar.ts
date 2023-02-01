@@ -48,6 +48,11 @@
 	        "status": "100%"
 	      },
 	      {
+	        "text": "Select",
+	        "link": "/en-US/components/select/",
+	        "status": "100%"
+	      },
+	      {
 	        "text": "Upload",
 	        "link": "/en-US/components/upload/",
 	        "status": "100%"

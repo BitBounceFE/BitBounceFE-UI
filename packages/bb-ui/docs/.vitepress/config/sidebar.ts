@@ -48,6 +48,11 @@
 	        "status": "100%"
 	      },
 	      {
+	        "text": "Select 选择框",
+	        "link": "/components/select/",
+	        "status": "100%"
+	      },
+	      {
 	        "text": "upload 上传文件",
 	        "link": "/components/upload/",
 	        "status": "100%"
