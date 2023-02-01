@@ -7,7 +7,6 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import { defineComponent, computed,  ref, toRefs, watch, onMounted, effect } from 'vue';
-import { cardProps, CardProps } from './card-types';
 import { ProgressProps,progressProps } from './progress-types';
 import './progress.scss';
 import { useNamespace } from '../../shared/hooks/use-namespace';
@@ -18,60 +17,44 @@ export default defineComponent({
   setup(props: ProgressProps, { slots }) {
     const ns = useNamespace('progress');
 
-    // ccui-card ccui-card__nse ccui-card--nsm ccui-card__em--open
     console.log(ns.b(), ns.e('nse'), ns.m('nsm'), ns.em('em', 'open'));
 
     const shapeClass = `${ns.b()} ${ns.m(props.type)}-shape`;
 
     console.log(shapeClass);
-    // const isHeader = computed(() => {
-    //   return props.header || slots.header;
-    // });
+
+    //check attribute
     const isLine =  props.type === "line" ? true: false;
     const isCircle =  props.type === "Circle" ? true: false;
     const isDashboard = props.type === "dashboard"?true:false;
 
-
-    //console.log(percentage,props.type==="Circle");
-
-    console.log(props.percentage)
+    // radius of progress ring and dashboard
     const radius = 80;
     const strokeWidth = props.strokeWidth;
     const halfCircle = radius + strokeWidth;
     const percentage = ref(props.percentage);
 
-    var coefficient = 1;
     var rotation = 90;
     var translateY = radius + strokeWidth;
     // var percentage = props.percentage;
 
     if(isDashboard){
-      coefficient = 0.7;
       rotation = 90 + 180 * 0.7;
       translateY += strokeWidth;
     }
+
+    // calculating related value
     const circumference = 2 * Math.PI * radius;
     var progressVal = circumference - (circumference *percentage.value)/100;
     var dashboardVal = circumference*0.3+circumference*((100 - percentage.value)/100)*0.7;
-    // console.log( 2 * Math.PI * radius," ",circumference,val);
+
     effect(() => {
       percentage.value = props.percentage;
       progressVal = circumference - (circumference * percentage.value)/100;
       dashboardVal = circumference*0.3+circumference*((100 - percentage.value)/100)*0.7
     });
 
-    console.log(translateY)
-
-
     return () => (
-      // <div>
-      //   <div class={ns.m('header')} v-show={isHeader}>
-      //     {(slots.header && slots.header()) || props.header}
-      //   </div>
-      //   <div class={ns.m('body')} style={props.bodyStyle}>
-      //     {slots.default && slots.default()}
-      //   </div>
-      // </div>
       <div>
         <div class={shapeClass} v-show={isLine} style={{height:`${props.strokeWidth}px`, backgroundColor:props.defineBackColor}}>
           <div style={{width:`${percentage.value}%`, 
@@ -133,7 +116,6 @@ export default defineComponent({
                     stroke={"yellow"} 
                     cx="50%" 
                     cy="50%"
-                    //stroke-dashoffset={val+circumference*0.1*0.7}
                     stroke-dashoffset={dashboardVal}
                     stroke-linejoin='round'
                     stroke-linecap={props.strokeLinecap}
@@ -147,8 +129,6 @@ export default defineComponent({
             {props.percentage}%
           </div>
         </div>
-
-
       </div>
 
 

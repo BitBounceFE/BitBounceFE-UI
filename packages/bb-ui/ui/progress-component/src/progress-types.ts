@@ -2,7 +2,7 @@
  * @Author: XinyueShu xshuac@connect.hk.ust
  * @Date: 2023-01-23 16:45:22
  * @LastEditors: XinyueShu xshuac@connect.hk.ust
- * @LastEditTime: 2023-01-27 01:20:35
+ * @LastEditTime: 2023-02-01 00:23:06
  * @FilePath: /project/BitBounceFE-UI/packages/bb-ui/ui/progress-component/src/progress-types.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -16,23 +16,24 @@ export const progressProps = {
   percentage:{
     type: Number,
     default: 0,
-    required: true,
+    required: true, // atrribute percentage is required field
+    validator: val => val >= 0 && val <= 100 // the value of percentage should [0,100]
   },
   type:{
     type: String as shapeType,
     default: 'line',
+    validator: val => ['line','Circle','dahsboard'].indexOf(val) > -1
   },
   strokeWidth:{
     type: Number,
     default:6,
   },
   textInside:{
-    //only valid for progress bar/line
-    //! missing validator function
     type: Boolean,
     default:false,
   },
   status:{
+    // not yet finished
     type: String as statusType,
     default: '',
   },
@@ -41,8 +42,6 @@ export const progressProps = {
     default:"rgb(52,137,255)",
   },
   width:{
-    //only valid for circle and dashboard
-    //!missig validator function
     type: Number,
     default:126,
   },
@@ -60,12 +59,6 @@ export const progressProps = {
       return 'Default function'
     }
   },
-  // bodyStyle: {
-  //   type: Object,
-  //   default: () => {
-  //     return { padding: '20px' };
-  //   }
-  // },
   defineBackColor:{
     type: String,
     default:"#eee"
