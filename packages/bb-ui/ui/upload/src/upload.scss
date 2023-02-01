@@ -1,0 +1,30 @@
+.bbui-upload-input {
+  display: none;
+}
+
+.bbui-upload-button {
+  width: 130px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  background-color: rgb(64 158 255);
+  border-radius: 5px;
+  outline: none;
+}
+
+.bbui-upload-list {
+  li {
+    height: 30px;
+    line-height: 30px;
+    list-style: none;
+    background-color: #eee;
+    border-radius: 5px;
+
+    span {
+      float: right;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}

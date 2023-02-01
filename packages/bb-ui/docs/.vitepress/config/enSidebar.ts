@@ -16,7 +16,13 @@
 	  },
 	  {
 	    "text": "Navigation",
-	    "items": []
+	    "items": [
+	      {
+	        "text": "Menu",
+	        "link": "/en-US/components/menu/",
+	        "status": "100%"
+	      }
+	    ]
 	  },
 	  {
 	    "text": "Feedback",
@@ -25,12 +31,23 @@
 	        "text": "Dialog",
 	        "link": "/en-US/components/dialog/",
 	        "status": "100%"
+	      },
+	      {
+	        "text": "MessageBox",
+	        "link": "/en-US/components/message-box/",
+	        "status": "100%"
 	      }
 	    ]
 	  },
 	  {
 	    "text": "Data Entry",
-	    "items": []
+	    "items": [
+	      {
+	        "text": "Upload",
+	        "link": "/en-US/components/upload/",
+	        "status": "100%"
+	      }
+	    ]
 	  },
 	  {
 	    "text": "Data Display",
