@@ -1,5 +1,5 @@
 // 后边组件主题环节会通过此文件替换 下边的两个变量
- @import '../../style-var/index.scss';  
+@import '../../style-var/index';
 
 .#{$cls-prefix}-progress {
   // color: rgb(231,234,242);
@@ -8,7 +8,7 @@
   // border-radius: 3px;
   // width: 50%;
   // height: 10px;
-  //transition: 0.3s;
+  // transition: 0.3s;
 
   // &-header {
   //   box-sizing: border-box;
@@ -18,17 +18,19 @@
   margin-bottom: 2.5%;
 }
 .#{$cls-prefix}-progress--line-shape {
-  // color: rgb(231,234,242);
-  // background: rgb(231,234,242);
-  background-color: rgb(231,234,242);
-  border-radius: 10px;
   width: 50%;
   height: 10px;
+
+  // color: rgb(231,234,242);
+  // background: rgb(231,234,242);
+  background-color: rgb(231 234 242);
+  border-radius: 10px;
 }
 
 .#{$cls-prefix}-progress--dashboard-shape {
   transform: rotate(-216deg);
 }
+
 // .mask2{
 //   transform: rotate(-216deg);
 // }

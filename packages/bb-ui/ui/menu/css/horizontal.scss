@@ -1,28 +1,28 @@
-//水平的menu的样式
+// 水平的menu的样式
 .#{$cls-prefix}-menu__horizontal {
   box-sizing: border-box;
   display: flex;
-  padding: 10px 15px 0px 15px;
+  padding: 10px 15px 0;
   line-height: 1.5;
   border-bottom: 1px solid #dcdfe6;
 
   .#{$cls-prefix}-menu-item {
-    //为了为after伪元素提供定位
+    // 为了为after伪元素提供定位
     position: relative;
     padding: 4px 20px;
-    cursor: pointer;
+    margin-top: 0;
     line-height: 24px;
-    margin-top: 0px;
+    cursor: pointer;
 
     &::after {
-      content: '';
-      display: block;
       position: absolute;
-      left: 18px;
       right: 18px;
-      bottom: 0px;
-      height: 2px;
+      bottom: 0;
+      left: 18px;
+      display: block;
       width: auto;
+      height: 2px;
+      content: '';
     }
 
     &:hover {
@@ -30,38 +30,35 @@
     }
 
     &:hover::after {
-      background-color: rgb(27, 152, 110);
+      background-color: rgb(27 152 110);
     }
   }
 
   .#{$cls-prefix}-submenu {
-    margin: 0px;
-    padding: 0px;
     position: relative;
+    padding: 0;
+    margin: 0;
     cursor: pointer;
 
     &::after {
-      content: '';
-      display: block;
       position: absolute;
-      left: 18px;
       right: 18px;
-      bottom: 0px;
-      height: 2px;
+      bottom: 0;
+      left: 18px;
+      display: block;
       width: auto;
-    }
-
-    &:hover {
+      height: 2px;
+      content: '';
     }
 
     &:hover::after {
-      background-color: rgb(27, 152, 110);
+      background-color: rgb(27 152 110);
     }
 
     div.#{$cls-prefix}-submenu--title {
-      line-height: 24px;
       padding: 4px 15px;
       margin: 0;
+      line-height: 24px;
     }
 
     div.#{$cls-prefix}-submenu--hor-con {
@@ -71,16 +68,16 @@
     }
 
     div.#{$cls-prefix}-submenu--hor-con-show {
+      position: absolute;
       visibility: visible;
-      position: absolute;
     }
 
-    div.#{$cls-prefix}-submenu--hor-con-hidden{
+    div.#{$cls-prefix}-submenu--hor-con-hidden {
+      position: absolute;
       visibility: hidden;
-      position: absolute;
     }
 
-    //选项容器
+    // 选项容器
 
     // div {
     //   span:nth-of-type(2) {
@@ -98,8 +95,8 @@
   // 禁用disabled的样式
   .#{$cls-prefix}-menu-item--disabled,
   .#{$cls-prefix}-submenu--disabled {
-    cursor: not-allowed;
     color: darkgrey;
+    cursor: not-allowed;
 
     &::after {
       content: unset;

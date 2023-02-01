@@ -1,12 +1,11 @@
 /*
- * @Author: error: git config user.name && git config user.email & please set dead value or install git
- * @Date: 2023-01-16 22:12:52
+ * @Author: Xia Yuang xiayuang@foxmail.com
+ * @Date: 2023-02-01 16:56:43
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-01 15:53:45
+ * @LastEditTime: 2023-02-01 17:08:38
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\.vitepress\config\sidebar.ts
  * @Description: doc sidebar
  */
-
 export default {
   '/': [
     {
@@ -66,11 +65,6 @@ export default {
     {
       text: '数据展示',
       items: [
-        {
-          text: 'Card 卡片',
-          link: '/components/card/',
-          status: '100%'
-        },
         {
           text: 'Progress 进度条',
           link: 'components/progress/',
