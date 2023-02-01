@@ -2,7 +2,7 @@
  * @Author: XinyueShu xshuac@connect.hk.ust
  * @Date: 2023-01-23 17:19:32
  * @LastEditors: XinyueShu xshuac@connect.hk.ust
- * @LastEditTime: 2023-02-01 14:37:43
+ * @LastEditTime: 2023-02-01 14:55:30
  * @FilePath: /project/BitBounceFE-UI/packages/bb-ui/docs/components/progress/index.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -23,17 +23,10 @@
 
 <template>
   <div>
-    <!-- <c-card style="margin-bottom: 20px" header="这是标题">
-      test
-    </c-card> -->
-    <!-- <c-progress type = "line":percentage="percentage" :strokeWidth=24  textColor="red"></c-progress> -->
-    <c-progress type = "Circle":percentage="percentage" strokeLinecap="butt"></c-progress>
+    <c-progress type = "Circle" :percentage="percentage" strokeLinecap="butt"></c-progress>
     <button  v-on:click="increase">add</button>
-    <button  @click="decrease">  sub</button>
-
-    <c-progress type = "dashboard":percentage="percentage" strokeLinecap="butt"></c-progress>
-    
-    <!-- <c-progress type = "Circle":percentage=50 strokeLinecap="butt"></c-progress> -->
+    <button  @click="decrease">sub</button>
+    <c-progress type = "dashboard" :percentage="percentage" strokeLinecap="butt"></c-progress>
   </div>
 
 </template>
@@ -83,30 +76,6 @@ export default {
 
 <style lang="scss" scoped>
 </style>
-```
-
-:::
-:::demo Card 示例
-
-```vue
-
-<template>
-  <div>
-    <c-progress type = "line":percentage=10 :strokeWidth=24 :textInside=true  textColor="red"></c-progress>
-  </div>
-
-</template>
-
-<script>
-export default {
-  name: 'progressBar',
-}
-
-</script>
-
-<style lang="scss" scoped>
-</style>
-```
 
 :::
 
