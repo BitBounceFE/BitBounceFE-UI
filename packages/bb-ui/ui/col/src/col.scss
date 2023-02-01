@@ -6,6 +6,7 @@
   &--is-guttered {
     display: block;
   }
+
   &--span-0,
   &--is-guttered &--span-0 {
     display: none;
@@ -15,8 +16,8 @@
     $percent: (math.div(1, 24) * $i * 100) * 1%;
 
     &--span-#{$i} {
-      max-width: $percent;
       flex: 0 0 $percent;
+      max-width: $percent;
     }
     &--offset-#{$i} {
       margin-left: $percent;

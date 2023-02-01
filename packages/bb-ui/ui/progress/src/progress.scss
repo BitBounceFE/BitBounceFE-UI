@@ -1,0 +1,51 @@
+// 后边组件主题环节会通过此文件替换 下边的两个变量
+@import '../../style-var/index';
+
+.#{$cls-prefix}-progress {
+  // color: rgb(231,234,242);
+  // background: rgb(231,234,242);
+  // // border: 1px solid #ebeef5;
+  // border-radius: 3px;
+  // width: 50%;
+  // height: 10px;
+  // transition: 0.3s;
+
+  // &-header {
+  //   box-sizing: border-box;
+  //   padding: 18px 20px;
+  //   border-bottom: 1px solid #ebeef5;
+  // }
+  margin-bottom: 2.5%;
+}
+.#{$cls-prefix}-progress--line-shape {
+  width: 50%;
+  height: 10px;
+
+  // color: rgb(231,234,242);
+  // background: rgb(231,234,242);
+  background-color: rgb(231 234 242);
+  border-radius: 10px;
+}
+
+.#{$cls-prefix}-progress--dashboard-shape {
+  transform: rotate(-216deg);
+}
+
+// .mask2{
+//   transform: rotate(-216deg);
+// }
+
+// .#{$cls-prefix}-card-always-shadow {
+//   box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+// }
+
+// .#{$cls-prefix}-card-hover-shadow {
+//   &:hover,
+//   &:focus {
+//     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+//   }
+// }
+
+// .#{$cls-prefix}-card-never-shadow {
+//   box-shadow: none;
+// }

@@ -1,14 +1,14 @@
-//垂直的menu的样式
+// 垂直的menu的样式
 .#{$cls-prefix}-menu__vertical {
-  border-right: 1px solid rgb(27, 152, 110);
+  border-right: 1px solid rgb(27 152 110);
 
   .#{$cls-prefix}-menu-item {
-    //为了为after伪元素提供定位
+    // 为了为after伪元素提供定位
     position: relative;
     padding: 10px 20px;
-    cursor: pointer;
+    margin-top: 0;
     line-height: 24px;
-    margin-top: 0px;
+    cursor: pointer;
 
     &:hover {
       background-color: #ecf5ff;
@@ -17,11 +17,11 @@
   }
 
   .#{$cls-prefix}-menu-item--disabled {
-    cursor: not-allowed;
     color: darkgrey;
+    cursor: not-allowed;
 
     &:hover {
-      border-right: 0px;
+      border-right: 0;
     }
   }
 }
