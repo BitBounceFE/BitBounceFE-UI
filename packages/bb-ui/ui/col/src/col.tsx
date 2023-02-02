@@ -2,7 +2,7 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-24 15:14:40
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 10:01:03
+ * @LastEditTime: 2023-02-02 16:32:11
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\col\src\col.tsx
  * @Description: col 组件
  */
@@ -14,18 +14,18 @@ import {
   inject,
   resolveComponent
 } from 'vue';
-import { colProps, ColProps } from './col-types';
-import './col.scss';
+
 import { useNamespace } from '../../shared/hooks/use-namespace';
 import { RowContextType, rowContextKey } from '../../shared/tokens';
+
+import { colProps, ColProps } from './col-types';
+import './col.scss';
 
 export default defineComponent({
   name: 'BCol',
   props: colProps,
   setup(props: ColProps, { slots }) {
-    /**
-     * @description: 使用依赖注入获取 row 组件的 gutter 值，默认为 0。
-     */
+    // 使用依赖注入获取 row 组件的 gutter 值，默认为 0。
     const { gutter } = inject<RowContextType>(rowContextKey, {
       gutter: computed(() => 0)
     });
@@ -60,7 +60,7 @@ export default defineComponent({
     });
 
     return () =>
-      /* tsx 难以使用动态组件 <component>，故使用渲染函数 h() 以实现动态标签名。 */
+      // tsx 难以使用动态组件 <component>，故使用渲染函数 h() 以实现动态标签名。
       h(
         resolveComponent(props.tag),
         {

@@ -9,9 +9,7 @@
 import type { ExtractPropTypes } from 'vue';
 
 export const colProps = {
-  /**
-   * @description: 自定义元素标签
-   */
+  // 自定义元素标签
   tag: {
     type: String,
     default: 'div'

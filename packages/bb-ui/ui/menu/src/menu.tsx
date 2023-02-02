@@ -2,16 +2,17 @@
  * @Author: xuepeng184 1831919639@qq.com
  * @Date: 2023-01-28 20:18:58
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 10:45:29
+ * @LastEditTime: 2023-02-02 17:59:07
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\menu\src\menu.tsx
  * @Description: Menu 组件
  */
-
 import { computed, defineComponent, provide, toRefs } from 'vue';
-import { menuProps, MenuProps } from './menu-types';
-import './menu.scss';
+
 import { useNamespace } from '../../shared/hooks/use-namespace';
 import { MenuContextType, menuContextKey } from '../../shared/tokens/index';
+
+import { menuProps, MenuProps } from './menu-types';
+import './menu.scss';
 
 export default defineComponent({
   name: 'BMenu',

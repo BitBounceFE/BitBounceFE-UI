@@ -2,7 +2,7 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-24 15:15:07
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 10:34:21
+ * @LastEditTime: 2023-02-02 18:31:15
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\row\src\row.tsx
  * @Description: row 组件
  */
@@ -15,10 +15,12 @@ import {
   resolveComponent,
   toRef
 } from 'vue';
-import { rowProps, RowProps } from './row-types';
-import './row.scss';
+
 import { useNamespace } from '../../shared/hooks/use-namespace';
 import { RowContextType, rowContextKey } from '../../shared/tokens/index';
+
+import { rowProps, RowProps } from './row-types';
+import './row.scss';
 
 export default defineComponent({
   name: 'BRow',
@@ -39,16 +41,14 @@ export default defineComponent({
       return styles;
     });
 
-    /**
-     * @description: 使用依赖注入将 gutter 提供给 col 组件
-     */
+    // 使用依赖注入将 gutter 提供给 col 组件
     const gutter = toRef(props, 'gutter');
     provide<RowContextType>(rowContextKey, {
       gutter
     });
 
     return () =>
-      /* tsx 难以使用动态组件 <component>，故使用渲染函数 h() 以实现动态标签名。 */
+      // tsx 难以使用动态组件 <component>，故使用渲染函数 h() 以实现动态标签名。
       h(
         resolveComponent(props.tag),
         {

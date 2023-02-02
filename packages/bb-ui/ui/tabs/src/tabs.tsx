@@ -2,17 +2,19 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-27 10:18:21
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 10:23:05
+ * @LastEditTime: 2023-02-02 18:41:08
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\tabs.tsx
  * @Description: Tabs 组件
  */
 import { computed, defineComponent, provide, watch, ref, reactive } from 'vue';
+
+import { useNamespace } from '../../shared/hooks/use-namespace';
+import { TabsContextType, TabsContextKey } from '../../shared/tokens/index';
+
 import { tabsProps, TabsProps } from './tabs-type';
 import { TabPaneProps } from '../../tab-pane/src/tab-pane-type';
 import { TabsNavProps } from './components/tabs-nav/tabs-nav-types';
 import './tabs.scss';
-import { useNamespace } from '../../shared/hooks/use-namespace';
-import { TabsContextType, TabsContextKey } from '../../shared/tokens/index';
 
 import TabsNav from './components/tabs-nav/tabs-nav';
 
