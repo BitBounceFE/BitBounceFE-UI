@@ -2,7 +2,7 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-24 15:15:07
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-01-25 11:12:37
+ * @LastEditTime: 2023-02-02 10:34:21
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\row\src\row.tsx
  * @Description: row 组件
  */
@@ -12,11 +12,13 @@ import {
   defineComponent,
   h,
   provide,
-  resolveComponent
+  resolveComponent,
+  toRef
 } from 'vue';
 import { rowProps, RowProps } from './row-types';
 import './row.scss';
 import { useNamespace } from '../../shared/hooks/use-namespace';
+import { RowContextType, rowContextKey } from '../../shared/tokens/index';
 
 export default defineComponent({
   name: 'BRow',
@@ -40,8 +42,8 @@ export default defineComponent({
     /**
      * @description: 使用依赖注入将 gutter 提供给 col 组件
      */
-    const gutter = computed(() => props.gutter);
-    provide('rowContextKey', {
+    const gutter = toRef(props, 'gutter');
+    provide<RowContextType>(rowContextKey, {
       gutter
     });
 

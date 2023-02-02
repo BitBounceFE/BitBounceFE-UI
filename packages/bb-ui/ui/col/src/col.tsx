@@ -2,7 +2,7 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-24 15:14:40
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-01-25 10:28:52
+ * @LastEditTime: 2023-02-02 10:01:03
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\col\src\col.tsx
  * @Description: col 组件
  */
@@ -17,6 +17,7 @@ import {
 import { colProps, ColProps } from './col-types';
 import './col.scss';
 import { useNamespace } from '../../shared/hooks/use-namespace';
+import { RowContextType, rowContextKey } from '../../shared/tokens';
 
 export default defineComponent({
   name: 'BCol',
@@ -25,7 +26,9 @@ export default defineComponent({
     /**
      * @description: 使用依赖注入获取 row 组件的 gutter 值，默认为 0。
      */
-    const { gutter } = inject('rowContextKey', { gutter: computed(() => 0) });
+    const { gutter } = inject<RowContextType>(rowContextKey, {
+      gutter: computed(() => 0)
+    });
     const ns = useNamespace('col');
 
     const colCls = computed(() => {
@@ -49,7 +52,9 @@ export default defineComponent({
     const style = computed(() => {
       const styles: CSSProperties = {};
       if (gutter.value) {
-        styles.paddingLeft = styles.paddingRight = `${gutter.value / 2}px`;
+        styles.paddingLeft = styles.paddingRight = `${
+          (gutter.value as number) / 2
+        }px`;
       }
       return styles;
     });
