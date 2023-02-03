@@ -1,4 +1,4 @@
-      export default {
+export default {
         '/': [
 	  {
 	    "text": "Quick Start",
@@ -63,8 +63,8 @@
 	    "text": "Data Display",
 	    "items": [
 	      {
-	        "text": "Card",
-	        "link": "/en-US/components/card/",
+	        "text": "Progress",
+	        "link": "/en-US/components/progress/",
 	        "status": "100%"
 	      }
 	    ]
@@ -74,5 +74,5 @@
 	    "items": []
 	  }
 	]
-      }
+}
       

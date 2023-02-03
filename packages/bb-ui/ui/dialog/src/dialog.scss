@@ -1,26 +1,28 @@
+@import '../../theme/theme';
+
 .bbui-dialog__mask {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: $bbui-dialog-z-index;
   width: 100%;
   height: 100vh;
-  background-color: rgb(22 21 21 / 30%);
+  background-color: $bbui-dialog-mask;
 }
 
 .bbui-dialog {
   position: absolute;
   right: 0;
   left: 0;
-  padding: 20px;
+  padding: $bbui-dialog-padding;
   margin: 0 auto;
-  background-color: #fff;
-  border-radius: 4px;
+  background-color: $bbui-global-bg-normal;
+  border-radius: $bbui-dialog-border-radius;
 }
 
 .bbui-dialog__header {
-  padding: 20px 0;
-  font-size: 18px;
+  padding: $bbui-dialog-header-padding;
+  font-size: $bbui-font-size-header;
   font-weight: 700;
 }
 

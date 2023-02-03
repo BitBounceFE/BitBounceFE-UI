@@ -1,3 +1,14 @@
+/*
+ * @Date: 2023-02-03 13:29:42
+ * @LastEditors: fxjzz && 1042183935@qq.com
+ * @LastEditTime: 2023-02-03 14:36:43
+ * @FilePath: \BB-UI\packages\bb-ui\ui\theme\theme.scss
+ */
+$bbui-botton-bg-normal: var(--bbui-botton-bg, #fff);
+$bbui-botton-bg-primary: var(--bbui-botton-bg-primary, #409eff);
+$bbui-botton-bg-success: var(--bbui-botton-bg-success, #67c23a);
+$bbui-botton-bg-warning: var(--bbui-botton-bg-warning, #e6a23c);
+$bbui-botton-bg-danger: var(--bbui-botton-bg-danger, #f56c6c);
 $bbui-global-bg: var(--bbui-global-bg, #f3f6f8);
 $bbui-global-bg-normal: var(--bbui-global-bg-normal, #fff);
 $bbui-base-bg: var(--bbui-base-bg, #fff);
@@ -65,8 +76,14 @@ $bbui-feedback-overlay-bg: var(--bbui-feedback-overlay-bg, #464d6e);
 $bbui-feedback-overlay-text: var(--bbui-feedback-overlay-text, #dfe1e6);
 $bbui-embed-search-bg: var(--bbui-embed-search-bg, #f2f5fc);
 $bbui-embed-search-bg-hover: var(--bbui-embed-search-bg-hover, #eef0f5);
-$bbui-float-block-shadow: var(--bbui-float-block-shadow, rgb(94 124 224 / 30%));
-$bbui-highlight-overlay: var(--bbui-highlight-overlay, rgb(255 255 255 / 80%));
+$bbui-float-block-shadow: var(
+  --bbui-float-block-shadow,
+  rgb(94 124 224 / 30%)
+);
+$bbui-highlight-overlay: var(
+  --bbui-highlight-overlay,
+  rgb(255 255 255 / 80%)
+);
 $bbui-range-item-hover-bg: var(--bbui-range-item-hover-bg, #e9edfa);
 $bbui-primary: var(--bbui-primary, #5e7ce0);
 $bbui-primary-hover: var(--bbui-primary-hover, #7693f5);
@@ -98,7 +115,7 @@ $bbui-font-size-lg: var(--bbui-font-size-lg, 14px);
 $bbui-font-title-weight: var(--bbui-font-title-weight, bold);
 $bbui-font-content-weight: var(--bbui-font-content-weight, normal);
 $bbui-line-height-base: var(--bbui-line-height-base, 1.5);
-$bbui-border-radius: var(--bbui-border-radius, 2px);
+$bbui-border-radius: var(--bbui-border-radius, 4px);
 $bbui-border-radius-feedback: var(--bbui-border-radius-feedback, 4px);
 $bbui-border-radius-card: var(--bbui-border-radius-card, 6px);
 $bbui-shadow-length-base: var(--bbui-shadow-length-base, 0 1px 4px 0);
@@ -148,4 +165,10 @@ $bbui-z-index-pop-up: var(--bbui-z-index-pop-up, 1060);
 $bbui-z-index-dropdown: var(--bbui-z-index-dropdown, 1052);
 $bbui-z-index-modal: var(--bbui-z-index-modal, 1050);
 $bbui-z-index-drawer: var(--bbui-z-index-drawer, 1040);
-$bbui-z-index-framework: var(--bbui-z-index-framework, 1000)
+$bbui-z-index-framework: var(--bbui-z-index-framework, 1000);
+$bbui-dialog-z-index: var(--bbui-dialog-z-index, 9999);
+$bbui-dialog-mask: var(--bbui-dialog-mask, rgb(127 127 127 / 50%));
+$bbui-dialog-padding: var(--bbui-dialog-padding, (28px 24px));
+$bbui-dialog-border-radius: $bbui-border-radius;
+$bbui-dialog-header-padding: var(bbui-dialog-header-padding, (16px 0));
+$bbui-font-size-header: var(bbui-font-size-header, 20px);

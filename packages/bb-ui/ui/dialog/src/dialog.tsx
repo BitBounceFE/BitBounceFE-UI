@@ -24,43 +24,43 @@ export default defineComponent({
     //控制弹窗打开与否
     const isShow = ref(false);
     // 事件延迟句柄
-    const handleDelay:(fn:Function,delay:number)=>void=(fn:Function,delay:number)=>{
-         setTimeout(()=>{
-           fn()
-         },delay)
+    const handleDelay: (fn: Function, delay: number) => void = (fn: Function, delay: number) => {
+      setTimeout(() => {
+        fn()
+      }, delay)
     }
     //打开弹窗
-    const openDialog:()=>void=()=>{
-      if(props.openDelay>0){
-        handleDelay(()=>{
-          isShow.value=true
+    const openDialog: () => void = () => {
+      if (props.openDelay > 0) {
+        handleDelay(() => {
+          isShow.value = true
           emit("open")
-        },props.openDelay)
-      }else{
-        isShow.value=true
+        }, props.openDelay)
+      } else {
+        isShow.value = true
         emit('open')
-      } 
+      }
     }
     //延迟关弹窗
-    const closeDialogDelay:(closeDelay:number)=>void=(closeDelay:number)=>{
-      if(closeDelay>0){
-        handleDelay(()=>{
-          isShow.value=false
+    const closeDialogDelay: (closeDelay: number) => void = (closeDelay: number) => {
+      if (closeDelay > 0) {
+        handleDelay(() => {
+          isShow.value = false
           emit("close")
-        },closeDelay)
-      }else{
-        isShow.value=false
+        }, closeDelay)
+      } else {
+        isShow.value = false
         emit('close')
-      } 
+      }
     }
-        //关闭弹窗
-      const closeDialog:()=>void=()=>{
-          if(props.beforeClose){
-            props.beforeClose(()=>{
-              closeDialogDelay(props.closeDelay)
-            })
-          }else closeDialogDelay(props.closeDelay);
-        }
+    //关闭弹窗
+    const closeDialog: () => void = () => {
+      if (props.beforeClose) {
+        props.beforeClose(() => {
+          closeDialogDelay(props.closeDelay)
+        })
+      } else closeDialogDelay(props.closeDelay);
+    }
 
     watch(
       () => props.vModel,
