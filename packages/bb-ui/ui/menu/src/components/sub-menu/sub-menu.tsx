@@ -8,7 +8,7 @@
  */
 import { defineComponent, computed } from 'vue';
 
-import { useNamespace } from '../../../shared/hooks/use-namespace';
+import { useNamespace } from '../../../../shared/hooks/use-namespace';
 
 import { SubMenuProps, subMenuProps } from './sub-menu-types';
 

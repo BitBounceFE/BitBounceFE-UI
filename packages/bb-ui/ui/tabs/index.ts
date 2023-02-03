@@ -2,7 +2,7 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-27 10:17:58
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-01-27 16:31:26
+ * @LastEditTime: 2023-02-03 10:05:04
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\index.ts
  * @Description: Tabs 入口文件
  *
@@ -10,13 +10,30 @@
  */
 import type { App } from 'vue';
 import Tabs from './src/tabs';
+import TabPane from './src/components/tab-pane/tab-pane';
 
-const BTabs = {
-  install: function (app: App): void {
+export const BTabs = {
+  title: 'Tabs 选项卡',
+  category: '导航',
+  status: '100%',
+  install(app: App): void {
     app.component(Tabs.name, Tabs);
+    app.component(TabPane.name, TabPane);
+  }
+};
+export const BTabPane = {
+  install: function (app: App): void {
+    app.component(TabPane.name, TabPane);
   },
-  ...Tabs
+  ...TabPane
 };
 
-export default BTabs;
-export { BTabs };
+export default {
+  title: 'Tabs 选项卡',
+  category: '导航',
+  status: '100%',
+  install(app: App): void {
+    app.component(Tabs.name, Tabs);
+    app.component(TabPane.name, TabPane);
+  }
+};

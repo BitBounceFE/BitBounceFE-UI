@@ -8,8 +8,11 @@
  */
 import { defineComponent, inject, computed, toRefs } from 'vue';
 
-import { useNamespace } from '../../../shared/hooks/use-namespace';
-import { MenuContextType, menuContextKey } from '../../../shared/tokens/index';
+import { useNamespace } from '../../../../shared/hooks/use-namespace';
+import {
+  MenuContextType,
+  menuContextKey
+} from '../../../../shared/tokens/index';
 
 import { menuItemProps, MenuItemProps } from './menu-item-types';
 

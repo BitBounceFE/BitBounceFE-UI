@@ -2,8 +2,8 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-24 15:14:40
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 16:32:11
- * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\col\src\col.tsx
+ * @LastEditTime: 2023-02-03 09:12:49
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\layout\src\components\col\src\col.tsx
  * @Description: col 组件
  */
 import {
@@ -15,8 +15,8 @@ import {
   resolveComponent
 } from 'vue';
 
-import { useNamespace } from '../../shared/hooks/use-namespace';
-import { RowContextType, rowContextKey } from '../../shared/tokens';
+import { useNamespace } from '../../../../shared/hooks/use-namespace';
+import { RowContextType, rowContextKey } from '../../../../shared/tokens';
 
 import { colProps, ColProps } from './col-types';
 import './col.scss';

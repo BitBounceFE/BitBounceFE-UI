@@ -12,7 +12,7 @@ import { useNamespace } from '../../shared/hooks/use-namespace';
 import { TabsContextType, TabsContextKey } from '../../shared/tokens/index';
 
 import { tabsProps, TabsProps } from './tabs-type';
-import { TabPaneProps } from '../../tab-pane/src/tab-pane-type';
+import { TabPaneProps } from './components/tab-pane/tab-pane-type';
 import { TabsNavProps } from './components/tabs-nav/tabs-nav-types';
 import './tabs.scss';
 
