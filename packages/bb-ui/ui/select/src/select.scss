@@ -1,3 +1,5 @@
+@import '../../style-var/index';
+
 .bbui-select {
   width: 200px;
 
@@ -6,37 +8,39 @@
 
   input {
     width: 100%;
-    padding-left: 5px;
+    padding-left: 12px;
     cursor: pointer;
-    border: 1px solid rgb(221 224 231);
+    border: 1px solid $bbui-input-border-color;
 
     &:focus {
-      border: 1px solid rgb(50 222 235);
+      border: 1px solid $bbui-input-focus-border-color;
     }
   }
 
   .bbui-select-content {
+    position: relative;
     width: 100%;
+    margin-top: 12px;
 
     // height: 50px;
     // background-color: pink;
-    margin-top: 5px;
-    border: 1px solid rgb(221 224 231);
-    border-radius: 1px solid #ccc;
+    border: 1px solid $bbui-input-border-color;
+    border-radius: $bbui-input-border-radius;
 
     li {
-      height: 30px;
+      height: $bbui-select-height;
       padding-left: 5px;
-      line-height: 30px;
+      margin-top: 0;
+      line-height: $bbui-select-line-height;
       list-style: none;
 
       &:hover {
-        background-color: #f0f0f0;
+        background-color: $bbui-select-hover-color;
       }
     }
 
     li.li-disabled {
-      color: rgb(174 174 174);
+      color: $bbui-li-disabled;
       cursor: not-allowed;
     }
   }

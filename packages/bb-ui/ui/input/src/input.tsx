@@ -1,9 +1,9 @@
 /*
  * @Author: syk syk@qq.com
  * @Date: 2023-01-27 21:15:29
- * @LastEditors: syk syk@qq.com
- * @LastEditTime: 2023-02-01 15:02:11
- * @FilePath: \组件库\BitBounceFE-UI\packages\bb-ui\ui\input\src\input.tsx
+ * @LastEditors: fxjzz && 1042183935@qq.com
+ * @LastEditTime: 2023-02-03 15:57:35
+ * @FilePath: \BB-UI\packages\bb-ui\ui\input\src\input.tsx
  * @Description: input组件开发
  * Copyright (c) 2023 by syk syk@qq.com, All Rights Reserved
  */
