@@ -1,4 +1,4 @@
-export default {
+      export default {
         '/': [
 	  {
 	    "text": "Quick Start",
@@ -74,5 +74,5 @@ export default {
 	    "items": []
 	  }
 	]
-}
+      }
       
