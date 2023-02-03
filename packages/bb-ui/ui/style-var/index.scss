@@ -1,9 +1,18 @@
 @import '../theme/theme';
 
 $cls-prefix: bbui;
-$bbui-dialog-z-index: var(--bbui-dialog-z-index, 9999);
+$bbui-clean-color: var(--bbui-clean-color, #fff);
+$bbui-disabled: var(--bbui-disabled, darkgrey);
+$bbui-z-index: var(--bbui-dialog-z-index, 9999);
 $bbui-dialog-mask: var(--bbui-dialog-mask, rgb(127 127 127 / 50%));
 $bbui-dialog-padding: var(--bbui-dialog-padding, (28px 24px));
 $bbui-dialog-border-radius: $bbui-border-radius;
-$bbui-dialog-header-padding: var(bbui-dialog-header-padding, (16px 0));
-$bbui-font-size-header: var(bbui-font-size-header, 20px);
+$bbui-dialog-header-padding: var(--bbui-dialog-header-padding, (16px 0));
+$bbui-font-size-header: var(--bbui-font-size-header, 20px);
+$bbui-menu-hoverbg: var(--bbui-menu-hoverbg, #ecf5ff);
+$bbui-menu-border: var(--bbui-menu-border, #dcdfe6);
+$bbui-menu-brand: var(--bbui-menu-brand, #5e7ce0);
+$bbui-menu-line-height: var(--bbui-menu-line-height, 24px);
+$bbui-progress-bg: var(--bbui-progress-bg, rgb(231 234 242));
+$bbui-message-bg: var(--bbui-message-bg, rgb(22 21 21 / 10%));
+$bbui-message-font-size: var(--bbui-message-font-size, 24px);

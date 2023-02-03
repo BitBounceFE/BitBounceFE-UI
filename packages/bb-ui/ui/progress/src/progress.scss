@@ -1,4 +1,4 @@
-// 后边组件主题环节会通过此文件替换 下边的两个变量
+// 后边组件主题环节会通过此文件替换 下边的变量
 @import '../../style-var/index';
 
 .#{$cls-prefix}-progress {
@@ -23,7 +23,7 @@
 
   // color: rgb(231,234,242);
   // background: rgb(231,234,242);
-  background-color: rgb(231 234 242);
+  background-color: $bbui-progress-bg;
   border-radius: 10px;
 }
 

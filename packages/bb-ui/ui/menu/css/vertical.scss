@@ -1,23 +1,23 @@
 // 垂直的menu的样式
 .#{$cls-prefix}-menu__vertical {
-  border-right: 1px solid rgb(27 152 110);
+  border-right: 1px solid $bbui-menu-border;
 
   .#{$cls-prefix}-menu-item {
     // 为了为after伪元素提供定位
     position: relative;
     padding: 10px 20px;
     margin-top: 0;
-    line-height: 24px;
+    line-height: $bbui-menu-line-height;
     cursor: pointer;
 
     &:hover {
       background-color: #ecf5ff;
-      border-right: 2px solid #5e7ce0;
+      border-right: 2px solid $bbui-menu-brand;
     }
   }
 
   .#{$cls-prefix}-menu-item--disabled {
-    color: darkgrey;
+    color: $bbui-disabled;
     cursor: not-allowed;
 
     &:hover {
