@@ -1,6 +1,5 @@
-@import '../theme/theme';
-
 $cls-prefix: bbui;
+$bbui-border-radius: var(--bbui-border-radius, 2px);
 $bbui-clean-color: var(--bbui-clean-color, #fff);
 $bbui-disabled: var(--bbui-disabled, darkgrey);
 $bbui-z-index: var(--bbui-dialog-z-index, 9999);
@@ -18,7 +17,6 @@ $bbui-message-bg: var(--bbui-message-bg, rgb(22 21 21 / 10%));
 $bbui-message-font-size: var(--bbui-message-font-size, 24px);
 $bbui-input-focus-border-color: var(--bbui-input-focus-border-color, #409eff);
 $bbui-input-border-radius: var(--bbui-input-border-radius, 4px);
-$bbui-input-bg: var(--bbui-input-bg, #fff);
 $bbui-input-border-color: var(--bbui-input-border-color, #dcdfe6);
 $bbui-input-height-lg: var(--bbui-input-height-lg, 40px);
 $bbui-input-height-md: var(--bbui-input-height-md, 30px);
@@ -30,4 +28,3 @@ $bbui-select-line-height: 30px;
 $bbui-select-height: 30px;
 $bbui-upload-line-height: 30px;
 $bbui-upload-li-height: 30px;
-$bbui-li-disabled: rgb(174 174 174);
