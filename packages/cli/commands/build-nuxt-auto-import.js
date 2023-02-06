@@ -24,10 +24,10 @@ exports.createNuxtPlugin = () => {
 
 exports.createAutoImportedComponent = (dirName) => {
   const importStyle = fsExtra.pathExistsSync(
-      path.resolve(outputDir, `${dirName}/style.css`)
-    ) ?
-    `import '../../${dirName}/style.css' \n` :
-    ``;
+    path.resolve(outputDir, `${dirName}/style.css`)
+  )
+    ? `import '../../${dirName}/style.css' \n`
+    : ``;
 
   const comps = require(path.resolve(outputDir, `${dirName}/index.es.js`));
 

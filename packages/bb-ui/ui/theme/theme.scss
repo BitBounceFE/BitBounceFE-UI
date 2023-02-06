@@ -65,8 +65,14 @@ $bbui-feedback-overlay-bg: var(--bbui-feedback-overlay-bg, #464d6e);
 $bbui-feedback-overlay-text: var(--bbui-feedback-overlay-text, #dfe1e6);
 $bbui-embed-search-bg: var(--bbui-embed-search-bg, #f2f5fc);
 $bbui-embed-search-bg-hover: var(--bbui-embed-search-bg-hover, #eef0f5);
-$bbui-float-block-shadow: var(--bbui-float-block-shadow, rgb(94 124 224 / 30%));
-$bbui-highlight-overlay: var(--bbui-highlight-overlay, rgb(255 255 255 / 80%));
+$bbui-float-block-shadow: var(
+  --bbui-float-block-shadow,
+  rgb(94 124 224 / 30%)
+);
+$bbui-highlight-overlay: var(
+  --bbui-highlight-overlay,
+  rgb(255 255 255 / 80%)
+);
 $bbui-range-item-hover-bg: var(--bbui-range-item-hover-bg, #e9edfa);
 $bbui-primary: var(--bbui-primary, #5e7ce0);
 $bbui-primary-hover: var(--bbui-primary-hover, #7693f5);

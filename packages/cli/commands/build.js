@@ -1,16 +1,11 @@
 const path = require('path');
 const fs = require('fs');
 const fsExtra = require('fs-extra');
-const {
-  defineConfig,
-  build
-} = require('vite');
+const { defineConfig, build } = require('vite');
 const vue = require('@vitejs/plugin-vue');
 const vueJsx = require('@vitejs/plugin-vue-jsx');
 const nuxtBuild = require('./build-nuxt-auto-import');
-const {
-  isReadyToRelease
-} = require('../shared/utils');
+const { isReadyToRelease } = require('../shared/utils');
 
 const entryDir = path.resolve(__dirname, '../../bb-ui/ui');
 const outputDir = path.resolve(__dirname, '../../bb-ui/build');

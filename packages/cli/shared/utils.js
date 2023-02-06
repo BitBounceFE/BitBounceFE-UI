@@ -105,10 +105,13 @@ const parseComponentInfo = (name) => {
     plugins: ['typescript']
   });
   traverse(ast, {
-    ExportDefaultDeclaration({ node }) {
+    ExportNamedDeclaration({ node }) {
       hasExportDefault = true;
-      if (node.declaration && node.declaration.properties) {
-        const properties = node.declaration.properties;
+      if (
+        node?.declaration?.declarations &&
+        node.declaration.declarations[0].init.properties
+      ) {
+        const properties = node.declaration.declarations[0].init.properties;
         properties.forEach((pro) => {
           if (pro.type === 'ObjectProperty') {
             componentInfo[pro.key.name] = pro.value.value;
