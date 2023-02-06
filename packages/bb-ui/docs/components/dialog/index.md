@@ -1,10 +1,10 @@
 # Dialog 对话框
 
-+ //TODO
++ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 
 ## 何时使用
 
-+ 关闭按钮未完成
++ 在保留当前页面状态的情况下，告知用户并承载相关操作。
 
 ## 基本用法
 
@@ -17,7 +17,7 @@
      click to open the Dialog
     </button>
     <b-dialog  :v-model="dialogVisible" :title="header" @open="open" @close="close"
-     :before-close="beforeClose" :close-delay="openDelay">
+     :before-close="beforeClose" :close-delay="openDelay" @closed="closed" @opened="opened">
     <span>This is a message</span>
     <template #footer>
       <span class="dialog-footer">
@@ -25,7 +25,7 @@
         <button @click="dialogVisible = false"> Confirm</button>
       </span>
     </template>
-    <b-dialog>
+    </b-dialog>
 
 
 </template>
@@ -42,6 +42,12 @@
    const close=()=>{
     console.log('close')
   }
+    const opened=()=>{
+    console.log('opened')
+  }
+     const closed=()=>{
+    console.log('closed')
+  }
    const beforeClose=(done)=>{
     return setTimeout(()=>{
       console.log('beforeClose')
@@ -50,7 +56,7 @@
    }
    const openDelay=ref(1000)
     return {
-      header,dialogVisible,open,close,openDelay,beforeClose
+      header,dialogVisible,open,close,openDelay,beforeClose,opened,closed
     }
   }
 }
@@ -100,3 +106,5 @@
 | ---- | ---- | ---- | 
 | open | Dialog 打开的回调 |  —    |
 | close | Dialog 关闭的回调 |  —    | 
+| opened | Dialog 打开动画结束时的回调 |  —    |
+| closed | Dialog 关闭动画结束时的回调 |  —    | 

@@ -1,4 +1,10 @@
-import { defineComponent, computed, ref, watch } from 'vue';
+/*
+ * @Date: 2023-02-06 19:02:38
+ * @LastEditors: Diachao 3430737927@qq.com
+ * @LastEditTime: 2023-02-06 19:30:55
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\dialog\src\dialog.tsx
+ */
+import { defineComponent, computed, ref, watch, Transition } from 'vue';
 
 import { useNamespace } from '../../shared/hooks/use-namespace';
 
@@ -70,7 +76,14 @@ export default defineComponent({
         });
       } else closeDialogDelay(props.closeDelay);
     };
-
+    //打开动画结束时调用
+    const afterEnter=()=>{
+      emit("opened")
+    }
+      //关闭动画结束时调用
+     const afterLeave=()=>{
+        emit("closed")
+      }
     watch(
       () => props.vModel,
       (newValue, oldValue) => {
@@ -82,10 +95,11 @@ export default defineComponent({
     );
 
     return () => (
+      <Transition onAfterEnter={afterEnter} onAfterLeave={afterLeave}>
       <div class={ns.e('mask')} v-show={isShow.value}>
         <div class={ns.b()} style={dialogStyle}>
           <div class={ns.e('header')} v-show={bHeader}>
-            {(slots.header && slots.header()) || props.title}
+                {(slots.header && slots.header()) || props.title}
           </div>
           <div class={ns.e('default')}>{slots.default && slots.default()}</div>
           <div class={ns.e('footer')} v-show={bFooter}>
@@ -93,6 +107,7 @@ export default defineComponent({
           </div>
         </div>
       </div>
+      </Transition>
     );
   }
 });

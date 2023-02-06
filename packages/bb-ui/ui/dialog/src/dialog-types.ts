@@ -79,6 +79,8 @@ export type DialogProps = ExtractPropTypes<typeof dialogProps>;
 export const dialogEmits = {
   open: () => true,
   close: () => true,
+  opened: () => true,
+  closed: () => true,
   openAutoFocus: () => true,
   closeAutoFocus: () => true
 };
