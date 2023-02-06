@@ -1,8 +1,6 @@
 const path = require('path');
 const fsExtra = require('fs-extra');
-const {
-  omit
-} = require('lodash');
+const { omit } = require('lodash');
 const shell = require('shelljs');
 
 const outputDir = path.resolve(__dirname, '../../bb-ui/build');
@@ -34,9 +32,7 @@ const createPackageJson = async (version) => {
   );
 };
 
-exports.release = async ({
-  version
-}) => {
+exports.release = async ({ version }) => {
   await createPackageJson(version);
   shell.sed('-i', 'workspace:', '', path.resolve(outputDir, 'package.json'));
   shell.cp('-R', path.resolve(__dirname, '../../bb-ui/README.md'), outputDir);

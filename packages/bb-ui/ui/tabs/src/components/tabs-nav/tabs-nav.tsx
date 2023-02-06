@@ -2,14 +2,16 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-30 12:11:11
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-01-30 13:59:25
+ * @LastEditTime: 2023-02-02 18:42:23
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\components\tabs-nav\tabs-nav.tsx
  * @Description: Tabs Nav 组件
  */
 import { defineComponent, inject } from 'vue';
-import { tabsNavProps, TabsNavProps } from './tabs-nav-types';
-import { TabsContextType } from '../../tabs-type';
+
 import { useNamespace } from '../../../../shared/hooks/use-namespace';
+import { TabsContextType } from '../../../../shared/tokens/index';
+
+import { tabsNavProps, TabsNavProps } from './tabs-nav-types';
 import './tabs-nav.scss';
 
 export default defineComponent({

@@ -12,7 +12,13 @@
 	  },
 	  {
 	    "text": "General",
-	    "items": []
+	    "items": [
+	      {
+	        "text": "Button",
+	        "link": "/en-US/components/button/",
+	        "status": "100%"
+	      }
+	    ]
 	  },
 	  {
 	    "text": "Navigation",
@@ -20,6 +26,11 @@
 	      {
 	        "text": "Menu",
 	        "link": "/en-US/components/menu/",
+	        "status": "100%"
+	      },
+	      {
+	        "text": "Tabs",
+	        "link": "/en-US/components/tabs/",
 	        "status": "100%"
 	      }
 	    ]
@@ -63,15 +74,21 @@
 	    "text": "Data Display",
 	    "items": [
 	      {
-	        "text": "Card",
-	        "link": "/en-US/components/card/",
+	        "text": "Progress",
+	        "link": "/en-US/components/progress/",
 	        "status": "100%"
 	      }
 	    ]
 	  },
 	  {
 	    "text": "Layout",
-	    "items": []
+	    "items": [
+	      {
+	        "text": "Layout",
+	        "link": "/en-US/components/layout/",
+	        "status": "100%"
+	      }
+	    ]
 	  }
 	]
       }

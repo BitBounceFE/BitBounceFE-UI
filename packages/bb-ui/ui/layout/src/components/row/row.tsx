@@ -2,8 +2,8 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-24 15:15:07
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-01-25 11:12:37
- * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\row\src\row.tsx
+ * @LastEditTime: 2023-02-03 09:16:57
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\layout\src\components\row\row.tsx
  * @Description: row 组件
  */
 import {
@@ -12,11 +12,15 @@ import {
   defineComponent,
   h,
   provide,
-  resolveComponent
+  resolveComponent,
+  toRef
 } from 'vue';
+
+import { useNamespace } from '../../../../shared/hooks/use-namespace';
+import { RowContextType, rowContextKey } from '../../../../shared/tokens/index';
+
 import { rowProps, RowProps } from './row-types';
 import './row.scss';
-import { useNamespace } from '../../shared/hooks/use-namespace';
 
 export default defineComponent({
   name: 'BRow',
@@ -37,16 +41,14 @@ export default defineComponent({
       return styles;
     });
 
-    /**
-     * @description: 使用依赖注入将 gutter 提供给 col 组件
-     */
-    const gutter = computed(() => props.gutter);
-    provide('rowContextKey', {
+    // 使用依赖注入将 gutter 提供给 col 组件
+    const gutter = toRef(props, 'gutter');
+    provide<RowContextType>(rowContextKey, {
       gutter
     });
 
     return () =>
-      /* tsx 难以使用动态组件 <component>，故使用渲染函数 h() 以实现动态标签名。 */
+      // tsx 难以使用动态组件 <component>，故使用渲染函数 h() 以实现动态标签名。
       h(
         resolveComponent(props.tag),
         {

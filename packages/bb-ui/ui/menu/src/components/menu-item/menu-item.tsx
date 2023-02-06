@@ -1,25 +1,28 @@
 /*
  * @Author: xuepeng184 1831919639@qq.com
  * @Date: 2023-01-28 22:18:18
- * @LastEditors: xuepeng184 1831919639@qq.com
- * @LastEditTime: 2023-01-30 16:10:39
- * @FilePath: \bbui\packages\bb-ui\ui\menu\components\menu-item\menu-item.tsx
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-02 18:00:36
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\menu\components\menu-item\menu-item.tsx
+ * @Description: MenuItem 子组件
  */
+import { defineComponent, inject, computed, toRefs } from 'vue';
 
-import { defineComponent, inject, Ref, computed, toRefs } from 'vue';
+import { useNamespace } from '../../../../shared/hooks/use-namespace';
+import {
+  MenuContextType,
+  menuContextKey
+} from '../../../../shared/tokens/index';
+
 import { menuItemProps, MenuItemProps } from './menu-item-types';
-import { useNamespace } from '../../../shared/hooks/use-namespace';
-
-const ns = useNamespace('menu-item');
 
 export default defineComponent({
   name: 'BMenuItem',
   props: menuItemProps,
   setup(props: MenuItemProps, ctx) {
-    //  竖直还是水平模式，使用Ref定义防止.value报错
-    const mode = inject('mode') as Ref<'vertical' | 'horizontal'>;
+    const { mode } = inject<MenuContextType>(menuContextKey); // 竖直还是水平模式
 
+    const ns = useNamespace('menu-item');
     //  是否禁用
     const { disabled } = toRefs(props);
     // 计算出根节点的类名
@@ -29,6 +32,7 @@ export default defineComponent({
         [`${ns.b()}--disabled`]: disabled.value
       };
     });
+
     return () => {
       return mode.value === 'horizontal' ? (
         <li class={menuItemClass.value}>

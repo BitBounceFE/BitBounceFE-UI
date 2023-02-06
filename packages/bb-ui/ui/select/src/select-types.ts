@@ -1,12 +1,17 @@
 import type { ExtractPropTypes } from 'vue';
 
+export type selectOptionType = {
+  name: string;
+  value: string;
+};
+
 export const selectProps = {
   modelValue: {
     type: String,
     default: ''
   },
   options: {
-    type: Array
+    type: Array<selectOptionType>
   },
   disabled: {
     type: Boolean,

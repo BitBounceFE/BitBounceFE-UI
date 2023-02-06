@@ -1,4 +1,5 @@
 import type { ExtractPropTypes } from 'vue';
+
 export const dialogProps = {
   vModel: {
     type: Boolean,
@@ -71,7 +72,6 @@ export const dialogProps = {
     default: false
   }
 };
-
 // 获取 props 类型
 export type DialogProps = ExtractPropTypes<typeof dialogProps>;
 

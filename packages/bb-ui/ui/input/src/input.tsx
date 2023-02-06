@@ -1,17 +1,19 @@
 /*
  * @Author: syk syk@qq.com
  * @Date: 2023-01-27 21:15:29
- * @LastEditors: syk syk@qq.com
- * @LastEditTime: 2023-02-01 15:02:11
- * @FilePath: \组件库\BitBounceFE-UI\packages\bb-ui\ui\input\src\input.tsx
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-02 17:56:14
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\input\src\input.tsx
  * @Description: input组件开发
  * Copyright (c) 2023 by syk syk@qq.com, All Rights Reserved
  */
-
 import { defineComponent, shallowRef } from 'vue';
+
+import { useNamespace } from '../../shared/hooks/use-namespace';
+
 import { inputProps, InputProps } from './input-types';
 import './input.scss';
-import { useNamespace } from '../../shared/hooks/use-namespace';
+
 export default defineComponent({
   name: 'BInput',
   props: inputProps,
@@ -33,14 +35,13 @@ export default defineComponent({
       ctx.emit('change', (e.target as HTMLInputElement).value);
     };
 
-    const showType = props.showPassword ? 'password' : 'text';
-    const ns = useNamespace('input');
-
     // ccui-card ccui-card__nse ccui-card--nsm ccui-card__em--open
     // console.log(ns.b(), ns.e('nse'), ns.m('nsm'), ns.em('em', 'open'));
-
+    const showType = props.showPassword ? 'password' : 'text';
+    const ns = useNamespace('input');
     const disaClass = `${ns.b()}-disabled`;
     const boxClass = `${ns.b()}-${props.size}`;
+
     return () => (
       <div class={boxClass}>
         <input
