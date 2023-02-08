@@ -5,6 +5,10 @@ export const dialogProps = {
     type: Boolean,
     default: undefined
   },
+  modelValue: {
+    type: Boolean,
+    default: false
+  },
   title: {
     type: String
   },

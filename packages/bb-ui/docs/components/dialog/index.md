@@ -16,7 +16,7 @@
      <button @click="dialogVisible=true">
      click to open the Dialog
     </button>
-    <b-dialog  :v-model="dialogVisible" :title="header" @open="open" @close="close"
+    <b-dialog  :model-value="dialogVisible" :title="header" @open="open" @close="close"
      :before-close="beforeClose" :close-delay="openDelay" @closed="closed" @opened="opened">
     <span>This is a message</span>
     <template #footer>

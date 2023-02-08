@@ -1,5 +1,5 @@
-import { shallowMount, mount } from '@vue/test-utils';
-import { nextTick } from "vue"
+import { mount } from '@vue/test-utils';
+import { nextTick, h } from "vue"
 import { expect, test, describe, vi } from 'vitest';
 import { BDialog } from '../index';
 import Dialog from '../src/dialog';
@@ -24,14 +24,14 @@ describe('BDialog.vue', async () => {
     const wrapper = mount(Dialog, {
       props: {
         title: 'header title',
-        width: "50%",
-        top: "15vh"
+        width: "60%",
+        top: "20vh"
       }
     })
     await nextTick()
     expect(wrapper.html()).toContain("header title")
-    expect(wrapper.html()).toContain("50%")
-    expect(wrapper.html()).toContain("15vh")
+    expect(wrapper.html()).toContain("60%")
+    expect(wrapper.html()).toContain("20vh")
 
   });
 
@@ -45,16 +45,55 @@ describe('BDialog.vue', async () => {
     })
     await wrapper.setProps({ vModel: true })
     expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(false)
-
   });
 
-  //props的function测试TODO
-  test('dialog demo has created successfully', async () => {
+  //props的function测试
+  test('function props test', async () => {
+    const beforeClose = vi.fn()
     const wrapper = mount(Dialog, {
       props: {
-        openDelay: 1000,
-        closeDelay: 1000
+        beforeClose: beforeClose
       }
     })
+    await nextTick()
+    await wrapper.setProps({ modelValue: true })
+    expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(true)
+    await wrapper.setProps({ modelValue: false })
+    expect(beforeClose).toHaveBeenCalled()
   });
+
+  //emit test
+  test('emit test', async () => {
+    const wrapper = mount(Dialog)
+    await nextTick()
+    //触发open
+    await wrapper.setProps({ modelValue: true })
+    expect(wrapper.emitted().open).toBeTruthy()
+    //触发close
+    await wrapper.setProps({ modelValue: false })
+    expect(wrapper.emitted().close).toBeTruthy()
+    //触发opened
+    wrapper.vm.$emit('opened')
+    expect(wrapper.emitted().opened).toBeTruthy()
+    //触发closed
+    wrapper.vm.$emit('closed')
+    expect(wrapper.emitted().closed).toBeTruthy()
+  })
+
+
+  //slots test
+  test('emit test', async () => {
+    const wrapper = mount(Dialog, {
+      slots: {
+        default: 'Default',
+        header: h('h1', {}, 'i am header slot'),
+        footer: h("div", {}, 'i am footer slot')
+      }
+    })
+    await nextTick()
+    expect(wrapper.html()).toContain('Default')
+    expect(wrapper.html()).toContain('<h1>i am header slot</h1>')
+    expect(wrapper.html()).toContain('<div>i am footer slot</div>')
+  })
+
 })

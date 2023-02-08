@@ -30,7 +30,9 @@ export default defineComponent({
     const bFooter = computed(() => {
       return slots.footer;
     });
-
+    const modelShow = computed(() => {
+      return props.vModel === undefined ? props.modelValue : props.vModel
+    });
     // 控制弹窗打开与否
     const isShow = ref(false);
     // 事件延迟句柄
@@ -77,36 +79,37 @@ export default defineComponent({
       } else closeDialogDelay(props.closeDelay);
     };
     //打开动画结束时调用
-    const afterEnter=()=>{
+    const afterEnter = () => {
       emit("opened")
     }
-      //关闭动画结束时调用
-     const afterLeave=()=>{
-        emit("closed")
-      }
+    //关闭动画结束时调用
+    const afterLeave = () => {
+      emit("closed")
+    }
     watch(
-      () => props.vModel,
-      (newValue, oldValue) => {
+      () => modelShow.value
+      ,
+      (newvModel, oldvModel) => {
         // 打开弹窗时
-        if (newValue === true) openDialog();
+        if (newvModel === true) openDialog();
         // 关闭弹窗时
-        if (newValue === false) closeDialog();
+        if (newvModel === false) closeDialog();
       }
     );
 
     return () => (
       <Transition onAfterEnter={afterEnter} onAfterLeave={afterLeave}>
-      <div class={ns.e('mask')} v-show={isShow.value}>
-        <div class={ns.b()} style={dialogStyle}>
-          <div class={ns.e('header')} v-show={bHeader}>
-                {(slots.header && slots.header()) || props.title}
-          </div>
-          <div class={ns.e('default')}>{slots.default && slots.default()}</div>
-          <div class={ns.e('footer')} v-show={bFooter}>
-            {slots.footer && slots.footer()}
+        <div class={ns.e('mask')} v-show={isShow.value}>
+          <div class={ns.b()} style={dialogStyle}>
+            <div class={ns.e('header')} v-show={bHeader}>
+              {(slots.header && slots.header()) || props.title}
+            </div>
+            <div class={ns.e('default')}>{slots.default && slots.default()}</div>
+            <div class={ns.e('footer')} v-show={bFooter}>
+              {slots.footer && slots.footer()}
+            </div>
           </div>
         </div>
-      </div>
       </Transition>
     );
   }
