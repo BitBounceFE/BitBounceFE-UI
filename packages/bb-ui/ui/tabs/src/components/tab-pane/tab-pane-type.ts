@@ -2,8 +2,8 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-27 14:14:49
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-01-28 19:24:12
- * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tab-pane\src\tab-pane-type.ts
+ * @LastEditTime: 2023-02-10 14:17:28
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\components\tab-pane\tab-pane-type.ts
  * @Description: Tab Pane Type
  *
  * Copyright (c) 2023 by Xia Yuang xiayuang@foxmail.com, All Rights Reserved.
@@ -20,7 +20,8 @@ export const tabPaneProps = {
     default: false
   },
   name: {
-    type: String
+    type: String,
+    required: true
   },
   closable: {
     type: Boolean,
