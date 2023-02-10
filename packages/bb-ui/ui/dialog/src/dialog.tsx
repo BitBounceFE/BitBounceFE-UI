@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-02-06 19:30:55
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\dialog\src\dialog.tsx
  */
-import { defineComponent, computed, ref, watch, Transition } from 'vue';
+import { defineComponent, computed, ref, watch, Transition, onMounted, defineEmits } from 'vue';
 
 import { useNamespace } from '../../shared/hooks/use-namespace';
 
@@ -23,15 +23,13 @@ export default defineComponent({
       width: props.width,
       'margin-top': props.top
     };
-
+    //mask class
+    let maskClass = ref(ns.e('mask'))
     const bHeader = computed(() => {
       return slots.header || props.title;
     });
     const bFooter = computed(() => {
       return slots.footer;
-    });
-    const modelShow = computed(() => {
-      return props.vModel === undefined ? props.modelValue : props.vModel
     });
     // 控制弹窗打开与否
     const isShow = ref(false);
@@ -44,6 +42,16 @@ export default defineComponent({
         fn();
       }, delay);
     };
+    //是否全屏
+    if (props.fullscreen) {
+      dialogStyle['width'] = '100vw'
+      dialogStyle['height'] = '100vw'
+      dialogStyle['margin-top'] = '0'
+    }
+    //是否有遮罩层
+    if (!props.modal) {
+      maskClass.value += ' ' + ns.m('mask')
+    }
     // 打开弹窗
     const openDialog: () => void = () => {
       if (props.openDelay > 0) {
@@ -72,23 +80,41 @@ export default defineComponent({
     };
     // 关闭弹窗
     const closeDialog: () => void = () => {
+      if (isShow.value == false) return
       if (props.beforeClose) {
         props.beforeClose(() => {
           closeDialogDelay(props.closeDelay);
         });
       } else closeDialogDelay(props.closeDelay);
     };
+    if (props.closeOnPressEscape) { }
     //打开动画结束时调用
     const afterEnter = () => {
       emit("opened")
     }
+
     //关闭动画结束时调用
     const afterLeave = () => {
       emit("closed")
     }
+
+    //esc 的句柄函数
+    const handleESC = () => {
+      document.addEventListener('keyup', function (e) {
+        if (e.key !== "Escape") return
+        e.preventDefault()
+        emit('update:modelValue', false)
+        closeDialog()
+      })
+    }
+    //modal 的句柄函数
+    const handleClickModal = (e) => {
+      if (e.target != e.currentTarget) return
+      emit('update:modelValue', false)
+      closeDialog()
+    }
     watch(
-      () => modelShow.value
-      ,
+      () => props.modelValue,
       (newvModel, oldvModel) => {
         // 打开弹窗时
         if (newvModel === true) openDialog();
@@ -96,10 +122,18 @@ export default defineComponent({
         if (newvModel === false) closeDialog();
       }
     );
+    //生命周期
+    onMounted(() => {
+      if (props.closeOnPressEscape) handleESC();
+      if (props.modelValue) {
+        openDialog()
+      }
+    })
+
 
     return () => (
       <Transition onAfterEnter={afterEnter} onAfterLeave={afterLeave}>
-        <div class={ns.e('mask')} v-show={isShow.value}>
+        <div class={maskClass.value} v-show={isShow.value} onClick={(e) => handleClickModal(e)}>
           <div class={ns.b()} style={dialogStyle}>
             <div class={ns.e('header')} v-show={bHeader}>
               {(slots.header && slots.header()) || props.title}

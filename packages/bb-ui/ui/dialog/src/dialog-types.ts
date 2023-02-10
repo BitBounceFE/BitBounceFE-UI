@@ -14,7 +14,7 @@ export const dialogProps = {
   },
   width: {
     type: [Number, String],
-    default: '50%'
+    default: '40%'
   },
   fullscreen: {
     type: Boolean,
@@ -86,6 +86,7 @@ export const dialogEmits = {
   opened: () => true,
   closed: () => true,
   openAutoFocus: () => true,
-  closeAutoFocus: () => true
+  closeAutoFocus: () => true,
+  "update:modelValue": (e: boolean) => true
 };
 export type DialogEmits = typeof dialogEmits;
