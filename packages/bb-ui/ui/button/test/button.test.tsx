@@ -2,9 +2,9 @@
  * @Author: ThreeFire1 thricefice@gmail.com
  * @Date: 2023-02-09 14:21:35
  * @LastEditors: ThreeFire1 thricefice@gmail.com
- * @LastEditTime: 2023-02-09 16:01:05
+ * @LastEditTime: 2023-02-09 16:25:01
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\button\test\button.test.tsx
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Description: Unit test of Button
  */
 
 import { describe, test, expect, it, vi } from 'vitest';
@@ -83,6 +83,8 @@ describe('Button', () => {
 
         await wrapper.setProps({ size: 'small' });
         expect(wrapper.classes()).toContain(getSizeClass('small'));
+
+        wrapper.unmount();
     });
 
     it('round', async () => {
@@ -94,6 +96,8 @@ describe('Button', () => {
             },
         });
         expect(wrapper.classes()).toContain(roundClass);
+
+        wrapper.unmount();
     });
 
     it('circle', async () => {
@@ -105,6 +109,8 @@ describe('Button', () => {
             },
         });
         expect(wrapper.classes()).toContain(circleClass);
+
+        wrapper.unmount();
     });
 
     it('disabled', async () => {
@@ -118,5 +124,7 @@ describe('Button', () => {
         });
         await wrapper.trigger('click');
         expect(handleClick).not.toBeCalled();
+
+        wrapper.unmount();
       });
 });
