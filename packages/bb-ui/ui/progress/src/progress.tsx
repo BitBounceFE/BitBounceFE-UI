@@ -1,8 +1,8 @@
 /*
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 21:13:04
- * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 18:18:33
+ * @LastEditors: XinyueShu xshuac@connect.hk.ust
+ * @LastEditTime: 2023-02-12 15:29:24
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\progress\src\progress.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -14,14 +14,21 @@ import { ProgressProps, progressProps } from './progress-types';
 import './progress.scss';
 
 export default defineComponent({
-  name: 'CProgress',
+  name: 'BProgress',
   props: progressProps,
   setup(props: ProgressProps, { slots }) {
     const ns = useNamespace('progress');
     // console.log(ns.b(), ns.e('nse'), ns.m('nsm'), ns.em('em', 'open'));
 
     const shapeClass = `${ns.b()} ${ns.m(props.type)}-shape`;
-    // console.log(shapeClass);
+    let isVisibleTextClass = '';
+    let isTextInsideClass = '';
+    if (props.showText) {
+      isVisibleTextClass = `${ns.b()} ${ns.m(props.type)}-text`;
+    }
+    if (props.textInside) {
+      isTextInsideClass = `${ns.b()} ${ns.m(props.type)}-inside-text`;
+    }
 
     // check attribute
     const isLine = props.type === 'line';
@@ -78,16 +85,19 @@ export default defineComponent({
             }}
           ></div>
           <div
+            class={isVisibleTextClass}
             v-show={!props.textInside && props.showText}
             style={{
               marginLeft: '102.5%',
               color: props.textColor,
-              marginTop: `-${strokeWidth}px`
+              // fontSize: `${strokeWidth / 2}px`,
+              marginTop: `-${strokeWidth * 1.5}px`
             }}
           >
             {percentage.value}%
           </div>
           <div
+            class={isTextInsideClass}
             v-show={props.textInside && props.showText}
             style={{
               marginLeft: `${percentage.value - 10}%`,
@@ -126,7 +136,7 @@ export default defineComponent({
                 fill='transparent'
                 r={radius}
                 stroke-width={strokeWidth}
-                stroke={'yellow'}
+                stroke={props.color}
                 cx='50%'
                 cy='50%'
                 stroke-dashoffset={progressVal}
@@ -137,6 +147,7 @@ export default defineComponent({
             </g>
           </svg>
           <div
+            class={isVisibleTextClass}
             v-show={props.showText}
             style={{
               color: props.textColor,
@@ -178,7 +189,7 @@ export default defineComponent({
                 fill='transparent'
                 r={radius}
                 stroke-width={strokeWidth}
-                stroke={'yellow'}
+                stroke={props.color}
                 cx='50%'
                 cy='50%'
                 stroke-dashoffset={dashboardVal}
@@ -189,6 +200,7 @@ export default defineComponent({
             </g>
           </svg>
           <div
+            class={isVisibleTextClass}
             v-show={props.showText}
             style={{
               color: props.textColor,
