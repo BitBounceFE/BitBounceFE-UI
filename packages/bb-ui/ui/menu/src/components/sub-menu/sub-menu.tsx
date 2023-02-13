@@ -26,12 +26,14 @@ export default defineComponent({
 
     return () => {
       return (
-        <ul class={subMenuClass.value}>
-          <div class={`${ns.b()}--title`}>
-            <span>{props.title}</span>
-          </div>
-          <div class={`${ns.m('hor-con')}`}>{ctx.slots.default?.()}</div>
-        </ul>
+        <div>
+          <ul class={subMenuClass.value}>
+            <div class={`${ns.b()}--title`}>
+              <span>{props.title}</span>
+            </div>
+            <div class={`${ns.m('hor-con')}`}>{ctx.slots.default?.()}</div>
+          </ul>
+        </div>
       );
     };
   }

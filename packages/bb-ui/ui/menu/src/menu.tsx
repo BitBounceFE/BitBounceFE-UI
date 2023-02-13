@@ -6,7 +6,7 @@
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\menu\src\menu.tsx
  * @Description: Menu 组件
  */
-import { computed, defineComponent, provide, toRefs } from 'vue';
+import { computed, defineComponent, onMounted, provide, toRefs } from 'vue';
 
 import { useNamespace } from '../../shared/hooks/use-namespace';
 import { MenuContextType, menuContextKey } from '../../shared/tokens/index';
@@ -45,6 +45,26 @@ export default defineComponent({
         // 是否折叠,默认为false
         [`${ns.e('collapse')}`]: collapse.value
       };
+    });
+
+    //  挂载时添加鼠标进入的时间
+    onMounted(() => {
+      if (props.mode === 'horizontal') {
+        const subElement = document.querySelectorAll('.bbui-submenu');
+        console.log(subElement);
+        subElement.forEach((item) => {
+          item.addEventListener('mouseenter', (e) => {
+            e.stopPropagation();
+            item.classList.add('bbui-submenu--hor-con-show');
+            item.classList.remove('bbui-submenu--hor-con-hidden');
+          });
+          item.addEventListener('mouseleave', (e) => {
+            e.stopPropagation();
+            item.classList.add('bbui-submenu--hor-con-hidden');
+            item.classList.remove('bbui-submenu--hor-con-show');
+          });
+        });
+      }
     });
 
     return () => {

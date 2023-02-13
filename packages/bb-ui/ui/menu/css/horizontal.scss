@@ -67,16 +67,6 @@
       transition: all 0.5s ease-in-out;
     }
 
-    div.#{$cls-prefix}-submenu--hor-con-show {
-      position: absolute;
-      visibility: visible;
-    }
-
-    div.#{$cls-prefix}-submenu--hor-con-hidden {
-      position: absolute;
-      visibility: hidden;
-    }
-
     // 选项容器
 
     // div {
@@ -90,6 +80,18 @@
     //     transition: all 0.2s ease-in;
     //   }
     // }
+  }
+
+  div.#{$cls-prefix}-submenu--hor-con-show {
+    position: absolute;
+    visibility: visible;
+  }
+
+  ul.#{$cls-prefix}-submenu--hor-con-hidden {
+    div.#{$cls-prefix}-submenu--hor-con {
+      position: absolute;
+      visibility: hidden;
+    }
   }
 
   // 禁用disabled的样式
