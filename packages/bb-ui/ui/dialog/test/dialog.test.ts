@@ -11,10 +11,10 @@ describe('BDialog.vue', async () => {
     await nextTick()
     //默认为关闭
     expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(false)
-    await wrapper.setProps({ vModel: true })
+    await wrapper.setProps({ modelValue: true })
     //测试是否能打开
     expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(true)
-    await wrapper.setProps({ vModel: false })
+    await wrapper.setProps({ modelValue: false })
     //测试是否能关闭
     expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(false)
   })
@@ -32,8 +32,65 @@ describe('BDialog.vue', async () => {
     expect(wrapper.html()).toContain("header title")
     expect(wrapper.html()).toContain("60%")
     expect(wrapper.html()).toContain("20vh")
-
   });
+
+  //modal测试
+  test('modal props test', async () => {
+    const wrapper = mount(Dialog, {
+      props: {
+        modelValue: true,
+        modal: false
+      }
+    })
+    await nextTick()
+    expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(true)
+    expect(wrapper.find('.bbui-dialog__mask').html()).toContain('bbui-dialog--mask')
+  });
+
+  //fullscreen测试
+  test('fullscreen props test', async () => {
+    const wrapper = mount(Dialog, {
+      props: {
+        modelValue: true,
+        fullscreen: true
+      }
+    })
+    await nextTick()
+    expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(true)
+    expect(wrapper.find('.bbui-dialog').html()).toContain("width: 100vw")
+    expect(wrapper.find('.bbui-dialog').html()).toContain("height: 100vh")
+    expect(wrapper.find('.bbui-dialog').html()).toContain("top: 0")
+  });
+
+  // //close-on-press-escape测试
+  // test('close-on-press-escape props test', async () => {
+  //   const wrapper = mount(Dialog, {
+  //     props: {
+  //       modelValue: true,
+  //     }
+  //   })
+  //   const doc = mount(document)
+  //   console.log(doc)
+  //   await nextTick()
+  //   expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(true)
+  //   console.log(doc)
+  //   await doc.trigger('keydown', { key: "Escape" })
+  //   expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(false)
+  // });
+
+  //close-on-click-modal测试
+  test('close-on-click-modal props test', async () => {
+    const wrapper = mount(Dialog, {
+      props: {
+        modelValue: true,
+      }
+    })
+    await nextTick()
+    expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(true)
+    await wrapper.find('.bbui-dialog__mask').trigger('click')
+    expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(false)
+  });
+
 
   //延迟测试
   test('delay props test', async (done) => {
@@ -43,7 +100,7 @@ describe('BDialog.vue', async () => {
         closeDelay: 1000
       }
     })
-    await wrapper.setProps({ vModel: true })
+    await wrapper.setProps({ modelValue: true })
     expect(wrapper.find('.bbui-dialog__mask').isVisible()).toBe(false)
   });
 

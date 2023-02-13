@@ -45,7 +45,7 @@ export default defineComponent({
     //是否全屏
     if (props.fullscreen) {
       dialogStyle['width'] = '100vw'
-      dialogStyle['height'] = '100vw'
+      dialogStyle['height'] = '100vh'
       dialogStyle['margin-top'] = '0'
     }
     //是否有遮罩层
@@ -100,8 +100,8 @@ export default defineComponent({
 
     //esc 的句柄函数
     const handleESC = () => {
-      document.addEventListener('keyup', function (e) {
-        if (e.key !== "Escape") return
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== "Escape" || e.keyCode != 27) return
         e.preventDefault()
         emit('update:modelValue', false)
         closeDialog()

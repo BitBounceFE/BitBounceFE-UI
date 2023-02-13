@@ -20,7 +20,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
      <button @click="add">
      click to open the Dialog
     </button>
-    <b-dialog  v-model="dialogVisible" :title="header" @open="open" @close="close" >
+    <b-dialog  v-model="dialogVisible" :title="header" @open="open" @close="close" :modal="false">
     <span>This is a message</span>
     <template #footer>
       <span class="dialog-footer">
@@ -91,7 +91,6 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 | before-close | Function(done) (done 用来关闭 Dialog) | - | 关闭前的回调，会暂停 Dialog 的关闭. 回调函数内执行 done 参数方法的时候才是真正关闭对话框的时候. |
 | open-delay | number | 0 | Dialog 打开的延时时间，单位毫秒 |
 | close-delay | number | 0 | Dialog 关闭的延时时间，单位毫秒 |
-//TODO  test
 | fullscreen | boolean | false | 是否为全屏 Dialog |
 | modal | boolean | true | 是否为全屏 是否需要遮罩层 |
 | close-on-press-escape | boolean | true | 是否可以通过按下 ESC 关闭 Dialog |
