@@ -2,7 +2,7 @@
  * @Author: ThreeFire1 thricefice@gmail.com
  * @Date: 2023-02-09 14:21:35
  * @LastEditors: ThreeFire1 thricefice@gmail.com
- * @LastEditTime: 2023-02-09 16:25:01
+ * @LastEditTime: 2023-02-09 19:59:26
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\button\test\button.test.tsx
  * @Description: Unit test of Button
  */
@@ -91,7 +91,7 @@ describe('Button', () => {
         const wrapper = mount({
             setup() {
                 return () => {
-                    return <Button round="true"></Button>;
+                    return <Button round={true}></Button>;
                 };
             },
         });
@@ -104,7 +104,7 @@ describe('Button', () => {
         const wrapper = mount({
             setup() {
                 return () => {
-                    return <Button circle="true"></Button>;
+                    return <Button circle={true}></Button>;
                 };
             },
         });
