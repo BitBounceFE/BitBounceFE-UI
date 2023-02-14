@@ -1,7 +1,7 @@
 /*
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 21:13:04
- * @LastEditors: XinyueShu xshuac@connect.hk.ust
+ * @LastEditors: XinyueShu
  * @LastEditTime: 2023-02-14 21:44:20
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\progress\src\progress.tsx
  * @Description: define the progress component
@@ -21,7 +21,14 @@ export default defineComponent({
     // console.log(ns.b(), ns.e('nse'), ns.m('nsm'), ns.em('em', 'open'));
 
     const shapeClass = `${ns.b()} ${ns.m(props.type)}-shape`;
-    // console.log(shapeClass);
+    let isVisibleTextClass = '';
+    let isTextInsideClass = '';
+    if (props.showText) {
+      isVisibleTextClass = `${ns.b()} ${ns.m(props.type)}-text`;
+    }
+    if (props.textInside) {
+      isTextInsideClass = `${ns.b()} ${ns.m(props.type)}-inside-text`;
+    }
 
     // check attribute
     const isLine = props.type === 'line';
@@ -75,16 +82,18 @@ export default defineComponent({
             }}
           ></div>
           <div
+            class={isVisibleTextClass}
             v-show={!props.textInside && props.showText}
             style={{
               marginLeft: '102.5%',
               color: props.textColor,
-              marginTop: `-${props.strokeWidth}px`
+              marginTop: `-${strokeWidth}px`
             }}
           >
             {percentage.value}%
           </div>
           <div
+            class={isTextInsideClass}
             v-show={props.textInside && props.showText}
             style={{
               marginLeft: `${percentage.value - 10}%`,
@@ -122,7 +131,7 @@ export default defineComponent({
               <circle
                 fill='transparent'
                 r={radius}
-                stroke-width={props.strokeWidth}
+                stroke-width={strokeWidth}
                 stroke={'yellow'}
                 cx='50%'
                 cy='50%'
@@ -134,6 +143,7 @@ export default defineComponent({
             </g>
           </svg>
           <div
+            class={isVisibleTextClass}
             v-show={props.showText}
             style={{
               color: props.textColor,
@@ -174,7 +184,7 @@ export default defineComponent({
               <circle
                 fill='transparent'
                 r={radius}
-                stroke-width={props.strokeWidth}
+                stroke-width={strokeWidth}
                 stroke={'yellow'}
                 cx='50%'
                 cy='50%'
@@ -186,6 +196,7 @@ export default defineComponent({
             </g>
           </svg>
           <div
+            class={isVisibleTextClass}
             v-show={props.showText}
             style={{
               color: props.textColor,
