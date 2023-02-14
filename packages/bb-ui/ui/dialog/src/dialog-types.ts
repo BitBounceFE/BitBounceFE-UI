@@ -5,12 +5,16 @@ export const dialogProps = {
     type: Boolean,
     default: undefined
   },
+  modelValue: {
+    type: Boolean,
+    default: false
+  },
   title: {
     type: String
   },
   width: {
     type: [Number, String],
-    default: '50%'
+    default: '40%'
   },
   fullscreen: {
     type: Boolean,
@@ -79,7 +83,10 @@ export type DialogProps = ExtractPropTypes<typeof dialogProps>;
 export const dialogEmits = {
   open: () => true,
   close: () => true,
+  opened: () => true,
+  closed: () => true,
   openAutoFocus: () => true,
-  closeAutoFocus: () => true
+  closeAutoFocus: () => true,
+  "update:modelValue": (e: boolean) => true
 };
 export type DialogEmits = typeof dialogEmits;
