@@ -2,14 +2,14 @@
  * @Author: XinyueShu xshuac@connect.hk.ust
  * @Date: 2023-02-10 01:15:58
  * @LastEditors: XinyueShu xshuac@connect.hk.ust
- * @LastEditTime: 2023-02-12 12:01:34
+ * @LastEditTime: 2023-02-15 12:01:25
  * @FilePath: /BitBounceFE-UI/packages/bb-ui/ui/progress/test/progress.test.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import { mount } from '@vue/test-utils';
 import { BProgress } from '../index';
-import { nextTick, h } from 'vue';
-import { expect, test, describe, vi } from 'vitest';
+import { nextTick } from 'vue';
+import { expect, test } from 'vitest';
 import Progress from '../src/progress';
 
 // 测试是否visible
@@ -45,7 +45,6 @@ test('common props type test', async () => {
   expect(wrapper.html()).toContain('10%');
   // test show text
   expect(wrapper.find('.bbui-progress--line-text').isVisible()).toBe(true);
-
 });
 
 test('other props test', async () => {

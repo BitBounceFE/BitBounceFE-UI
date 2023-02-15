@@ -1,8 +1,8 @@
 /*
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 21:13:04
- * @LastEditors: XinyueShu
- * @LastEditTime: 2023-02-14 21:44:20
+ * @LastEditors: XinyueShu xshuac@connect.hk.ust
+ * @LastEditTime: 2023-02-15 12:20:24
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\progress\src\progress.tsx
  * @Description: define the progress component
  */
@@ -87,7 +87,8 @@ export default defineComponent({
             style={{
               marginLeft: '102.5%',
               color: props.textColor,
-              marginTop: `-${strokeWidth}px`
+              // fontSize: `${strokeWidth / 2}px`,
+              marginTop: `-${props.strokeWidth * 1.5}px`
             }}
           >
             {percentage.value}%
@@ -131,8 +132,8 @@ export default defineComponent({
               <circle
                 fill='transparent'
                 r={radius}
-                stroke-width={strokeWidth}
-                stroke={'yellow'}
+                stroke-width={props.strokeWidth}
+                stroke={props.color}
                 cx='50%'
                 cy='50%'
                 stroke-dashoffset={progressVal}
@@ -184,8 +185,8 @@ export default defineComponent({
               <circle
                 fill='transparent'
                 r={radius}
-                stroke-width={strokeWidth}
-                stroke={'yellow'}
+                stroke-width={props.strokeWidth}
+                stroke={props.color}
                 cx='50%'
                 cy='50%'
                 stroke-dashoffset={dashboardVal}
