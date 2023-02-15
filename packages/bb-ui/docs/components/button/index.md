@@ -2,9 +2,9 @@
  * @Author: ThreeFire1 thricefice@gmail.com
  * @Date: 2023-02-14 13:27:48
  * @LastEditors: ThreeFire1 thricefice@gmail.com
- * @LastEditTime: 2023-02-14 19:53:23
+ * @LastEditTime: 2023-02-14 20:16:48
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\button\index.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Description: Button doc
 -->
 
 
@@ -96,14 +96,14 @@ export default defineComponent({
 
 | 参数 | 类型                                    | 默认 | 说明 |
 | ---- |---------------------------------------| ---- | ---- |
-| type | [ButtonType](#buttontype)             | -- | 类型 |
-| size | [ButtonSizeType](#buttonsizetype)     | -- | 尺寸 |
+| type | [ButtonType]            | -- | 类型 |
+| size | [ButtonSizeType]     | -- | 尺寸 |
 | round | boolean                               | false | 是否为圆角按钮 |
 | circle | boolean                               | false | 是否为圆形按钮 |
 | plain | boolean                               | false | 是否为朴素按钮 |
 | disabled | boolean                               | false | 是否为禁用状态 |
 | autofocus | boolean                               | false | 原生 autofocus 属性 |
-| native-type | [ButtonNativeType](#buttonnativetype) | button | 原生 type 属性 |
+| native-type | [ButtonNativeType] | button | 原生 type 属性 |
 
 ## Button类型定义
 
