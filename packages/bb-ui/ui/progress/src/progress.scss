@@ -7,6 +7,9 @@
 .#{$cls-prefix}-progress--line-shape {
   width: 50%;
   height: 10px;
+
+  // color: rgb(231,234,242);
+  // background: rgb(231,234,242);
   background-color: $bbui-progress-bg;
   border-radius: 10px;
 }
