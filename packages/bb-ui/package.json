@@ -33,6 +33,7 @@
     "predev": "node ../cli/index.js create -t bbui --ignore-parse-error && node ../cli/index.js generate:theme"
   },
   "dependencies": {
+    "@vue/shared": "^3.2.47",
     "vitepress-theme-demoblock": "^1.4.2",
     "vue": "^3.2.37"
   },

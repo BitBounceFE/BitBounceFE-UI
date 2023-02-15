@@ -67,12 +67,28 @@
       transition: all 0.5s ease-in-out;
     }
 
-    div.#{$cls-prefix}-submenu--hor-con-show {
-      position: absolute;
-      visibility: visible;
-    }
+    // 选项容器
 
-    div.#{$cls-prefix}-submenu--hor-con-hidden {
+    // div {
+    //   span:nth-of-type(2) {
+    //     box-sizing: border-box;
+    //     display: inline-block;
+    //     font-size: 10px;
+    //     width: 14px;
+    //     height: 14px;
+    //     padding-left: 5px;
+    //     transition: all 0.2s ease-in;
+    //   }
+    // }
+  }
+
+  div.#{$cls-prefix}-submenu--hor-con-show {
+    position: absolute;
+    visibility: visible;
+  }
+
+  ul.#{$cls-prefix}-submenu--hor-con-hidden {
+    div.#{$cls-prefix}-submenu--hor-con {
       position: absolute;
       visibility: hidden;
     }

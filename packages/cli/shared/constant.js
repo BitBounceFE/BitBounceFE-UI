@@ -1,9 +1,5 @@
-const {
-  resolve
-} = require('path');
-const {
-  version
-} = require('../package.json');
+const { resolve } = require('path');
+const { version } = require('../package.json');
 
 exports.VERSION = version;
 exports.isProd = process.env.NODE_ENV === 'production';
@@ -60,7 +56,8 @@ exports.VITEPRESS_SIDEBAR_CATEGORY_ZH_TO_EN = {
   数据展示: 'Data Display',
   布局: 'Layout'
 };
-exports.COMPONENT_PARTS_MAP = [{
+exports.COMPONENT_PARTS_MAP = [
+  {
     name: 'component（组件）',
     value: 'component'
   },

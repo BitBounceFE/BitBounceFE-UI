@@ -1,15 +1,20 @@
 import type { ExtractPropTypes } from 'vue';
+
 export const dialogProps = {
   vModel: {
     type: Boolean,
     default: undefined
+  },
+  modelValue: {
+    type: Boolean,
+    default: false
   },
   title: {
     type: String
   },
   width: {
     type: [Number, String],
-    default: '50%'
+    default: '40%'
   },
   fullscreen: {
     type: Boolean,
@@ -71,7 +76,6 @@ export const dialogProps = {
     default: false
   }
 };
-
 // 获取 props 类型
 export type DialogProps = ExtractPropTypes<typeof dialogProps>;
 
@@ -79,7 +83,10 @@ export type DialogProps = ExtractPropTypes<typeof dialogProps>;
 export const dialogEmits = {
   open: () => true,
   close: () => true,
+  opened: () => true,
+  closed: () => true,
   openAutoFocus: () => true,
-  closeAutoFocus: () => true
+  closeAutoFocus: () => true,
+  "update:modelValue": (e: boolean) => true
 };
 export type DialogEmits = typeof dialogEmits;

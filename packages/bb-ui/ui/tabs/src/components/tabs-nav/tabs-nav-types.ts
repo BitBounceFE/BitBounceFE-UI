@@ -6,7 +6,7 @@
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\components\tabs-nav\tabs-nav-types.ts
  * @Description: Tabs Nav Types
  */
-import { TabPaneProps } from '../../../../tab-pane/src/tab-pane-type';
+import { TabPaneProps } from '../tab-pane/tab-pane-type';
 
 export const tabsNavProps = {
   panes: Array<TabPaneProps>

@@ -1,16 +1,17 @@
 /*
  * @Author: thricefice thricefice@gmail.com
  * @Date: 2023-01-28 21:12:12
- * @LastEditors: thricefice thricefice@gmail.com
- * @LastEditTime: 2023-01-28 22:06:28
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-02 16:27:08
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\button\src\button.tsx
  * @Description: button 组件
  */
-
 import { defineComponent, computed } from 'vue';
+
+import { useNamespace } from '../../shared/hooks/use-namespace';
+
 import { buttonProps, ButtonProps } from './button-types';
 import './button.scss';
-import { useNamespace } from '../../shared/hooks/use-namespace';
 
 export default defineComponent({
   name: 'BButton',

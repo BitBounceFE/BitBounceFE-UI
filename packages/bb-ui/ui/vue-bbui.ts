@@ -1,46 +1,45 @@
 import type { App } from 'vue';
 import ButtonInstall, { BButton } from './button';
-import ColInstall, { BCol } from './col';
-import DialogInstall, { Dialog } from './dialog';
-import InputInstall, { Input } from './input';
-import MenuInstall, { Menu } from './menu';
-import MessageBoxInstall, { MessageBox } from './message-box';
-import ProgressInstall, { Progress } from './progress';
-import RowInstall, { BRow } from './row';
-import SelectInstall, { Select } from './select';
-import TabPaneInstall, { BTabPane } from './tab-pane';
-import TabsInstall, { BTabs } from './tabs';
-import UploadInstall, { Upload } from './upload';
+import DialogInstall, { BDialog } from './dialog';
+import InputInstall, { BInput } from './input';
+import LayoutInstall, { BLayout, BRow, BCol } from './layout';
+import MenuInstall, { BMenu, BMenuItem, BSubMenu } from './menu';
+import MessageBoxInstall, { BMessageBox } from './message-box';
+import ProgressInstall, { BProgress } from './progress';
+import SelectInstall, { BSelect } from './select';
+import TabsInstall, { BTabs, BTabPane } from './tabs';
+import UploadInstall, { BUpload } from './upload';
 const installs = [
   ButtonInstall,
-	ColInstall,
-	DialogInstall,
-	InputInstall,
-	MenuInstall,
-	MessageBoxInstall,
-	ProgressInstall,
-	RowInstall,
-	SelectInstall,
-	TabPaneInstall,
-	TabsInstall,
-	UploadInstall
+  DialogInstall,
+  InputInstall,
+  LayoutInstall,
+  MenuInstall,
+  MessageBoxInstall,
+  ProgressInstall,
+  SelectInstall,
+  TabsInstall,
+  UploadInstall
 ];
 export {
   BButton,
-	BCol,
-	Dialog,
-	Input,
-	Menu,
-	MessageBox,
-	Progress,
-	BRow,
-	Select,
-	BTabPane,
-	BTabs,
-	Upload
+  BDialog,
+  BInput,
+  BLayout,
+  BRow,
+  BCol,
+  BMenu,
+  BMenuItem,
+  BSubMenu,
+  BMessageBox,
+  BProgress,
+  BSelect,
+  BTabs,
+  BTabPane,
+  BUpload
 };
 export default {
-  version: '1.0.9',
+  version: '1.0.0',
   install(app: App): void {
     installs.forEach((p) => app.use(p));
   }
