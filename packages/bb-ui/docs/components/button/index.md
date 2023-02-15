@@ -2,7 +2,7 @@
  * @Author: ThreeFire1 thricefice@gmail.com
  * @Date: 2023-02-14 13:27:48
  * @LastEditors: ThreeFire1 thricefice@gmail.com
- * @LastEditTime: 2023-02-14 15:38:49
+ * @LastEditTime: 2023-02-14 19:53:23
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\button\index.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -25,7 +25,7 @@
 <template>
   <p>基本样式</p>
   <div>
-    <b-button>Default</b-button>
+    <bbutton>Default</bbutton>
     <b-button type='primary'>Primary</b-button>
     <b-button type='success'>Success</b-button>
     <b-button type='warning'>Warning</b-button>
@@ -36,7 +36,7 @@
 
   <p>禁用状态</p>
   <div>
-    <b-button>Default</b-button>
+    <b-button disabled={true}>Default </b-button>
     <b-button type='primary' disabled={true}>Primary</b-button>
     <b-button type='success' disabled={true}>Success</b-button>
     <b-button type='warning' disabled={true}>Warning</b-button>
