@@ -20,7 +20,8 @@ export default defineComponent({
     const ns = useNamespace('submenu');
     const subMenuClass = computed(() => {
       return {
-        [`${ns.b()}`]: true
+        [`${ns.b()}`]: true,
+        [`${ns.m('hor-con-hidden')}`]: true
       };
     });
 
