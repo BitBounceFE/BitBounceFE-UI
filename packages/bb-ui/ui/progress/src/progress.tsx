@@ -2,9 +2,9 @@
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 21:13:04
  * @LastEditors: XinyueShu xshuac@connect.hk.ust
- * @LastEditTime: 2023-02-15 12:20:24
+ * @LastEditTime: 2023-02-15 12:32:33
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\progress\src\progress.tsx
- * @Description: define the progress component
+ * @Description: define progress component
  */
 import { defineComponent, ref, effect } from 'vue';
 
@@ -42,6 +42,7 @@ export default defineComponent({
 
     let rotation = 90;
     let translateY = radius + props.strokeWidth;
+    // let percentage = props.percentage;
 
     if (isDashboard) {
       rotation = 90 + 180 * 0.7;
