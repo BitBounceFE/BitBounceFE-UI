@@ -4,14 +4,14 @@
   display: flex;
   padding: 10px 15px 0;
   line-height: 1.5;
-  border-bottom: 1px solid #dcdfe6;
+  border-bottom: 1px solid $bbui-menu-border;
 
   .#{$cls-prefix}-menu-item {
     // 为了为after伪元素提供定位
     position: relative;
     padding: 4px 20px;
     margin-top: 0;
-    line-height: 24px;
+    line-height: $bbui-menu-line-height;
     cursor: pointer;
 
     &::after {
@@ -26,11 +26,11 @@
     }
 
     &:hover {
-      background-color: #ecf5ff;
+      background-color: $bbui-menu-hoverbg;
     }
 
     &:hover::after {
-      background-color: rgb(27 152 110);
+      background-color: $bbui-menu-brand;
     }
   }
 
@@ -52,18 +52,18 @@
     }
 
     &:hover::after {
-      background-color: rgb(27 152 110);
+      background-color: $bbui-menu-brand;
     }
 
     div.#{$cls-prefix}-submenu--title {
       padding: 4px 15px;
       margin: 0;
-      line-height: 24px;
+      line-height: $bbui-menu-line-height;
     }
 
     div.#{$cls-prefix}-submenu--hor-con {
       position: absolute;
-      z-index: 9999;
+      z-index: $bbui-z-index;
       transition: all 0.5s ease-in-out;
     }
 
@@ -97,7 +97,7 @@
   // 禁用disabled的样式
   .#{$cls-prefix}-menu-item--disabled,
   .#{$cls-prefix}-submenu--disabled {
-    color: darkgrey;
+    color: $bbui-disabled;
     cursor: not-allowed;
 
     &::after {

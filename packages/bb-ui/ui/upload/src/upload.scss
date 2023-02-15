@@ -1,3 +1,5 @@
+@import '../../style-var/index';
+
 .bbui-upload-input {
   display: none;
 }
@@ -15,8 +17,8 @@
 
 .bbui-upload-list {
   li {
-    height: 30px;
-    line-height: 30px;
+    height: $bbui-upload-line-height;
+    line-height: $bbui-upload-li-height;
     list-style: none;
     background-color: #eee;
     border-radius: 5px;
