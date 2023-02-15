@@ -2,7 +2,7 @@
  * @Author: ThreeFire1 thricefice@gmail.com
  * @Date: 2023-02-14 18:13:32
  * @LastEditors: ThreeFire1 thricefice@gmail.com
- * @LastEditTime: 2023-02-14 19:06:13
+ * @LastEditTime: 2023-02-14 19:27:39
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\layout\index.md
  * @Description: Layout doc
 -->
@@ -25,107 +25,107 @@
   <p>基本布局</p>
   <div>
     <b-row>
-    <b-col :span="24"><div style="background-color:gray"></b-col>
+    <b-col :span="24"><div style="background-color:gray">Layout</div></b-col>
     </b-row>
   <b-row>
-    <b-col :span="12"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="12"><div style="background-color:LightSkyBlue  "></div></b-col>
+    <b-col :span="12"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="12"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
   </b-row>
   <b-row>
-    <b-col :span="8"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="8"><div style="background-color:LightSkyBlue  "></div></b-col>
-    <b-col :span="8"><div style="background-color:LightSteelBlue "></div></b-col>
+    <b-col :span="8"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="8"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
+    <b-col :span="8"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
   </b-row>
   <b-row>
-    <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="6"><div style="background-color:LightSkyBlue  "></div></b-col>
-    <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="6"><div style="background-color:LightSkyBlue  "></div></b-col>
+    <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="6"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
+    <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="6"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
   </b-row>
   <b-row>
-    <b-col :span="4"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="4"><div style="background-color:LightSkyBlue  "></div></b-col>
-    <b-col :span="4"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="4"><div style="background-color:LightSkyBlue  "></div></b-col>
-    <b-col :span="4"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="4"><div style="background-color:LightSkyBlue  "></div></b-col>
+    <b-col :span="4"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="4"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
+    <b-col :span="4"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="4"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
+    <b-col :span="4"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="4"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
   </b-row>
   </div>
 
   <p>分栏间隔</p>
   <div>
     <b-row :gutter="20">
-    <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-    <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
+    <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+    <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
   </b-row>
   </div> 
 
   <p>混合布局</p>
   <div>
     <b-row :gutter="20">
-        <b-col :span="16"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="8"><div style="background-color:LightSteelBlue "></div></b-col>
+        <b-col :span="16"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="8"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
     <b-row :gutter="20">
-        <b-col :span="8"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="8"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="4"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="4"><div style="background-color:LightSteelBlue "></div></b-col>
+        <b-col :span="8"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="8"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="4"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="4"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
     <b-row :gutter="20">
-        <b-col :span="4"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="16"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="4"><div style="background-color:LightSteelBlue "></div></b-col>
+        <b-col :span="4"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="16"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="4"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
   </div> 
 
   <p>列偏移</p>
   <div>
     <b-row :gutter="20">
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
         <b-col :span="6" :offset="6"
-        ><div style="background-color:LightSteelBlue "></div></b-col>
+        ><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
     <b-row :gutter="20">
         <b-col :span="6" :offset="6"
-        ><div style="background-color:LightSteelBlue "></div></b-col>
+        ><div style="background-color:LightSteelBlue ">Layout</div></b-col>
         <b-col :span="6" :offset="6"
-        ><div style="background-color:LightSteelBlue "></div></b-col>
+        ><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
     <b-row :gutter="20">
         <b-col :span="12" :offset="6"
-        ><div style="background-color:LightSteelBlue "></div></b-col>
+        ><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
   </div> 
 
   <p>对齐方式</p>
   <div>
     <b-row class="row-bg">
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSkyBlue  "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
     <b-row class="row-bg" justify="center">
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSkyBlue  "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
     <b-row class="row-bg" justify="end">
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSkyBlue  "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
     <b-row class="row-bg" justify="space-between">
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSkyBlue  "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
     <b-row class="row-bg" justify="space-around">
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSkyBlue  "></div></b-col>
-        <b-col :span="6"><div style="background-color:LightSteelBlue "></div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSkyBlue  ">Layout</div></b-col>
+        <b-col :span="6"><div style="background-color:LightSteelBlue ">Layout</div></b-col>
     </b-row>
   </div> 
 </template>
@@ -169,6 +169,7 @@ export type RowJustifyType =
 ```ts
 export type RowAlignType = 'top' | 'middle' | 'bottom';
 ```
+
 ## Col参数
 
 | 参数 | 类型                                    | 默认 | 说明 |
