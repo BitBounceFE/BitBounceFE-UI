@@ -1,43 +1,37 @@
-.bbui-button {
-  &--primary {
-    color: #7693f5;
-  }
+@import '../../style-var/index';
 
-  &--success {
-    color: #67c23a;
-  }
+.#{$cls-prefix}-button {
+  --primary-color: #7693f5;
+  --success-color: #67c23a;
+  --info-color: #909399;
+  --warning-color: #e6a23c;
+  --danger-color: #f56c6c;
+  --primary-light-color: rgb(118 147 245 / 10%);
+  --success-light-color: rgb(103 194 58 / 10%);
+  --info-light-color: rgb(144 147 153 / 10%);
+  --warning-light-color: rgb(230 162 60 / 10%);
+  --danger-light-color: rgb(245 108 108 / 10%);
 
-  &--info {
-    color: #909399;
-  }
-
-  &--warning {
-    color: #e6a23c;
-  }
-
-  &--danger {
-    color: #f56c6c;
-  }
-
-  &--plain-primary {
-    color: #7693f5;
-  }
-
-  &--plain-success {
-    color: #67c23a;
-  }
-
-  &--plain-info {
-    color: #909399;
-  }
-
-  &--plain-warning {
-    color: #e6a23c;
-  }
-
-  &--plain-danger {
-    color: #f56c6c;
-  }
+  box-sizing: border-box;
+  display: inline-flex;
+  align-content: center;
+  justify-content: center;
+  height: 32px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: #fff;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.1s;
+  appearance: none;
 
   &:hover {
     opacity: 0.8;
@@ -47,6 +41,107 @@
     cursor: not-allowed;
   }
 
+  &--primary,
+  &--success,
+  &--info,
+  &--warning,
+  &--danger {
+    color: #fff;
+
+    // 获取焦点、选中
+    &:focus,
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &--primary {
+    background: var(--primary-color);
+  }
+
+  &--success {
+    background: var(--success-color);
+  }
+
+  &--info {
+    background: var(--info-color);
+  }
+
+  &--warning {
+    background: var(--warning-color);
+  }
+
+  &--danger {
+    background: var(--danger-color);
+  }
+
+  &--text {
+    color: #7693f5;
+  }
+
+  // plain 朴素按钮
+  &--plain-primary,
+  &--plain-success,
+  &--plain-info,
+  &--plain-warning,
+  &--plain-danger {
+    &:focus,
+    &:active {
+      color: #fff;
+    }
+  }
+
+  &--plain-primary {
+    color: var(--primary-color);
+    background: var(--primary-light-color);
+
+    &:focus,
+    &:active {
+      background: var(--primary-color);
+    }
+  }
+
+  &--plain-success {
+    color: var(--success-color);
+    background: var(--success-light-color);
+
+    &:focus,
+    &:active {
+      background: var(--success-color);
+    }
+  }
+
+  &--plain-info {
+    color: var(--info-color);
+    background: var(--info-light-color);
+
+    &:focus,
+    &:active {
+      background: var(--info-color);
+    }
+  }
+
+  &--plain-warning {
+    color: var(--warning-color);
+    background: var(--warning-light-color);
+
+    &:focus,
+    &:active {
+      background: var(--warning-color);
+    }
+  }
+
+  &--plain-danger {
+    color: var(--danger-color);
+    background: var(--danger-light-color);
+
+    &:focus,
+    &:active {
+      background: var(--danger-color);
+    }
+  }
+
+  // 大小
   &--large {
     height: 40px;
     padding: 12px 19px;
@@ -58,10 +153,12 @@
     font-size: 12px;
   }
 
+  // 圆角
   &--round {
     border-radius: 20px;
   }
 
+  // 圆形
   &--circle {
     padding: 8px;
     border-radius: 50%;

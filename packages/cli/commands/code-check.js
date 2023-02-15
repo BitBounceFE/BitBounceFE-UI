@@ -2,9 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const shell = require('shelljs');
 const chalk = require('chalk');
-const {
-  isReadyToRelease
-} = require('../shared/utils');
+const { isReadyToRelease } = require('../shared/utils');
 
 const log = console.log;
 
@@ -87,10 +85,7 @@ const unitTest = async (components) => {
 };
 
 exports.codeCheck = async function () {
-  const {
-    components,
-    type
-  } = this.opts();
+  const { components, type } = this.opts();
 
   if (!type) {
     await eslintCheck(components);

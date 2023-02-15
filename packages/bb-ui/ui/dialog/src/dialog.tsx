@@ -1,8 +1,16 @@
+/*
+ * @Date: 2023-02-06 19:02:38
+ * @LastEditors: Diachao 3430737927@qq.com
+ * @LastEditTime: 2023-02-06 19:30:55
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\dialog\src\dialog.tsx
+ */
+import { defineComponent, computed, ref, watch, Transition, onMounted, defineEmits } from 'vue';
 
-import { defineComponent, computed, ref, watch } from 'vue';
+import { useNamespace } from '../../shared/hooks/use-namespace';
+
 import { dialogProps, DialogProps, dialogEmits } from './dialog-types';
 import './dialog.scss';
-import { useNamespace } from '../../shared/hooks/use-namespace';
+
 export default defineComponent({
   name: 'BDialog',
   components: {},
@@ -10,79 +18,133 @@ export default defineComponent({
   emits: dialogEmits,
   setup(props: DialogProps, { slots, attrs, emit }) {
     const ns = useNamespace('dialog');
+    // 样式
+    const dialogStyle = {
+      width: props.width,
+      'margin-top': props.top
+    };
+    //mask class
+    let maskClass = ref(ns.e('mask'))
     const bHeader = computed(() => {
       return slots.header || props.title;
     });
     const bFooter = computed(() => {
       return slots.footer;
     });
-    // 样式
-    const dialogStyle = {
-      width: props.width,
-      'margin-top': props.top
-    };
-    //控制弹窗打开与否
+    // 控制弹窗打开与否
     const isShow = ref(false);
     // 事件延迟句柄
-    const handleDelay: (fn: Function, delay: number) => void = (fn: Function, delay: number) => {
+    const handleDelay: (fn: Function, delay: number) => void = (
+      fn: Function,
+      delay: number
+    ) => {
       setTimeout(() => {
-        fn()
-      }, delay)
+        fn();
+      }, delay);
+    };
+    //是否全屏
+    if (props.fullscreen) {
+      dialogStyle['width'] = '100vw'
+      dialogStyle['height'] = '100vh'
+      dialogStyle['margin-top'] = '0'
     }
-    //打开弹窗
+    //是否有遮罩层
+    if (!props.modal) {
+      maskClass.value += ' ' + ns.m('mask')
+    }
+    // 打开弹窗
     const openDialog: () => void = () => {
       if (props.openDelay > 0) {
         handleDelay(() => {
-          isShow.value = true
-          emit("open")
-        }, props.openDelay)
+          isShow.value = true;
+          emit('open');
+        }, props.openDelay);
       } else {
-        isShow.value = true
-        emit('open')
+        isShow.value = true;
+        emit('open');
       }
-    }
-    //延迟关弹窗
-    const closeDialogDelay: (closeDelay: number) => void = (closeDelay: number) => {
+    };
+    // 延迟关弹窗
+    const closeDialogDelay: (closeDelay: number) => void = (
+      closeDelay: number
+    ) => {
       if (closeDelay > 0) {
         handleDelay(() => {
-          isShow.value = false
-          emit("close")
-        }, closeDelay)
+          isShow.value = false;
+          emit('close');
+        }, closeDelay);
       } else {
-        isShow.value = false
-        emit('close')
+        isShow.value = false;
+        emit('close');
       }
-    }
-    //关闭弹窗
+    };
+    // 关闭弹窗
     const closeDialog: () => void = () => {
+      if (isShow.value == false) return
       if (props.beforeClose) {
         props.beforeClose(() => {
-          closeDialogDelay(props.closeDelay)
-        })
+          closeDialogDelay(props.closeDelay);
+        });
       } else closeDialogDelay(props.closeDelay);
+    };
+    if (props.closeOnPressEscape) { }
+    //打开动画结束时调用
+    const afterEnter = () => {
+      emit("opened")
     }
 
+    //关闭动画结束时调用
+    const afterLeave = () => {
+      emit("closed")
+    }
+
+    //esc 的句柄函数
+    const handleESC = () => {
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== "Escape" || e.keyCode != 27) return
+        e.preventDefault()
+        emit('update:modelValue', false)
+        closeDialog()
+      })
+    }
+    //modal 的句柄函数
+    const handleClickModal = (e) => {
+      if (e.target != e.currentTarget) return
+      emit('update:modelValue', false)
+      closeDialog()
+    }
     watch(
-      () => props.vModel,
-      (newValue, oldValue) => {
+      () => props.modelValue,
+      (newvModel, oldvModel) => {
         // 打开弹窗时
-        if (newValue === true) openDialog();
+        if (newvModel === true) openDialog();
         // 关闭弹窗时
-        if (newValue === false) closeDialog();
+        if (newvModel === false) closeDialog();
       }
     );
+    //生命周期
+    onMounted(() => {
+      if (props.closeOnPressEscape) handleESC();
+      if (props.modelValue) {
+        openDialog()
+      }
+    })
+
+
     return () => (
-      <div class={ns.e('mask')} v-show={isShow.value}>
-        <div class={ns.b()} style={dialogStyle}>
-          <div class={ns.e('header')} v-show={bHeader}>
-            {(slots.header && slots.header()) || props.title}
-          </div>
-          <div class={ns.e('default')}>{slots.default && slots.default()}</div>
-          <div class={ns.e('footer')} v-show={bFooter}>
-            {slots.footer && slots.footer()}
+      <Transition onAfterEnter={afterEnter} onAfterLeave={afterLeave}>
+        <div class={maskClass.value} v-show={isShow.value} onClick={(e) => handleClickModal(e)}>
+          <div class={ns.b()} style={dialogStyle}>
+            <div class={ns.e('header')} v-show={bHeader}>
+              {(slots.header && slots.header()) || props.title}
+            </div>
+            <div class={ns.e('default')}>{slots.default && slots.default()}</div>
+            <div class={ns.e('footer')} v-show={bFooter}>
+              {slots.footer && slots.footer()}
+            </div>
           </div>
         </div>
-      </div>
+      </Transition>
     );
   }
 });

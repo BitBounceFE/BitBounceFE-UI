@@ -12,14 +12,25 @@
 	  },
 	  {
 	    "text": "通用",
-	    "items": []
+	    "items": [
+	      {
+	        "text": "Button 按钮",
+	        "link": "/components/button/",
+	        "status": "100%"
+	      }
+	    ]
 	  },
 	  {
 	    "text": "导航",
 	    "items": [
 	      {
-	        "text": "Menu菜单",
+	        "text": "Menu 菜单",
 	        "link": "/components/menu/",
+	        "status": "100%"
+	      },
+	      {
+	        "text": "Tabs 选项卡",
+	        "link": "/components/tabs/",
 	        "status": "100%"
 	      }
 	    ]
@@ -53,7 +64,7 @@
 	        "status": "100%"
 	      },
 	      {
-	        "text": "upload 上传文件",
+	        "text": "Upload 上传文件",
 	        "link": "/components/upload/",
 	        "status": "100%"
 	      }
@@ -71,7 +82,13 @@
 	  },
 	  {
 	    "text": "布局",
-	    "items": []
+	    "items": [
+	      {
+	        "text": "Layout 布局",
+	        "link": "/components/layout/",
+	        "status": "100%"
+	      }
+	    ]
 	  }
 	]
       }

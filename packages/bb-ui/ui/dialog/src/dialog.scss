@@ -8,6 +8,10 @@
   width: 100%;
   height: 100vh;
   background-color: $bbui-dialog-mask;
+
+  &.bbui-dialog--mask {
+    background-color: rgb(255 255 255 / 0%);
+  }
 }
 
 .bbui-dialog {
@@ -18,6 +22,7 @@
   margin: 0 auto;
   background-color: $bbui-clean-color;
   border-radius: $bbui-dialog-border-radius;
+  box-shadow: 0 0 3px 3px rgb(22 21 21 / 15%);
 }
 
 .bbui-dialog__header {

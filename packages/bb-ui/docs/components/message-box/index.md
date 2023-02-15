@@ -30,7 +30,7 @@
           <button @click="visible = false" style="background:#79bbff;color:#fff"> OK</button>
         </span>
       </template>
-    <b-message-box>
+    </b-message-box>
 </template>
 
 <script lang="ts">

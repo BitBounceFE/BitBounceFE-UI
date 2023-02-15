@@ -6,7 +6,6 @@
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\button\src\button-types.ts
  * @Description: button type
  */
-
 import type { PropType, ExtractPropTypes } from 'vue';
 
 export type ButtonType =

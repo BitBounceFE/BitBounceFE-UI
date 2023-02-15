@@ -1,1 +1,28 @@
-/* Empty */
+.bbui-tabs__nav {
+  $tabs-nav-border: 1px solid #ccc;
+
+  margin-bottom: 15px;
+  border-bottom: $tabs-nav-border;
+
+  .bbui-tabs__nav-item {
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 40px;
+    border: $tabs-nav-border;
+    border-bottom: none;
+    border-left: none;
+
+    &:first-child {
+      border-left: $tabs-nav-border;
+      border-radius: 4px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 0 0;
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+}

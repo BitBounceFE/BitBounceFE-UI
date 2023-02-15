@@ -1,18 +1,15 @@
-
 require('esbuild-register');
 const path = require('path');
 const fs = require('fs-extra');
 const logger = require('../shared/logger');
-const {
-  CSS_CLASS_PREFIX
-} = require('../shared/constant');
+const { CSS_CLASS_PREFIX } = require('../shared/constant');
 const lightTheme = require('../../bb-ui/ui/theme/themes/light.ts').default;
 const darkTheme = require('../../bb-ui/ui/theme/themes/dark.ts').default;
 
 const lightFileStr = Object.entries(lightTheme)
   .map(
     ([key, value]) =>
-    `$${CSS_CLASS_PREFIX}-${key}: var(--${CSS_CLASS_PREFIX}-${key}, ${value})`
+      `$${CSS_CLASS_PREFIX}-${key}: var(--${CSS_CLASS_PREFIX}-${key}, ${value})`
   )
   .join(';\n');
 

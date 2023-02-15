@@ -1,17 +1,21 @@
 /*
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-27 10:18:21
- * @LastEditors: thricefice thricefice@gmail.com
- * @LastEditTime: 2023-01-30 22:39:25
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-10 15:56:59
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\tabs.tsx
  * @Description: Tabs 组件
  */
 import { computed, defineComponent, provide, watch, ref, reactive } from 'vue';
+
+import { useNamespace } from '../../shared/hooks/use-namespace';
+import { TabsContextType, TabsContextKey } from '../../shared/tokens/index';
+
 import { tabsProps, TabsProps } from './tabs-type';
-import { TabPaneProps } from '../../tab-pane/src/tab-pane-type';
+import { TabPaneProps } from './components/tab-pane/tab-pane-type';
 import { TabsNavProps } from './components/tabs-nav/tabs-nav-types';
 import './tabs.scss';
-import { useNamespace } from '../../shared/hooks/use-namespace';
+
 import TabsNav from './components/tabs-nav/tabs-nav';
 
 export default defineComponent({
@@ -21,15 +25,26 @@ export default defineComponent({
     const ns = useNamespace('tabs');
     const TabsCls = computed(() => [ns.b()]);
 
+    /*
+     * Slot "default" invoked outside of the render function:
+     * this will not track dependencies used in the slot.
+     * Invoke the slot function inside the render function instead.
+     */
     const navProps: TabsNavProps = reactive({
-      panes: slots.default().map((pane) => pane.props as TabPaneProps)
+      panes:
+        (slots.default &&
+          slots.default().map((pane) => pane.props as TabPaneProps)) ||
+        []
     });
-    console.log(navProps);
 
+    // 记录当前选择的 tab
     const active = ref(
-      props.modelValue ? props.modelValue : navProps.panes[0].name || '0'
+      props.modelValue
+        ? props.modelValue
+        : navProps.panes.find((pane) => pane?.name)?.name || '0'
     );
 
+    // modelValue 变化时更新 active
     watch(
       () => props.modelValue,
       (modelValue) => (active.value = modelValue)
@@ -38,10 +53,10 @@ export default defineComponent({
     const tabsContext = {
       active
     };
-    provide('tabsContextKey', tabsContext);
+    provide<TabsContextType>(TabsContextKey, tabsContext);
 
     return () => (
-      <div class={TabsCls}>
+      <div class={TabsCls.value}>
         <TabsNav {...navProps}></TabsNav>
         {slots.default && slots.default()}
       </div>
