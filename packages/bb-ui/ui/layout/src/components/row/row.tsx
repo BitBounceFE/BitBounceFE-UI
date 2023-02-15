@@ -2,7 +2,7 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-24 15:15:07
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-03 09:16:57
+ * @LastEditTime: 2023-02-09 17:01:51
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\layout\src\components\row\row.tsx
  * @Description: row 组件
  */
@@ -55,7 +55,7 @@ export default defineComponent({
           class: rowCls.value,
           style: style.value
         },
-        slots.default()
+        slots.default && slots.default()
       );
   }
 });

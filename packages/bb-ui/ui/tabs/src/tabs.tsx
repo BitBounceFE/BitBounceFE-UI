@@ -2,7 +2,7 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-27 10:18:21
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 18:41:08
+ * @LastEditTime: 2023-02-10 15:56:59
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\tabs.tsx
  * @Description: Tabs 组件
  */
@@ -25,13 +25,23 @@ export default defineComponent({
     const ns = useNamespace('tabs');
     const TabsCls = computed(() => [ns.b()]);
 
+    /*
+     * Slot "default" invoked outside of the render function:
+     * this will not track dependencies used in the slot.
+     * Invoke the slot function inside the render function instead.
+     */
     const navProps: TabsNavProps = reactive({
-      panes: slots.default().map((pane) => pane.props as TabPaneProps)
+      panes:
+        (slots.default &&
+          slots.default().map((pane) => pane.props as TabPaneProps)) ||
+        []
     });
 
     // 记录当前选择的 tab
     const active = ref(
-      props.modelValue ? props.modelValue : navProps.panes[0].name || '0'
+      props.modelValue
+        ? props.modelValue
+        : navProps.panes.find((pane) => pane?.name)?.name || '0'
     );
 
     // modelValue 变化时更新 active
@@ -46,7 +56,7 @@ export default defineComponent({
     provide<TabsContextType>(TabsContextKey, tabsContext);
 
     return () => (
-      <div class={TabsCls}>
+      <div class={TabsCls.value}>
         <TabsNav {...navProps}></TabsNav>
         {slots.default && slots.default()}
       </div>
