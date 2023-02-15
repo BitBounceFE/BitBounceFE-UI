@@ -2,8 +2,8 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-24 15:14:40
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-03 09:12:49
- * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\layout\src\components\col\src\col.tsx
+ * @LastEditTime: 2023-02-09 17:02:14
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\layout\src\components\col\col.tsx
  * @Description: col 组件
  */
 import {
@@ -67,7 +67,7 @@ export default defineComponent({
           class: colCls.value,
           style: style.value
         },
-        slots.default()
+        slots.default && slots.default()
       );
   }
 });

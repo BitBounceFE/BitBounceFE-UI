@@ -1,62 +1,90 @@
 <!--
- * @Author: XinyueShu xshuac@connect.hk.ust
+ * @Author: XinyueShu
  * @Date: 2023-01-23 17:19:32
  * @LastEditors: XinyueShu xshuac@connect.hk.ust
- * @LastEditTime: 2023-02-01 14:55:30
+ * @LastEditTime: 2023-02-12 16:44:15
  * @FilePath: /project/BitBounceFE-UI/packages/bb-ui/docs/components/progress/index.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Description: 添加组件progress的文档，包含何时说明，参数说明，基本使用例子，方便用户理解明白
 -->
 
 # Progress 进度条
 
-+ 将信息聚合在卡片容器中展示。
++ 用于展示操作进度，告知用户当前状态。
 
 ## 何时使用
 
-+ 基础卡片容器，其中可包含文字，列表，图片，段落，用于概览展示时。
++ 向用户展示操作进度。
++ 当需要显示一个操作完成的百分比或已完成的步骤/总步骤时。
 
 ## 基本用法
++ 默认类型进度条
 
-:::demo Card 示例
+:::demo BProgress 示例
 
 ```vue
 
 <template>
   <div>
-    <c-progress type = "Circle" :percentage="percentage" strokeLinecap="butt"></c-progress>
-    <button  v-on:click="increase">add</button>
-    <button  @click="decrease">sub</button>
-    <c-progress type = "dashboard" :percentage="percentage" strokeLinecap="butt"></c-progress>
+    <b-progress :strokeWidth=10 :percentage=30></b-progress>
+    <b-progress :strokeWidth=10 :percentage=30 defineBackColor="green"></b-progress>
+    <b-progress textColor="red" color="yellow" :strokeWidth=24 :percentage=60 :textInside=true></b-progress>
+    <b-progress :percentage=90></b-progress>
   </div>
-
 </template>
+:::
 
++ 环形进度条
+
+:::demo BProgress 示例
+
+```vue
+
+<template>
+  <div>
+    <b-progress type="Circle" :strokeWidth=8 :percentage=35></b-progress>
+    <b-progress color="green" type="Circle" :strokeWidth=8 :percentage=70 strokeLinecap="butt"></b-progress>
+  </div>
+</template>
+:::
+
++ 仪表盘
+
+:::demo BProgress 示例
+
+```vue
+
+<template>
+  <div>
+    <b-progress type="dashboard" :strokeWidth=8 :percentage=35></b-progress>
+    <b-progress color="green" type="dashboard" :strokeWidth=8 :percentage=70 strokeLinecap="butt"></b-progress>
+  </div>
+</template>
+:::
+
++ 其他
+
+:::demo BProgress 示例
+
+```vue
+
+<template>
+  <div>
+    <b-progress :percentage="percentage"></b-progress>
+    <b-progress color="yellow" type="Circle" :strokeWidth=8 :percentage="percentage"></b-progress>
+    <b-progress color="green" type="dashboard" :strokeWidth=8 :percentage="percentage" strokeLinecap="butt"></b-progress>
+    <button  @click="increase">add</button>
+    <button  @click="decrease">sub</button>
+  </div>
+</template>
 <script>
 export default {
-  // name: 'progressBar',
+  // name: 'progress',
    data() {
       return {
-        percentage: 50,
-        customColor: '#409eff',
-        customColors: [
-          {color: '#f56c6c', percentage: 20},
-          {color: '#e6a23c', percentage: 40},
-          {color: '#5cb87a', percentage: 60},
-          {color: '#1989fa', percentage: 80},
-          {color: '#6f7ad3', percentage: 100}
-        ]
+        percentage: 30,
       };
     },
     methods: {
-      customColorMethod(percentage) {
-        if (percentage < 30) {
-          return '#909399';
-        } else if (percentage < 70) {
-          return '#e6a23c';
-        } else {
-          return '#67c23a';
-        }
-      },
       increase() {
         this.percentage += 10;
         if (this.percentage > 100) {
@@ -79,12 +107,19 @@ export default {
 
 :::
 
-## c-Progress
+## b-Progress
 
-c-card 参数
+b-progress 参数
 
 | 参数 | 类型 | 默认 | 说明 |
 | ---- | ---- | ---- | ---- |
-| header | string |  —    | 卡片的标题 可以通过设置 header 来修改标题，也可以通过 slot#header 传入 DOM 节点 |
-| body-style |object| '{ padding: '20px' }'| body 的样式  |
-| shadow | string | always | 设置阴影显示时机 always / hover / never  |
+| percentage | number |  0   |必选，进度条的值最大为 100|
+| type |string| 'line'| 可选，进度条类型，’line‘/’dashboard‘/’Circle‘  |
+| strokeWidth | number | 6 | 可选，进度条的宽度  |
+| textInside | boolean | false | 可选，进度条显示文字内置在进度条内（仅 type 为 'line' 时可用）  |
+| color | string | 'blue' | 可选，进度条的颜色  |
+| width | number | 126 | 可选，环形进度条画布宽度（只在 type 为 ‘Circle’ 或 ‘dashboard‘ 时可用）  |
+| showText | boolean | true | 可选，是否显示进度条文字内容  |
+| strokeLinecap | string | 'round' | 可选，‘Circle’/‘dashboard’ 类型路径两端的形状  |
+| defineBackcolor | string | '#eee' | 可选，进度条的背景颜色  |
+| textColor | string | 'black' | 可选，进度条的字体颜色  |

@@ -19,6 +19,7 @@ import UploadInstall from '../../../ui/upload/index';
 import SelectInstall from '../../../ui/select/index';
 import InputInstall from '../../../ui/input/index';
 import TabsInstall from '../../../ui/tabs';
+import LayoutInstall from '../../../ui/layout';
 // 引入组件 注册
 
 export default {
@@ -33,6 +34,7 @@ export default {
     app.use(SelectInstall);
     app.use(InputInstall);
     app.use(TabsInstall);
+    app.use(LayoutInstall);
     registerComponents(app);
   }
 };
