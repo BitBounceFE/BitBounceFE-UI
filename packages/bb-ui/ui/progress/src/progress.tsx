@@ -1,10 +1,10 @@
 /*
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2023-01-16 21:13:04
- * @LastEditors: XinyueShu xshuac@connect.hk.ust
- * @LastEditTime: 2023-02-12 15:29:24
+ * @LastEditors: XinyueShu
+ * @LastEditTime: 2023-02-15 12:06:02
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\progress\src\progress.tsx
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Description: Compoenent progress file
  */
 import { defineComponent, ref, effect } from 'vue';
 
@@ -37,18 +37,16 @@ export default defineComponent({
 
     // radius of progress ring and dashboard
     const radius = 80;
-    // eslint-disable-next-line vue/no-setup-props-destructure
-    const strokeWidth = props.strokeWidth;
-    const halfCircle = radius + strokeWidth;
+    const halfCircle = radius + props.strokeWidth;
     const percentage = ref(props.percentage);
 
     let rotation = 90;
-    let translateY = radius + strokeWidth;
+    let translateY = radius + props.strokeWidth;
     // let percentage = props.percentage;
 
     if (isDashboard) {
       rotation = 90 + 180 * 0.7;
-      translateY += strokeWidth;
+      translateY = radius + props.strokeWidth + props.strokeWidth;
     }
 
     // calculating related value
@@ -91,7 +89,7 @@ export default defineComponent({
               marginLeft: '102.5%',
               color: props.textColor,
               // fontSize: `${strokeWidth / 2}px`,
-              marginTop: `-${strokeWidth * 1.5}px`
+              marginTop: `-${props.strokeWidth * 1.5}px`
             }}
           >
             {percentage.value}%
@@ -101,9 +99,9 @@ export default defineComponent({
             v-show={props.textInside && props.showText}
             style={{
               marginLeft: `${percentage.value - 10}%`,
-              fontSize: `${strokeWidth / 2}px`,
+              fontSize: `${props.strokeWidth / 2}px`,
               color: props.textColor,
-              marginTop: `-${strokeWidth}px`
+              marginTop: `-${props.strokeWidth}px`
             }}
           >
             {percentage.value}%
@@ -125,7 +123,7 @@ export default defineComponent({
               <circle
                 fill='transparent'
                 r={radius}
-                stroke-width={strokeWidth}
+                stroke-width={props.strokeWidth}
                 stroke={props.defineBackColor}
                 stroke-linecap={props.strokeLinecap}
                 stroke-dasharray={circumference}
@@ -135,7 +133,7 @@ export default defineComponent({
               <circle
                 fill='transparent'
                 r={radius}
-                stroke-width={strokeWidth}
+                stroke-width={props.strokeWidth}
                 stroke={props.color}
                 cx='50%'
                 cy='50%'
@@ -177,7 +175,7 @@ export default defineComponent({
               <circle
                 fill='transparent'
                 r={radius}
-                stroke-width={strokeWidth}
+                stroke-width={props.strokeWidth}
                 stroke={props.defineBackColor}
                 stroke-linecap={props.strokeLinecap}
                 stroke-dashoffset={circumference * 0.3}
@@ -188,7 +186,7 @@ export default defineComponent({
               <circle
                 fill='transparent'
                 r={radius}
-                stroke-width={strokeWidth}
+                stroke-width={props.strokeWidth}
                 stroke={props.color}
                 cx='50%'
                 cy='50%'
