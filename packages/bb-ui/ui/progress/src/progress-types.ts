@@ -1,8 +1,8 @@
 /*
  * @Author: XinyueShu xshuac@connect.hk.ust
  * @Date: 2023-01-23 16:45:22
- * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 18:07:07
+ * @LastEditors: XinyueShu xshuac@connect.hk.ust
+ * @LastEditTime: 2023-02-12 14:57:47
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\progress\src\progress-types.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -22,11 +22,11 @@ export const progressProps = {
   type: {
     type: String as shapeType,
     default: 'line',
-    validator: (val) => ['line', 'Circle', 'dahsboard'].indexOf(val) > -1
+    validator: (val) => ['line', 'Circle', 'dashboard'].indexOf(val) > -1
   },
   strokeWidth: {
     type: Number,
-    default: 6
+    default: 10
   },
   textInside: {
     type: Boolean,
@@ -41,7 +41,7 @@ export const progressProps = {
     type: String,
     Function,
     Array,
-    default: 'rgb(52,137,255)'
+    default: 'blue'
   },
   width: {
     type: Number,
