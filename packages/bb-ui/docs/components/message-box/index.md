@@ -2,7 +2,7 @@
  * @Author: -yayabb 2286834433@qq.com
  * @Date: 2023-01-30 15:29:15
  * @LastEditors: -yayabb 2286834433@qq.com
- * @LastEditTime: 2023-01-31 21:25:08
+ * @LastEditTime: 2023-02-15 13:35:49
  * @FilePath: MessageBox文档
 -->
 # MessageBox 信息弹出框
@@ -77,8 +77,25 @@
 
 message-box 参数
 
-| 参数       | 类型   | 默认                  | 说明                                                                            |
-| ---------- | ------ | --------------------- | ------------------------------------------------------------------------------- |
-| v-model     | boolean | false                     | 是否显示MessageBox |
-| body-style | object | '{ padding: '20px' }' | body 的样式                                                                     |
-| shadow     | string | always                | 设置阴影显示时机 always / hover / never                                         |
+| 参数 | 类型 | 默认 | 说明 |
+| ---- | ---- | ---- | ---- |
+| v-model | boolean |  —    | 是否显示MessageBox |
+| title | string |  —    | 标题 |
+| before-close | Function(done) (done 用来关闭 MessageBox) | - | 关闭前的回调，会暂停 MessageBox 的关闭. 回调函数内执行 done 参数方法的时候才是真正关闭的时候. |
+| open-delay | number | 0 | MessageBox 打开的延时时间，单位毫秒 |
+| close-delay | number | 0 | MessageBox 关闭的延时时间，单位毫秒 |
+
+### b-message-box 插槽
+
+| 插槽名 | 说明 |
+| ---- | ---- |
+|   — |  MessageBox 的内容  |
+| header |MessageBox标题的内容 |
+| footer | MessageBox底部的内容|
+
+### b-message-box 事件
+
+| 事件名 | 说明 | 参数  |
+| ---- | ---- | ---- | 
+| open | MessageBox打开的回调 |  —    |
+| close | MessageBox关闭的回调 |  —    | 
