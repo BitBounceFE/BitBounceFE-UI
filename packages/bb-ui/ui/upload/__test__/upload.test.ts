@@ -1,12 +1,11 @@
 /*
  * @Author: ThreeFire1 thricefice@gmail.com
  * @Date: 2023-02-09 14:21:35
- * @LastEditors: syk syk@qq.com
- * @LastEditTime: 2023-02-14 00:41:00
- * @FilePath: \组件库\BitBounceFE-UI\packages\bb-ui\ui\upload\test\upload.test.ts
- * @Description: Unit test of Button
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-16 13:56:37
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\upload\__test__\upload.test.ts
+ * @Description: Unit test of Upload
  */
-
 import { describe, test, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
 import Upload from '../src/upload';

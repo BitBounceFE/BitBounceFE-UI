@@ -1,13 +1,12 @@
 /*
  * @Author: XinyueShu xshuac@connect.hk.ust
  * @Date: 2023-02-10 01:15:58
- * @LastEditors: XinyueShu xshuac@connect.hk.ust
- * @LastEditTime: 2023-02-15 12:01:25
- * @FilePath: /BitBounceFE-UI/packages/bb-ui/ui/progress/test/progress.test.ts
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-16 13:55:13
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\progress\__test__\progress.test.ts
+ * @Description: Unit test of Progress
  */
 import { mount } from '@vue/test-utils';
-import { BProgress } from '../index';
 import { nextTick } from 'vue';
 import { expect, test } from 'vitest';
 import Progress from '../src/progress';
