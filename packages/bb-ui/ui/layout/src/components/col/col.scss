@@ -1,6 +1,6 @@
-@import '../../style-var/index';
-
 @use 'sass:math';
+
+@import '../../../../style-var/index';
 
 .#{$cls-prefix}-col {
   box-sizing: border-box;
