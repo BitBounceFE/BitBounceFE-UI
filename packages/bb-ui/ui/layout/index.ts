@@ -2,9 +2,8 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-02-03 09:08:37
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-03 11:56:33
+ * @LastEditTime: 2023-02-16 13:58:58
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\layout\index.ts
- * @Description: Layout 入口文件
  */
 import type { App } from 'vue';
 import { NOOP } from '@vue/shared';

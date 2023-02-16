@@ -2,11 +2,8 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-27 10:17:58
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-03 12:09:51
+ * @LastEditTime: 2023-02-16 13:59:51
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\index.ts
- * @Description: Tabs 入口文件
- *
- * Copyright (c) 2023 by Xia Yuang xiayuang@foxmail.com, All Rights Reserved.
  */
 import type { App } from 'vue';
 import { NOOP } from '@vue/shared';

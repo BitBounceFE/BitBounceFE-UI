@@ -2,9 +2,8 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-27 10:18:21
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-10 15:56:59
+ * @LastEditTime: 2023-02-16 14:18:02
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\tabs.tsx
- * @Description: Tabs 组件
  */
 import { computed, defineComponent, provide, watch, ref, reactive } from 'vue';
 

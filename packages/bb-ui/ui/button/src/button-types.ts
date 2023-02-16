@@ -1,10 +1,9 @@
 /*
  * @Author: thricefice thricefice@gmail.com
  * @Date: 2023-01-28 21:12:12
- * @LastEditors: thricefice thricefice@gmail.com
- * @LastEditTime: 2023-01-28 22:05:11
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-16 14:00:27
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\button\src\button-types.ts
- * @Description: button type
  */
 import type { PropType, ExtractPropTypes } from 'vue';
 

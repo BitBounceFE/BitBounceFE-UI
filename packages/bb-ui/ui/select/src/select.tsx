@@ -1,10 +1,9 @@
 /*
- * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Author: BitBounceFE
  * @Date: 2023-01-16 21:13:04
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 19:28:36
+ * @LastEditTime: 2023-02-16 14:16:31
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\select\src\select.tsx
- * @Description: 写select的首页
  */
 import { defineComponent, ref, Transition } from 'vue';
 
@@ -16,7 +15,7 @@ import './select.scss';
 export default defineComponent({
   name: 'BSelect',
   directives: {
-    // 控制select的打开与关闭逻辑
+    // 控制 select 的打开与关闭逻辑
     myclick: {
       beforeMount(el: any, { value }): void {
         // console.log(el);
@@ -36,7 +35,7 @@ export default defineComponent({
   props: selectProps,
   emits: ['update:modelValue', 'change'],
   setup(props: SelectProps, ctx) {
-    const input = ref(''); // 获取input实例
+    const input = ref(''); // 获取 input 实例
     const isShow = ref(false); // 根据这个布尔值是否展示下拉框
 
     // ccui-card ccui-card__nse ccui-card--nsm ccui-card__em--open
@@ -51,7 +50,7 @@ export default defineComponent({
     const tempOptions = props.options;
     dataArr.value = tempOptions;
 
-    // 点击li后更新input中的值
+    // 点击 li 后更新 input 中的值
     const handleIsShow = (e: Event) => {
       const target = e.target as HTMLElement;
       // console.log(e.target.getAttribute('value'));
@@ -63,7 +62,7 @@ export default defineComponent({
       ctx.emit('update:modelValue', target.getAttribute('value'));
       ctx.emit('change', target.getAttribute('value'));
     };
-    // 点击li后 关闭
+    // 点击 li 后关闭
     const handleLi = () => {
       isShow.value = false;
       dataArr.value = tempOptions;

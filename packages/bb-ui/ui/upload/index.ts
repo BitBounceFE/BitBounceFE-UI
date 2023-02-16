@@ -2,9 +2,8 @@
  * @Author: syk syk@qq.com
  * @Date: 2023-01-30 21:37:30
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-03 12:10:50
+ * @LastEditTime: 2023-02-16 14:00:03
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\upload\index.ts
- * @Description: upload上传组件
  */
 import type { App } from 'vue';
 import Upload from './src/upload';

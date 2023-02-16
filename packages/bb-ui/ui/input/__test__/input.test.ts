@@ -2,9 +2,9 @@
  * @Author: syk syk@qq.com
  * @Date: 2023-02-09 14:21:35
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-16 13:49:01
+ * @LastEditTime: 2023-02-16 13:58:45
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\input\__test__\input.test.ts
- * @Description: Unit test of Button
+ * @Description: Unit test of Input
  */
 import { describe, test, expect } from 'vitest';
 import { mount } from '@vue/test-utils';

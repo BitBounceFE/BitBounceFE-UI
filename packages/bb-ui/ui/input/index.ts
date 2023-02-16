@@ -4,7 +4,6 @@
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
  * @LastEditTime: 2023-02-16 13:53:57
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\input\index.ts
- * @Description: Unit test of Input
  */
 import type { App } from 'vue';
 import Input from './src/input';
