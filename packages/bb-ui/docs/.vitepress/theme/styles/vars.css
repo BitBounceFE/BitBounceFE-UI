@@ -3,6 +3,7 @@
  * -------------------------------------------------------------------------- */
 
  :root {
+  --vp-code-block-bg: rgb(249,249,249);
   --vp-c-brand: #646cff;
   --vp-c-brand-light: #747bff;
   --vp-c-brand-lighter: #9499ff;
