@@ -1,6 +1,6 @@
 @import '../../style-var/index';
 
-.bbui-message-box__mask {
+.#{$cls-prefix}-message-box__mask {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   background-color: $bbui-message-bg;
 }
 
-.bbui-message-box {
+.#{$cls-prefix}-message-box {
   position: absolute;
   top: 25vh;
   right: 0;
@@ -22,17 +22,17 @@
   border-radius: 20px;
 }
 
-.bbui-message-box__header {
+.#{$cls-prefix}-message-box__header {
   padding: 20px 0;
   font-size: $bbui-message-font-size;
   font-weight: 700;
 }
 
-.bbui-message-box__default {
+.#{$cls-prefix}-message-box__default {
   min-height: 120px;
   padding: 30px 0;
 }
 
-.bbui-message-box__footer {
+.#{$cls-prefix}-message-box__footer {
   padding-top: 10px;
 }

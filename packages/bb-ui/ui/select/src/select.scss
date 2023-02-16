@@ -1,6 +1,6 @@
 @import '../../style-var/index';
 
-.bbui-select {
+.#{$cls-prefix}-select {
   width: 200px;
 
   // height: 30px;
@@ -17,7 +17,7 @@
     }
   }
 
-  .bbui-select-content {
+  .#{$cls-prefix}-select-content {
     position: relative;
     width: 100%;
     margin-top: 12px;
@@ -45,16 +45,16 @@
     }
   }
 
-  .bbui-select-disabled {
+  .#{$cls-prefix}-select-disabled {
     cursor: not-allowed;
   }
 }
 
-.bbui-select-small {
+.#{$cls-prefix}-select-small {
   width: 150px;
 }
 
-.bbui-select-big {
+.#{$cls-prefix}-select-big {
   width: 300px;
 }
 

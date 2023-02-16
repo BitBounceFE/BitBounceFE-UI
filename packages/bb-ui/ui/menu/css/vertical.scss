@@ -1,9 +1,9 @@
-// 垂直的menu的样式
+// 垂直的 menu 的样式
 .#{$cls-prefix}-menu__vertical {
   border-right: 1px solid $bbui-menu-border;
 
   .#{$cls-prefix}-menu-item {
-    // 为了为after伪元素提供定位
+    // 为了为 after 伪元素提供定位
     position: relative;
     padding: 10px 20px;
     margin-top: 0;
