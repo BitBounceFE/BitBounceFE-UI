@@ -1,6 +1,8 @@
 @use 'sass:math';
 
-.bbui-col {
+@import '../../../../style-var/index';
+
+.#{$cls-prefix}-col {
   box-sizing: border-box;
 
   &--is-guttered {

@@ -1,10 +1,9 @@
 /*
- * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Author: XinyueShu xshuac@connect.hk.ust
  * @Date: 2023-01-16 21:13:04
- * @LastEditors: XinyueShu xshuac@connect.hk.ust
- * @LastEditTime: 2023-02-15 12:32:33
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-16 14:14:26
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\progress\src\progress.tsx
- * @Description: define progress component
  */
 import { defineComponent, ref, effect } from 'vue';
 

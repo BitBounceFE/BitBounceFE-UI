@@ -2,10 +2,9 @@
 /*
  * @Author: 周洁钰
  * @Date: 2023-01-20 15:15:58
- * @LastEditors: -yayabb 2286834433@qq.com
- * @LastEditTime: 2023-02-15 11:34:22
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-16 14:13:14
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\message-box\src\message-box-types.ts
- * @Description: message box组件
  */
 import type { PropType, ExtractPropTypes } from 'vue';
 

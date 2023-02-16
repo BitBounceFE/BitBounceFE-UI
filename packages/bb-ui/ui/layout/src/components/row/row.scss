@@ -1,4 +1,6 @@
-.bbui-row {
+@import '../../../../style-var/index';
+
+.#{$cls-prefix}-row {
   position: relative;
   box-sizing: border-box;
   display: flex;

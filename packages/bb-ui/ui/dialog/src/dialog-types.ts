@@ -87,6 +87,6 @@ export const dialogEmits = {
   closed: () => true,
   openAutoFocus: () => true,
   closeAutoFocus: () => true,
-  "update:modelValue": (e: boolean) => true
+  'update:modelValue': (e: boolean) => true
 };
 export type DialogEmits = typeof dialogEmits;

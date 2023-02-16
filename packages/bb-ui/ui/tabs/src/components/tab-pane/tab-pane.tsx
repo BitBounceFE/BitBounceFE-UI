@@ -2,9 +2,8 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-01-27 14:14:23
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-10 14:09:47
+ * @LastEditTime: 2023-02-16 14:18:55
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\components\tab-pane\tab-pane.tsx
- * @Description: Tab Pane 组件
  */
 import { computed, defineComponent, inject } from 'vue';
 

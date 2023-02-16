@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { defineComponent, computed, ref, watch } from 'vue';
 
 import { useNamespace } from '../../shared/hooks/use-namespace';

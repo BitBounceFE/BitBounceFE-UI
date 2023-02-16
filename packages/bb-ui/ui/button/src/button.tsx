@@ -2,9 +2,8 @@
  * @Author: thricefice thricefice@gmail.com
  * @Date: 2023-01-28 21:12:12
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 16:27:08
+ * @LastEditTime: 2023-02-16 14:00:41
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\button\src\button.tsx
- * @Description: button 组件
  */
 import { defineComponent, computed } from 'vue';
 

@@ -2,10 +2,8 @@
  * @Author: syk syk@qq.com
  * @Date: 2023-01-29 21:09:12
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 16:42:49
+ * @LastEditTime: 2023-02-16 14:08:32
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\input\src\input-types.ts
- * @Description: sda
- * Copyright (c) 2023 by syk syk@qq.com, All Rights Reserved.
  */
 import type { ExtractPropTypes, PropType } from 'vue';
 

@@ -1,15 +1,14 @@
-/* eslint-disable prettier/prettier */
 import { mount } from '@vue/test-utils';
-import { nextTick, h} from 'vue';
-import { expect, test, describe} from 'vitest';
+import { nextTick, h } from 'vue';
+import { expect, test, describe } from 'vitest';
 import MessageBox from '../src/message-box';
 describe('BMessageBox.vue', async () => {
-  // 测试mask
+  // 测试 mask
   test('render test', async () => {
     // 挂载组件，得到这个包裹器
     const wrapper = mount(MessageBox);
     await nextTick();
-    // 默认为false
+    // 默认为 false
     expect(wrapper.find('.bbui-message-box__mask').isVisible()).toBe(false);
     wrapper.unmount();
   });
@@ -17,7 +16,7 @@ describe('BMessageBox.vue', async () => {
   test('common props test', async () => {
     const wrapper = mount(MessageBox, {
       props: {
-        title: 'header title',
+        title: 'header title'
       }
     });
     await nextTick();

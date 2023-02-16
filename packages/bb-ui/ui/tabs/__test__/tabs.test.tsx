@@ -2,9 +2,9 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-02-10 13:03:44
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-10 16:18:26
- * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\test\tabs.test.tsx
- * @Description: Tabs test
+ * @LastEditTime: 2023-02-16 13:56:08
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\__test__\tabs.test.tsx
+ * @Description: Unit test of Tabs
  */
 import { describe, expect, test } from 'vitest';
 import { mount } from '@vue/test-utils';

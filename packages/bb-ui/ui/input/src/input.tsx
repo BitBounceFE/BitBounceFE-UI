@@ -2,10 +2,8 @@
  * @Author: syk syk@qq.com
  * @Date: 2023-01-27 21:15:29
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-02 17:56:14
+ * @LastEditTime: 2023-02-16 14:11:42
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\input\src\input.tsx
- * @Description: input组件开发
- * Copyright (c) 2023 by syk syk@qq.com, All Rights Reserved
  */
 import { defineComponent, shallowRef } from 'vue';
 

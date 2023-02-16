@@ -2,9 +2,9 @@
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-02-09 15:21:11
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-09 17:38:55
- * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\layout\test\layout.test.tsx
- * @Description: Layout test
+ * @LastEditTime: 2023-02-16 13:54:10
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\layout\__test__\layout.test.tsx
+ * @Description: Unit test of Layout
  */
 import { describe, test, expect } from 'vitest';
 import { mount } from '@vue/test-utils';

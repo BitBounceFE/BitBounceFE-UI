@@ -4,7 +4,6 @@
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
  * @LastEditTime: 2023-02-10 16:17:41
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\components\tabs-nav\tabs-nav.tsx
- * @Description: Tabs Nav 组件
  */
 import { defineComponent, inject } from 'vue';
 

@@ -4,7 +4,6 @@
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
  * @LastEditTime: 2023-01-30 13:54:26
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\tabs\src\components\tabs-nav\tabs-nav-types.ts
- * @Description: Tabs Nav Types
  */
 import { TabPaneProps } from '../tab-pane/tab-pane-type';
 

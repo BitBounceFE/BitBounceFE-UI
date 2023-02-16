@@ -1,4 +1,4 @@
-// 水平的menu的样式
+// 水平的 menu 的样式
 .#{$cls-prefix}-menu__horizontal {
   box-sizing: border-box;
   display: flex;
@@ -7,7 +7,7 @@
   border-bottom: 1px solid $bbui-menu-border;
 
   .#{$cls-prefix}-menu-item {
-    // 为了为after伪元素提供定位
+    // 为了为 after 伪元素提供定位
     position: relative;
     padding: 4px 20px;
     margin-top: 0;
@@ -103,7 +103,7 @@
     }
   }
 
-  // 禁用disabled的样式
+  // 禁用 disabled 的样式
   .#{$cls-prefix}-menu-item--disabled,
   .#{$cls-prefix}-submenu--disabled {
     color: $bbui-disabled;

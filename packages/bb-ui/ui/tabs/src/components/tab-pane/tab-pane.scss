@@ -1,3 +1,5 @@
-.bbui-tab-pane {
+@import '../../../../style-var/index';
+
+.#{$cls-prefix}-tab-pane {
   padding: 20px;
 }
