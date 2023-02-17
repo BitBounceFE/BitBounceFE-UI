@@ -22,7 +22,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
     :title="header"
     @open="open"
     @close="close"
-    :modal="false"
+    :open-delay="openDelay"
   >
     <span>This is a message</span>
     <template #footer>
@@ -35,7 +35,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 </template>
 
 <script lang="ts">
-import { ref, watch, on } from 'vue';
+import { ref } from 'vue';
 export default {
   setup() {
     const header = 'header';
@@ -45,12 +45,6 @@ export default {
     };
     const close = () => {
       console.log('close');
-    };
-    const opened = () => {
-      console.log('opened');
-    };
-    const closed = () => {
-      console.log('closed');
     };
     const add = () => {
       dialogVisible.value = true;
@@ -63,8 +57,6 @@ export default {
       close,
       openDelay,
       add,
-      opened,
-      closed
     };
   }
 };
@@ -115,7 +107,7 @@ export default {
 | 插槽名 | 说明                                                   |
 | ------ | ------------------------------------------------------ |
 | —      | Dialog 的内容                                          |
-| header | 对话框标题的内容；会替换标题部分，但不会移除关闭按钮。 |
+| header | 对话框标题的内容；会替换标题部分。                        |
 | footer | Dialog 按钮操作区的内容                                |
 
 ### 事件

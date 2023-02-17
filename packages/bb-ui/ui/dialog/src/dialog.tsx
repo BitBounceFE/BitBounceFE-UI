@@ -26,7 +26,7 @@ export default defineComponent({
   setup(props: DialogProps, { slots, emit }) {
     const ns = useNamespace('dialog');
     // 样式
-    const dialogStyle = {
+    let dialogStyle = {
       width: props.width,
       'margin-top': props.top
     };
