@@ -71,7 +71,6 @@
   background-color: #f66f6a;
 }
 
-
 // doc code 文档块不显示 css js
 .vp-doc [class~='language-css']:before {
   display: none;
@@ -79,4 +78,9 @@
 
 .vp-doc [class~='language-javascript']:before {
   display: none;
+}
+
+// 表头不换行
+.vp-doc th {
+  word-break: keep-all;
 }

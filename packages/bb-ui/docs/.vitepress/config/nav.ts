@@ -1,4 +1,3 @@
-
 export default [
-  { text: 'code仓库', link: 'https://github.com/BitBounceFE/BitBounceFE-UI' }
-]
+  { text: 'github', link: 'https://github.com/BitBounceFE/BitBounceFE-UI' }
+];
