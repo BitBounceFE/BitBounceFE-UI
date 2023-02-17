@@ -16,7 +16,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 
 ```vue
 <template>
-  <button @click="add">click to open the Dialog</button>
+  <b-button type="primary" @click="add" :plain="true">Click to open the Dialog</b-button>
   <b-dialog
     v-model="dialogVisible"
     :title="header"

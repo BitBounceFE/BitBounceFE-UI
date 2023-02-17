@@ -1,8 +1,8 @@
 <!--
  * @Author: -yayabb 2286834433@qq.com
  * @Date: 2023-02-16 21:37:27
- * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-17 11:53:24
+ * @LastEditors: XinyueShu xshuac@connect.hk.ust
+ * @LastEditTime: 2023-02-17 13:12:24
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\message-box\index.md
 -->
 
@@ -24,7 +24,7 @@ MessageBox 信息弹出框组件一般用于消息提示、确认消息。
 
 ```vue
 <template>
-  <button @click="visible = true">Click to open the Message Box</button>
+  <b-button type="warning" @click="visible = true" :plain="true">Click to open the Message Box</b-button>
   <b-message-box
     :v-model="visible"
     v-show="visible"

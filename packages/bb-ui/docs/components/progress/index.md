@@ -1,8 +1,8 @@
 <!--
  * @Author: XinyueShu
  * @Date: 2023-01-23 17:19:32
- * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-17 11:54:26
+ * @LastEditors: XinyueShu xshuac@connect.hk.ust
+ * @LastEditTime: 2023-02-17 12:53:54
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\progress\index.md
 -->
 
@@ -112,8 +112,8 @@
       :percentage="percentage"
       strokeLinecap="butt"
     ></b-progress>
-    <button @click="increase">add</button>
-    <button @click="decrease">sub</button>
+     <b-button type="primary" size="large" @click="increase" :plain=true>+</b-button>
+     <b-button type="primary" size="large" @click="decrease" :plain=true>-</b-button>
   </div>
 </template>
 <script>
