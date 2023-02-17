@@ -2,7 +2,7 @@
  * @Author: ThreeFire1 thricefice@gmail.com
  * @Date: 2023-02-14 13:27:48
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-17 11:47:18
+ * @LastEditTime: 2023-02-17 16:03:53
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\button\index.md
 -->
 
@@ -33,17 +33,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'button',
-  data() {
-    return {
-      msg: 'button'
-    };
-  }
-};
-</script>
-
 <style lang="scss" scoped>
 .bbui-button {
   margin-right: 10px;
@@ -71,23 +60,6 @@ export default {
     <b-button type="text" disabled="{true}">Text</b-button>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'button',
-  data() {
-    return {
-      msg: 'button'
-    };
-  }
-};
-</script>
-
-<style lang="scss" scoped>
-.bbui-button {
-  margin-right: 10px;
-}
-</style>
 ```
 
 :::
@@ -110,23 +82,6 @@ export default {
     <b-button type="text" size="small">Text</b-button>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'button',
-  data() {
-    return {
-      msg: 'button'
-    };
-  }
-};
-</script>
-
-<style lang="scss" scoped>
-.bbui-button {
-  margin-right: 10px;
-}
-</style>
 ```
 
 :::
@@ -149,23 +104,6 @@ export default {
     <b-button type="text" round="{true}">Text</b-button>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'button',
-  data() {
-    return {
-      msg: 'button'
-    };
-  }
-};
-</script>
-
-<style lang="scss" scoped>
-.bbui-button {
-  margin-right: 10px;
-}
-</style>
 ```
 
 :::
@@ -188,23 +126,6 @@ export default {
     <b-button type="text" circle="{true}">Text</b-button>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'button',
-  data() {
-    return {
-      msg: 'button'
-    };
-  }
-};
-</script>
-
-<style lang="scss" scoped>
-.bbui-button {
-  margin-right: 10px;
-}
-</style>
 ```
 
 :::
@@ -226,23 +147,6 @@ export default {
     <b-button type="info" plain="{true}">Info</b-button>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'button',
-  data() {
-    return {
-      msg: 'button'
-    };
-  }
-};
-</script>
-
-<style lang="scss" scoped>
-.bbui-button {
-  margin-right: 10px;
-}
-</style>
 ```
 
 :::
