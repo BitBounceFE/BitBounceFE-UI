@@ -1,4 +1,4 @@
-# select选择框
+# select 选择框
 
 ::: tip
 
@@ -8,7 +8,7 @@
 
 ## 基本使用
 
-传递`options`对象，name为显示内容，value为实际输入值。`v-model`绑定选择的值！
+传递 `options` 对象，`name` 为显示内容，`value` 为实际输入值。`v-model` 绑定选择的值。
 
 :::demo
 
@@ -48,7 +48,7 @@ export default {
 
 ## 禁用状态
 
-传递`disabled`属性来禁用select
+传递 `disabled` 属性来禁用 select。
 
 :::demo
 
@@ -88,7 +88,7 @@ export default {
 
 ## 禁用选项
 
-通过在`options`数组选项中添加`disabled`属性，来实现哪些选项禁用
+通过在 `options` 数组选项中添加 `disabled` 属性，来实现哪些选项禁用。
 
 :::demo
 
@@ -141,7 +141,7 @@ export default {
 
 ## 过滤筛选
 
-设置`searchable`属性来设置是否过滤筛选。
+设置 `searchable` 属性来设置是否过滤筛选。
 
 :::demo
 
@@ -194,7 +194,7 @@ export default {
 
 ## 尺寸
 
-通过设置`size`属性来控制大小。有二个值可供选择 `small` `big` 
+通过设置 `size` 属性来控制大小。
 
 :::demo
 
@@ -255,9 +255,9 @@ export default {
 
 :::
 
-## change事件
+## change 事件
 
-向外暴露`change`事件，当选择某一选项时触发事件，事件第一个参数为选项value值。
+向外暴露 `change` 事件，当选择某一选项时触发事件，事件第一个参数为选项 value 值。
 
 :::demo
 
@@ -267,7 +267,6 @@ export default {
     <b-select
       :options="options"
       v-model="msg"
- 
       @change="handleChange"
     ></b-select>
     msg:{{ msg }}
@@ -318,21 +317,20 @@ export default {
 
 :::
 
-## API 
+## API
 
 ### 属性
 
-| 属性名     | 说明       | 类型            | 默认值 |
-| ---------- | ---------- | --------------- | ------ |
-| options    | 选项数组   | `Array`         | []     |
-| disabled   | 是否禁用   | `Boolean`       | false  |
-| searchable | 是否可筛选 | `Boolean`       | false  |
-| size       | 大小       | `String`        | mid    |
-| v-model    | 选项的值   | `String|Number` | ""     |
+| 属性名     | 类型             | 默认值  | 说明       |
+| ---------- | ---------------- | ------- | ---------- |
+| options    | array            | `[]`    | 选项数组   |
+| disabled   | boolean          | false   | 是否禁用   |
+| searchable | boolean          | false   | 是否可筛选 |
+| size       | string           | `'mid'` | 大小       |
+| v-model    | string \| number | —       | 选项的值   |
 
 ### 事件
 
-| 事件名 | 说明                                        | 类型     |
-| ------ | ------------------------------------------- | -------- |
-| change | 当选择选项后触发，第一个参数为选项的value值 | Function |
-
+| 事件名 | 说明             | 参数  |
+| ------ | ---------------- | ----- |
+| change | 当选择选项后触发 | value |

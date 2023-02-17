@@ -2,20 +2,23 @@
  * @Author: ThreeFire1 thricefice@gmail.com
  * @Date: 2023-02-14 18:13:32
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-15 13:15:19
+ * @LastEditTime: 2023-02-17 11:51:59
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\layout\index.md
- * @Description: Layout doc
 -->
 
 # Layout 布局
 
+:::tip
+
 定义了界面的视觉结构。
+
+:::
 
 ## 基本用法
 
 使用列创建基础网格布局。
 
-通过 row 和 col 组件，并通过 col 组件的 span 属性我们就可以自由地组合布局。
+通过 `row` 和 `col` 组件，以及 col 组件的 `span` 属性我们就可以自由地组合布局。
 
 :::demo
 
@@ -104,7 +107,7 @@
 
 ## 分栏间隔
 
-行提供 gutter 属性来指定列之间的间距，其默认值为 0。
+行提供 `gutter` 属性来指定列之间的间距，其默认值为 0。
 
 :::demo
 
@@ -177,7 +180,7 @@
 
 ## 列偏移
 
-通过指定 col 组件的 offset 属性可以指定分栏偏移的栏数。
+通过指定 col 组件的 `offset` 属性可以指定分栏偏移的栏数。
 
 :::demo
 
@@ -213,7 +216,7 @@
 
 默认使用 flex 布局来对分栏进行灵活的对齐。
 
-可以通过 justify 属性来定义子元素的排版方式，其取值包括 start、center、end、space-between、space-around。
+可以通过 `justify` 属性来定义子元素的排版方式，其取值包括 start、center、end、space-between、space-around。
 
 :::demo
 
@@ -279,38 +282,23 @@
 
 :::
 
-## Row 参数
+## API
 
-| 参数    | 类型                            | 默认  | 说明           |
-| ------- | ------------------------------- | ----- | -------------- |
-| gutter  | number                          | 0     | 栅格间隔       |
-| justify | [RowJustifyType](#row-类型定义) | start | 水平排列方式   |
-| align   | [RowAlignType](#row-类型定义)   | top   | 垂直排列方式   |
-| tag     | string                          | div   | 自定义元素标签 |
+### Row 属性
 
-## Row 类型定义
+| 属性名  | 类型                                                                        | 默认值    | 说明           |
+| ------- | --------------------------------------------------------------------------- | --------- | -------------- |
+| gutter  | number                                                                      | 0         | 栅格间隔       |
+| justify | `'center'` \| `'start'` \| `'end'` \| `'space-between'` \| `'space-around'` | `'start'` | 水平排列方式   |
+| align   | `'top'` \|` 'middle'` \| `'bottom'`                                         | `'top'`   | 垂直排列方式   |
+| tag     | string                                                                      | `'div'`   | 自定义元素标签 |
 
-### RowType
+### Col 属性
 
-```ts
-export type RowJustifyType =
-  | 'center'
-  | 'start'
-  | 'end'
-  | 'space-between'
-  | 'space-around';
-```
-
-```ts
-export type RowAlignType = 'top' | 'middle' | 'bottom';
-```
-
-## Col 参数
-
-| 参数   | 类型   | 默认 | 说明               |
-| ------ | ------ | ---- | ------------------ |
-| span   | number | 24   | 栅格占据的列数     |
-| offset | number | 0    | 栅格左侧的间隔格数 |
-| push   | number | 0    | 栅格向右移动格数   |
-| pull   | number | 0    | 栅格向左移动格数   |
-| tag    | string | div  | 自定义元素标签     |
+| 参数   | 类型   | 默认    | 说明               |
+| ------ | ------ | ------- | ------------------ |
+| span   | number | 24      | 栅格占据的列数     |
+| offset | number | 0       | 栅格左侧的间隔格数 |
+| push   | number | 0       | 栅格向右移动格数   |
+| pull   | number | 0       | 栅格向左移动格数   |
+| tag    | string | `'div'` | 自定义元素标签     |

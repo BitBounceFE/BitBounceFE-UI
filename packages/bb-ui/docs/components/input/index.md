@@ -1,27 +1,22 @@
 <!--
  * @Author: syk syk@qq.com
  * @Date: 2023-01-28 20:58:43
- * @LastEditors: syk syk@qq.com
- * @LastEditTime: 2023-01-29 20:33:33
- * @FilePath: \组件库\BitBounceFE-UI\packages\bb-ui\docs\components\input\index.md
- * @Description:
- *
- * Copyright (c) 2023 by syk syk@qq.com, All Rights Reserved.
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-17 11:57:23
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\input\index.md
 -->
-
-
 
 # Input 输入框
 
 ::: tip
 
-通过鼠标或键盘输入字符
+通过鼠标或键盘输入字符。
 
 :::
 
 ## 基础用法
 
-采用v-model实现数据的双向绑定。
+采用 v-model 实现数据的双向绑定。
 
 :::demo
 
@@ -29,7 +24,8 @@
 <template>
   <div>
     <B-input v-model="msg"></B-input>
-    msg:{{ msg }}
+    <br />
+    输入内容：{{ msg || '未输入内容' }}
   </div>
 </template>
 
@@ -59,7 +55,8 @@ export default {
 <template>
   <div>
     <B-input v-model="msg" :disabled="true"></B-input>
-    msg:{{ msg }}
+    <br />
+    输入内容：{{ msg || '未输入内容' }}
   </div>
 </template>
 
@@ -82,7 +79,7 @@ export default {
 
 ## 密码框
 
-使用`show-password`来控制是否选择密码框。
+使用 `show-password` 来控制是否选择密码框。
 
 :::demo
 
@@ -90,7 +87,8 @@ export default {
 <template>
   <div>
     <B-input v-model="msg" show-password></B-input>
-    msg:{{ msg }}
+    <br />
+    输入内容：{{ msg || '未输入内容' }}
   </div>
 </template>
 
@@ -113,7 +111,7 @@ export default {
 
 ## 尺寸
 
-通过传递size属性，来控制input的大小。除了默认大小，还有`mid`和`lg`类型
+通过传递 `size` 属性，来控制 input 的大小。
 
 :::demo
 
@@ -121,7 +119,8 @@ export default {
 <template>
   <div>
     <B-input v-model="msg" size="lg"></B-input>
-    msg:{{ msg }}
+    <br />
+    输入内容：{{ msg || '未输入内容' }}
   </div>
 </template>
 
@@ -143,7 +142,7 @@ export default {
 
 ## 提示信息
 
-通过`placeholder`属性来给input框提示信息
+通过 `placeholder` 属性来给 input 框提示信息。
 
 :::demo
 
@@ -151,7 +150,8 @@ export default {
 <template>
   <div>
     <B-input v-model="msg" placeholder="i am message"></B-input>
-    msg:{{ msg }}
+    <br />
+    输入内容：{{ msg || '未输入内容' }}
   </div>
 </template>
 
@@ -171,9 +171,9 @@ export default {
 
 :::
 
-## 事件-change
+## 事件——输入变化
 
-向外提供一个`change`事件，参数为input的值
+向外提供一个 `change` 事件，参数为 input 的值。
 
 :::demo
 
@@ -181,7 +181,8 @@ export default {
 <template>
   <div>
     <B-input v-model="msg" size="lg" @change="func"></B-input>
-    msg:{{ msg }}
+    <br />
+    输入内容：{{ msg || '未输入内容' }}
   </div>
 </template>
 
@@ -207,9 +208,9 @@ export default {
 
 :::
 
-## 事件-focus&blur
+## 事件——焦点变化
 
-向外提供`focus`事件和`blur`事件，触发时刻在光标聚焦和失焦时刻。
+向外提供 `focus` 事件和 `blur` 事件，触发时刻在光标聚焦和失焦时刻。
 
 :::demo
 
@@ -217,7 +218,7 @@ export default {
 <template>
   <div>
     <B-input v-model="msg" size="lg" @blur="func1" @focus="func2"></B-input>
-    事件触发信息：{{ msg }}
+    事件触发信息：{{ msg || '未输入内容' }}
   </div>
 </template>
 
@@ -251,19 +252,18 @@ export default {
 
 ### 属性
 
-| 属性名        | 说明             | 类型              | 默认值           |
-| ------------- | ---------------- | ----------------- | ---------------- |
-| v-model       | 绑定值           | `String`|`Number` | `""`             |
-| disabled      | 是否禁用         | `Boolean`         | `false`          |
-| show-password | 是否为展示密码框 | `Boolean`         | `false`          |
-| size          | 尺寸大小         | `sm`|`lg`|`md`    | `md`             |
-| placeholder   | 提示信息         | `String`          | `"please input"` |
+| 属性名        | 类型             | 默认值           | 说明             |
+| ------------- | ---------------- | ---------------- | ---------------- |
+| v-model       | string           | `''`             | 绑定值           |
+| disabled      | boolean          | false            | 是否禁用         |
+| show-password | boolean          | false            | 是否为展示密码框 |
+| size          | `'sm'` \| `'lg'` | —                | 尺寸大小         |
+| placeholder   | string           | `'please input'` | 提示信息         |
 
 ### 事件
 
-| 事件名 | 说明                                                 | 类型       |
-| ------ | ---------------------------------------------------- | ---------- |
-| change | 当 modelValue 改变时触发，第一个函数参数为modelValue | `Function` |
-| focus  | 当选择器的输入框获得焦点时触发                       | `Function` |
-| blur   | 当选择器的输入框失去焦点时触发                       | `Function` |
-
+| 事件名 | 说明                           | 参数  |
+| ------ | ------------------------------ | ----- |
+| change | 当输入值改变时触发             | value |
+| focus  | 当选择器的输入框获得焦点时触发 | —     |
+| blur   | 当选择器的输入框失去焦点时触发 | —     |
