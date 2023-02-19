@@ -20,10 +20,10 @@
   left: 0;
   padding: $bbui-dialog-padding;
   margin: 0 auto;
+  color: black;
   background-color: $bbui-clean-color;
   border-radius: $bbui-dialog-border-radius;
   box-shadow: 0 0 3px 3px rgb(22 21 21 / 15%);
-  color: black;
 }
 
 .#{$cls-prefix}-dialog__header {
