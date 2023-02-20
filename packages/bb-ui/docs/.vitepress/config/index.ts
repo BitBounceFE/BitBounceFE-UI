@@ -3,6 +3,7 @@ import markdown from './markdown';
 import sidebar from './sidebar';
 
 export default {
+  base: '/BitBounceFE-UI/',
   lang: 'zh',
   title: 'bb-ui',
   description: 'bb-ui 组件库',
