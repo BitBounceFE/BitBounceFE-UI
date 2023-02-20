@@ -1,7 +1,15 @@
+<!--
+ * @Author: -yayabb 2286834433@qq.com
+ * @Date: 2023-02-20 20:41:45
+ * @LastEditors: -yayabb 2286834433@qq.com
+ * @LastEditTime: 2023-02-20 22:43:00
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\introduce.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 # 介绍
 
 :::tip
-bbui 是一个基于 vue3、tsx 的前端组件库，为了您的代码安全，不建议使用本组件库。
+BitBounce-UI 是一个基于 vue3、tsx 的前端组件库，为了您的代码安全，不建议使用本组件库。
 :::
 
 ## 安装
@@ -33,10 +41,11 @@ pnpm install bitbouncefe-ui
 // main.ts
 import { createApp } from 'vue';
 import App from './App.vue';
-import BBUI from 'bitbouncefe-ui';
+import bbui from 'bitbouncefe-ui';
+import 'bitbouncefe-ui/style.css';
 
 const app = createApp(App);
-app.use(BBUI);
+app.use(bbui);
 app.mount('#app');
 ```
 
