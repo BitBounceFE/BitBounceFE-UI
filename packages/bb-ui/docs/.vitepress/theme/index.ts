@@ -1,8 +1,8 @@
 /*
  * @Author: Xia Yuang xiayuang@foxmail.com
  * @Date: 2023-02-01 16:56:43
- * @LastEditors: ThreeFire1 thricefice@gmail.com
- * @LastEditTime: 2023-02-14 19:44:17
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-17 14:40:13
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\.vitepress\theme\index.ts
  * @Description: 组件注册
  */
@@ -21,7 +21,6 @@ import InputInstall from '../../../ui/input/index';
 import ButtonInstall from '../../../ui/button/index';
 import TabsInstall from '../../../ui/tabs';
 import LayoutInstall from '../../../ui/layout';
-// 引入组件 注册
 
 export default {
   ...Theme,

@@ -1,23 +1,26 @@
 <!--
  * @Author: xuepeng184 1831919639@qq.com
  * @Date: 2023-01-28 22:34:00
- * @LastEditors: xuepeng184 1831919639@qq.com
- * @LastEditTime: 2023-01-30 20:01:30
- * @FilePath: \bbui\packages\bb-ui\docs\components\menu\menu.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-17 11:52:58
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\menu\index.md
 -->
 
 # Menu 菜单
 
-- Menu 菜单组件一般用于导航。
+:::tip
+
+Menu 菜单组件一般用于导航。
+
+:::
 
 ## 何时使用
 
-- 在需要有规律地展示或者排列一系列的选项时。
+在需要有规律地展示或者排列一系列的选项时。
 
 ## 基本用法
 
-:::demo Menu 示例
+:::demo
 
 ```vue
 <template>
@@ -60,22 +63,24 @@
 
 :::
 
-## b-menu
+## API
 
-menu 参数
+### Menu 属性
 
-| 参数         | 类型                    | 默认       | 说明                      |
-| ------------ | ----------------------- | ---------- | ------------------------- |
-| width        | String                  | ''         | 修改菜单的宽度            |
-| mode         | 'vertical','horizontal' | 'vertical' | 设置菜单是横向或者竖直    |
-| default-keys | Array                   | []         | 菜单的默认展开项的 key 值 |
+| 属性名      | 类型                           | 默认值       | 说明                      |
+| ----------- | ------------------------------ | ------------ | ------------------------- |
+| width       | string                         | `''`         | 修改菜单的宽度            |
+| mode        | `'vertical'` \| `'horizontal'` | `'vertical'` | 设置菜单是横向或者竖直    |
+| defaultKeys | array                          | `[]`         | 菜单的默认展开项的 key 值 |
 
-MenuItem 参数
-| 参数         | 类型                    | 默认       | 说明                      |
-| ------------ | ----------------------- | ---------- | ------------------------- |
-| disabled | Boolean                   | false         |是否禁用 |
+### MenuItem 属性
 
-subMenu 参数
-| 参数         | 类型                    | 默认       | 说明                      |
-| ------------ | ----------------------- | ---------- | ------------------------- |
-| disabled | Boolean                   | false         |是否禁用 |
+| 属性名   | 类型    | 默认值 | 说明     |
+| -------- | ------- | ------ | -------- |
+| disabled | boolean | false  | 是否禁用 |
+
+### subMenu 属性
+
+| 属性名   | 类型    | 默认值 | 说明     |
+| -------- | ------- | ------ | -------- |
+| disabled | boolean | false  | 是否禁用 |

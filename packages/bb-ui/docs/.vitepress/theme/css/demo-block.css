@@ -43,7 +43,7 @@
   background-color: var(--vp-c-bg) !important;
 }
 
-[class^=version-tag] {
+[class^='version-tag'] {
   display: inline-block;
   padding: 0 4px;
   line-height: 20px;
@@ -59,10 +59,10 @@
   background-color: #f66f6a;
 }
 
-.vp-doc [class~=language-css]:before {
+.vp-doc [class~='language-css']:before {
   display: none;
 }
 
-.vp-doc [class~=language-javascript]:before {
+.vp-doc [class~='language-javascript']:before {
   display: none;
 }

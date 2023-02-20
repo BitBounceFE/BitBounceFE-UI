@@ -2,7 +2,9 @@
  * Colors
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
+  --vp-code-block-bg: rgb(249, 249, 249);
+  --vp-code-block-color: #333;
   --vp-c-brand: #646cff;
   --vp-c-brand-light: #747bff;
   --vp-c-brand-lighter: #9499ff;
@@ -35,28 +37,28 @@
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
-          120deg,
-          #bd34fe 30%,
-          #41d1ff
+    120deg,
+    #bd34fe 30%,
+    #41d1ff
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
-          -45deg,
-          #f56a92 50%,
-          #61c4ec 50%
+    -45deg,
+    #f56a92 50%,
+    #61c4ec 50%
   );
   --vp-home-hero-image-filter: blur(40px);
 }
 
 @media (min-width: 640px) {
   :root {
-      --vp-home-hero-image-filter: blur(56px);
+    --vp-home-hero-image-filter: blur(56px);
   }
 }
 
 @media (min-width: 960px) {
   :root {
-      --vp-home-hero-image-filter: blur(72px);
+    --vp-home-hero-image-filter: blur(72px);
   }
 }
 

@@ -1,12 +1,9 @@
 <!--
  * @Author: syk syk@qq.com
  * @Date: 2023-01-30 22:49:21
- * @LastEditors: syk syk@qq.com
- * @LastEditTime: 2023-02-01 10:24:12
- * @FilePath: \组件库\BitBounceFE-UI\packages\bb-ui\docs\components\upload\index.md
- * @Description:
- *
- * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
+ * @LastEditors: Xia Yuang xiayuang@foxmail.com
+ * @LastEditTime: 2023-02-17 11:56:43
+ * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\upload\index.md
   -->
 
 # Upload 文件上传
@@ -17,13 +14,9 @@
 
 :::
 
-
-
-
-
 ## 基本用法
 
-点击上传后，通过`change`事件来接受文件信息。
+点击上传后，通过 `change` 事件来接受文件信息。
 
 :::demo
 
@@ -52,7 +45,7 @@ export default {
 
 ## 上传多个文件
 
-通过传递 `multiple`属性来实现多个文件上传
+通过传递 `multiple` 属性来实现多个文件上传
 
 :::demo
 
@@ -83,13 +76,12 @@ export default {
 
 ### 属性
 
-| 属性名   | 说明                 | 类型    | 默认值 |
-| -------- | -------------------- | ------- | ------ |
-| multiple | 是否支持多个文件上传 | Boolean | false  |
+| 属性名   | 类型    | 默认值 | 说明                 |
+| -------- | ------- | ------ | -------------------- |
+| multiple | boolean | false  | 是否支持多个文件上传 |
 
 ### 事件
 
-| 事件名 | 说明                                                 | 类型     |
-| :----: | ---------------------------------------------------- | -------- |
-| change | 当上传文件后，通过change事件第一个参数来接受文件信息 | Function |
-
+| 事件名 | 说明                                                   | 参数 |
+| :----: | ------------------------------------------------------ | ---- |
+| change | 当上传文件后，通过 change 事件第一个参数来接受文件信息 |      |

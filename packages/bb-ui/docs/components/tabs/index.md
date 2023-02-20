@@ -2,14 +2,17 @@
  * @Author: ThreeFire1 thricefice@gmail.com
  * @Date: 2023-02-14 14:19:18
  * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-15 14:06:48
+ * @LastEditTime: 2023-02-17 11:55:37
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\docs\components\tabs\index.md
- * @Description: tabs doc
 -->
 
 # Tabs 选项卡
 
+:::tip
+
 选项卡切换组件。
+
+:::
 
 ## 何时使用
 
@@ -56,13 +59,13 @@ export default {
 
 ## Tabs 参数
 
-| 参数    | 类型   | 默认 | 说明                      |
-| ------- | ------ | ---- | ------------------------- |
-| v-model | string | -    | 绑定值，选中选项卡的 name |
+| 参数    | 说明                          | 类型   | 默认值 |
+| ------- | ----------------------------- | ------ | ------ |
+| v-model | 绑定值，选中选项卡的 `name`。 | string | —      |
 
 ## Tab 参数
 
-| 参数  | 类型   | 默认 | 说明                                              |
-| ----- | ------ | ---- | ------------------------------------------------- |
-| label | string | -    | 选项卡标题                                        |
-| name  | string | -    | 与选项卡绑定值 value 对应的标识符，表示选项卡别名 |
+| 参数  | 类型   | 默认 | 说明                                                |
+| ----- | ------ | ---- | --------------------------------------------------- |
+| label | string | —    | 选项卡标题                                          |
+| name  | string | —    | 与选项卡绑定值 value 对应的标识符，表示选项卡别名。 |

@@ -1,8 +1,8 @@
 /*
  * @Author: XinyueShu xshuac@connect.hk.ust
  * @Date: 2023-01-23 16:45:22
- * @LastEditors: Xia Yuang xiayuang@foxmail.com
- * @LastEditTime: 2023-02-16 14:23:11
+ * @LastEditors: XinyueShu xshuac@connect.hk.ust
+ * @LastEditTime: 2023-02-17 20:32:43
  * @FilePath: \BitBounceFE-UI\packages\bb-ui\ui\progress\src\progress-types.ts
  */
 import type { PropType, ExtractPropTypes } from 'vue';
@@ -64,7 +64,7 @@ export const progressProps = {
   },
   textColor: {
     type: String,
-    default: 'black'
+    default: 'dark'
   }
 } as const;
 
