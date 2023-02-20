@@ -7,7 +7,7 @@ set -e
 npm run docs:build
 
 # navigate into the build output directory
-cd packages/bb-ui/docs/.vitepress
+cd packages/bb-ui/docs/.vitepress/dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
