@@ -9,18 +9,18 @@ bbui 是一个基于 vue3、tsx 的前端组件库，为了您的代码安全，
 ### 使用包管理器
 
 :::tip
-建议使用包管理器（如 npm、yarn 或 pnpm）安装 bb-ui。
+建议使用包管理器（如 npm、yarn 或 pnpm）安装 bitbouncefe-ui。
 :::
 
 ```bash
 # npm
-npm install bb-ui
+npm install bitbouncefe-ui
 
 # yarn
-yarn add bb-ui
+yarn add bitbouncefe-ui
 
 # pnpm
-pnpm install bb-ui
+pnpm install bitbouncefe-ui
 ```
 
 ## 用法
@@ -33,7 +33,7 @@ pnpm install bb-ui
 // main.ts
 import { createApp } from 'vue';
 import App from './App.vue';
-import BBUI from 'bb-ui';
+import BBUI from 'bitbouncefe-ui';
 
 const app = createApp(App);
 app.use(BBUI);
@@ -57,7 +57,7 @@ app.mount('#app');
 // main.ts
 import { createApp } from 'vue';
 import App from './App.vue';
-import BButton from 'bb-ui';
+import BButton from 'bitbouncefe-ui';
 
 const app = createApp(App);
 app.use(Button);

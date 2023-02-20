@@ -1,12 +1,12 @@
 ---
 layout: home
 hero:
-  name: bb-ui
+  name: BitBounceFE-UI
   text: 一个使用 vue3、tsx 的组件库示例
   tagline: 一个真敢写，一个真敢用。
   image:
     src: /logo.svg
-    alt: bb-ui
+    alt: BitBounceFE-UI
   actions:
     - theme: brand
       text: 快速开始
