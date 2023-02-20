@@ -1,6 +1,6 @@
 {
   "name": "bitbouncefe-ui",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "description": "bb-ui components based on Vite and Vue3",
   "keywords": [
@@ -13,15 +13,15 @@
     "vue3",
     "vite",
     "jsx",
-    "bb-ui"
+    "bitbouncefe-ui"
   ],
   "homepage": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/BitBounceFE/BitBounceFE-UI"
   },
-  "main": "bb-ui.umd.js",
-  "module": "bb-ui.es.js",
+  "main": "vue-bbui.umd.js",
+  "module": "vue-bbui.es.js",
   "style": "style.css",
   "scripts": {
     "dev": "vitepress dev docs",
