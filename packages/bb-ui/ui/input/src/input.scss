@@ -8,8 +8,13 @@ input {
   background-color: $bbui-clean-color;
   border: 1px solid $bbui-input-border-color;
   border-radius: $bbui-input-border-radius;
+
   &:focus {
     border: 1px solid $bbui-input-focus-border-color;
+  }
+
+  &::placeholder {
+    color: #aaa;
   }
 }
 
