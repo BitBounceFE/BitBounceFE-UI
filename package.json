@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter bb-ui dev",
-    "docs:build": "pnpm --filter bb-ui predev -- -e prod && pnpm --filter bb-ui docs:build",
+    "dev": "pnpm --filter bitbouncefe-ui dev",
+    "docs:build": "pnpm --filter bitbouncefe-ui predev -- -e prod && pnpm --filter bitbouncefe-ui docs:build",
     "lint": "pnpm run lint:script && pnpm run lint:style",
     "lint:script": "eslint --fix --ext \"packages/**/*.{vue,js,jsx,ts,tsx}\" ",
     "lint:style": "stylelint --fix \"packages/**/*.{css,scss}\"",
